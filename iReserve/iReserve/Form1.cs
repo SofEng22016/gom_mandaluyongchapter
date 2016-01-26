@@ -24,25 +24,31 @@ namespace WindowsFormsApplication1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do Login. \nClick OK to simulate successful login. \nClick Cancel to simulate failed login.", "Login", MessageBoxButtons.OKCancel) == DialogResult.OK)
-            {
+            String username, password;
+            int valid = 0;
                 //TODO: new view here maybe the dashboard?
                 //MessageBox.Show("Login Successful");
 
                 //Potential resource leak here ask for better solution
-                usersTableAdapter1.GetData();
+                username = txtUsername.Text;
+                password = txtPassword.Text;
+                valid = (int)usersTableAdapter.LoginValidation(username, password);
+            if (valid > 0)
+            {
+                MessageBox.Show("Login Successful.");
+                
                 Form2 Dashboard = new Form2();
-                //this.Visible = false;
-
-                //Dashboard.ShowDialog();
-                //this.DestroyHandle();
-                //this.Close();
-                //this.Visible = true;
+                this.Visible = false;
+                
+                Dashboard.ShowDialog();
+                this.DestroyHandle();
+                this.Close();
+                
             }
             else
             {
                 //TODO: error invalid user.
-                MessageBox.Show("Login Failed");
+                MessageBox.Show("Login Failed.");
             }
         }
 
@@ -54,11 +60,21 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'iReserveDBDataSet.users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.iReserveDBDataSet.users);
            
         }
 
         private void usersBindingNavigator_RefreshItems(object sender, EventArgs e)
         {
+
+        }
+
+        private void usersBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.iReserveDBDataSet);
 
         }
     }

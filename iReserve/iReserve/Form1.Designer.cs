@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -35,9 +36,13 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblBuild = new System.Windows.Forms.Label();
-            this.iReserveDBDataSet1 = new WindowsFormsApplication1.iReserveDBDataSet();
-            this.usersTableAdapter1 = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.usersTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet1)).BeginInit();
+            this.iReserveDBDataSet = new WindowsFormsApplication1.iReserveDBDataSet();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.usersTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager();
+            this.schedulesTableAdapter1 = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.schedulesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -102,20 +107,39 @@
             this.lblBuild.TabIndex = 6;
             this.lblBuild.Text = "iReserve Build 0.0.1";
             // 
-            // iReserveDBDataSet1
+            // iReserveDBDataSet
             // 
-            this.iReserveDBDataSet1.DataSetName = "iReserveDBDataSet";
-            this.iReserveDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.iReserveDBDataSet.DataSetName = "iReserveDBDataSet";
+            this.iReserveDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // usersTableAdapter1
+            // usersBindingSource
             // 
-            this.usersTableAdapter1.ClearBeforeFill = true;
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.iReserveDBDataSet;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.floorsTableAdapter = null;
+            this.tableAdapterManager.reservationsTableAdapter = null;
+            this.tableAdapterManager.roomsTableAdapter = null;
+            this.tableAdapterManager.schedulesTableAdapter = this.schedulesTableAdapter1;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
+            // 
+            // schedulesTableAdapter1
+            // 
+            this.schedulesTableAdapter1.ClearBeforeFill = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 277);
+            this.ClientSize = new System.Drawing.Size(380, 310);
             this.ControlBox = false;
             this.Controls.Add(this.lblBuild);
             this.Controls.Add(this.btnExit);
@@ -129,7 +153,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "iReserve";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,8 +169,11 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblBuild;
-        private iReserveDBDataSet iReserveDBDataSet1;
-        private iReserveDBDataSetTableAdapters.usersTableAdapter usersTableAdapter1;
+        private iReserveDBDataSet iReserveDBDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private iReserveDBDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private iReserveDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private iReserveDBDataSetTableAdapters.schedulesTableAdapter schedulesTableAdapter1;
     }
 }
 
