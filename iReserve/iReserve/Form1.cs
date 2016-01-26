@@ -77,5 +77,23 @@ namespace WindowsFormsApplication1
             this.tableAdapterManager.UpdateAll(this.iReserveDBDataSet);
 
         }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if enter key is pressed
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if enter key is pressed
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
     }
 }
