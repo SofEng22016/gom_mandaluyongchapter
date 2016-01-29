@@ -5324,7 +5324,7 @@ namespace WindowsFormsApplication1.iReserveDBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> LoginValidation(string username, string password) {
+        public virtual object LoginValidation(string username, string password) {
             global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[1];
             if ((username == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -5354,10 +5354,10 @@ namespace WindowsFormsApplication1.iReserveDBDataSetTableAdapters {
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
+                return null;
             }
             else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
+                return ((object)(returnValue));
             }
         }
     }
