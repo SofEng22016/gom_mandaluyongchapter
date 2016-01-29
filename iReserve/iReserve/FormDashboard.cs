@@ -23,5 +23,11 @@ namespace WindowsFormsApplication1
                 //this.Close();
                 
         }
+
+        private void btnAddFloor_Click(object sender, EventArgs e)
+        {
+            AddFloor af = new AddFloor();
+            af.ShowDialog();
+        }
     }
 }

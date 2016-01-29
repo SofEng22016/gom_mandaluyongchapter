@@ -107,7 +107,7 @@
             this.lblBuild.Name = "lblBuild";
             this.lblBuild.Size = new System.Drawing.Size(135, 17);
             this.lblBuild.TabIndex = 6;
-            this.lblBuild.Text = "iReserve Build 0.0.1";
+            this.lblBuild.Text = "iReserve Build 0.1.2";
             // 
             // iReserveDBDataSet
             // 

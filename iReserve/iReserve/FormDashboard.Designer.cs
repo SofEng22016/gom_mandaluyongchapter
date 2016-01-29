@@ -51,6 +51,7 @@
             this.btnAddFloor.TabIndex = 7;
             this.btnAddFloor.Text = "Add Floor";
             this.btnAddFloor.UseVisualStyleBackColor = true;
+            this.btnAddFloor.Click += new System.EventHandler(this.btnAddFloor_Click);
             // 
             // btnAddRoom
             // 
