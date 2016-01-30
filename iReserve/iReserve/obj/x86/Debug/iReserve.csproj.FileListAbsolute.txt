@@ -6,7 +6,12 @@ C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj
 C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\iReserve.pdb
 C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\iReserve.csprojResolveAssemblyReference.cache
 C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\bin\Debug\iReserve.exe.config
-C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\bin\Debug\iReserveDB.mdb
 C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.AddFloor.resources
 C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.frmLogin.resources
 C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.frmDashboard.resources
+C:\Users\ralphbausas\Documents\Visual Studio 2010\Projects\iReserve\iReserve\bin\Debug\iReserveDBDataSet.cs
+C:\Users\ralphbausas\Documents\Visual Studio 2010\Projects\iReserve\iReserve\bin\Debug\iReserveDBDataSet.Designer.cs
+C:\Users\ralphbausas\Documents\Visual Studio 2010\Projects\iReserve\iReserve\bin\Debug\iReserveDBDataSet.xsc
+C:\Users\ralphbausas\Documents\Visual Studio 2010\Projects\iReserve\iReserve\bin\Debug\iReserveDBDataSet.xsd
+C:\Users\ralphbausas\Documents\Visual Studio 2010\Projects\iReserve\iReserve\bin\Debug\iReserveDBDataSet.xss
+C:\Users\ralphbausas\Documents\Visual Studio 2010\Projects\iReserve\iReserve\bin\Debug\iReserveDB.mdb

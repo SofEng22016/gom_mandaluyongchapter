@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -43,9 +44,19 @@ namespace WindowsFormsApplication1
         private void btnDone_Click(object sender, EventArgs e)
         {
             //DO SQL stuff
-            floorsTableAdapter1.AddFloor(this.txtFloorName.Text);
-            MessageBox.Show("Added Floor: " + this.txtFloorName.Text);
-            this.DestroyHandle();
+            
+            try
+            {
+                floorsTableAdapter1.AddFloor(this.txtFloorName.Text);
+                floorsTableAdapter1.Update(this.iReserveDBDataSet);
+
+                MessageBox.Show("Added Floor: " + this.txtFloorName.Text);
+            }
+            catch(Exception ex){
+                MessageBox.Show("Insert Failed");
+            }
+            
+            //this.DestroyHandle();
             this.Close();
         }
 

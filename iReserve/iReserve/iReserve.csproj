@@ -73,11 +73,13 @@
     <Compile Include="iReserveDBDataSet.cs">
       <DependentUpon>iReserveDBDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="iReserveDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>iReserveDBDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,14 +104,17 @@
     <None Include="app.config" />
     <None Include="iReserveDBDataSet.xsc">
       <DependentUpon>iReserveDBDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="iReserveDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>iReserveDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="iReserveDBDataSet.xss">
       <DependentUpon>iReserveDBDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
