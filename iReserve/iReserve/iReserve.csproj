@@ -83,6 +83,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveRoom.Designer.cs">
+      <DependentUpon>RemoveRoom.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddFloor.resx">
       <DependentUpon>AddFloor.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +107,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RemoveRoom.resx">
+      <DependentUpon>RemoveRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="iReserveDBDataSet.xsc">
       <DependentUpon>iReserveDBDataSet.xsd</DependentUpon>

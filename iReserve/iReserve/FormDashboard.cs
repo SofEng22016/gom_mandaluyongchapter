@@ -29,5 +29,11 @@ namespace WindowsFormsApplication1
             AddFloor af = new AddFloor();
             af.ShowDialog();
         }
+
+        private void btnRemoveRoom_Click(object sender, EventArgs e)
+        {
+            RemoveRoom removeRoom = new RemoveRoom();
+            removeRoom.ShowDialog();
+        }
     }
 }

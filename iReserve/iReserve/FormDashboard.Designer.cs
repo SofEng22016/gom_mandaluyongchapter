@@ -31,6 +31,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnAddFloor = new System.Windows.Forms.Button();
             this.btnAddRoom = new System.Windows.Forms.Button();
+            this.btnRemoveRoom = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -62,12 +63,23 @@
             this.btnAddRoom.Text = "Add Room";
             this.btnAddRoom.UseVisualStyleBackColor = true;
             // 
+            // btnRemoveRoom
+            // 
+            this.btnRemoveRoom.Location = new System.Drawing.Point(13, 71);
+            this.btnRemoveRoom.Name = "btnRemoveRoom";
+            this.btnRemoveRoom.Size = new System.Drawing.Size(143, 23);
+            this.btnRemoveRoom.TabIndex = 9;
+            this.btnRemoveRoom.Text = "Remove Room";
+            this.btnRemoveRoom.UseVisualStyleBackColor = true;
+            this.btnRemoveRoom.Click += new System.EventHandler(this.btnRemoveRoom_Click);
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 253);
             this.ControlBox = false;
+            this.Controls.Add(this.btnRemoveRoom);
             this.Controls.Add(this.btnAddRoom);
             this.Controls.Add(this.btnAddFloor);
             this.Controls.Add(this.btnExit);
@@ -84,5 +96,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnAddFloor;
         private System.Windows.Forms.Button btnAddRoom;
+        private System.Windows.Forms.Button btnRemoveRoom;
     }
 }

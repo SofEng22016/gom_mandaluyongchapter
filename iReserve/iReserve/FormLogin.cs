@@ -62,7 +62,14 @@ namespace WindowsFormsApplication1
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'iReserveDBDataSet.users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.iReserveDBDataSet.users);
+            try
+            {
+                this.usersTableAdapter.Fill(this.iReserveDBDataSet.users);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB file not found please quit the application and supply the file.");
+            }
            
         }
 
