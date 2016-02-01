@@ -32,6 +32,7 @@ namespace WindowsFormsApplication1
 
         private void btnRemoveRoom_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show("Please Delete Records one at a time.");
             RemoveRoom removeRoom = new RemoveRoom();
             removeRoom.ShowDialog();
         }

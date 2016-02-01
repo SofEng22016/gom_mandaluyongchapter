@@ -87,18 +87,43 @@ namespace WindowsFormsApplication1
         {
             try
             {
+                String toMessage = "";
                 this.Validate();
                 this.roomsBindingSource.EndEdit();
                 this.iReserveDBDataSet.AcceptChanges();
                 //this.roomsTableAdapter.Update(this.iReserveDBDataSet.rooms);
-                MessageBox.Show("Update successful");
-                this.Close();
+                
+                foreach (DataGridViewRow row in roomsDataGridView.SelectedRows)
+                {
+                    String value1 = row.Cells[0].Value.ToString();
+                    String value2 = row.Cells[1].Value.ToString();
+                    String value3 = row.Cells[2].Value.ToString();
+                    toMessage += "Room: " + value2 + " " + value3 + "\n";  
+                    if(MessageBox.Show("Are you sure you want to delete\n"+toMessage, "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK){
+                    roomsTableAdapter.DeleteRoom(Convert.ToInt32(value1));
+                    //code to refill the table
+                    this.roomsTableAdapter.FillByFloor(this.iReserveDBDataSet.rooms, (int)this.floorsTableAdapter.GetID(this.comboBox1.Text));
+                    }
+                     
+                }
+                
+                //MessageBox.Show("Update successful");
+                //this.Close();
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.StackTrace);
                 MessageBox.Show("Update failed");
-                this.Close();
+                //this.Close();
+            }
+        }
+
+        private void roomsDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if delete is pressed for ease of use
+            if (e.KeyCode == Keys.Delete)
+            {
+                button1_Click(sender, e);
             }
         }
 
