@@ -28,14 +28,14 @@ namespace WindowsFormsApplication1
             if (valid == 0)
             {
                 this.btnDone.Enabled = true;
-                this.lblMessage.Text = "Room Name available please click finish.";
+                this.lblMessage.Text = "Floor name available please click finish.";
                 this.lblMessage.Visible = true;
                 this.lblMessage.ForeColor = this.lblGreen.ForeColor;
             }
             else
             {
                 this.btnDone.Enabled = false;
-                this.lblMessage.Text = "Room Name taken please select a new one.";
+                this.lblMessage.Text = "Floor name taken please select a new one.";
                 this.lblMessage.Visible = true;
                 this.lblMessage.ForeColor = this.lblRed.ForeColor;
             }
@@ -53,6 +53,7 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("Added Floor: " + this.txtFloorName.Text);
             }
             catch(Exception ex){
+                MessageBox.Show(ex.StackTrace);
                 MessageBox.Show("Insert Failed");
             }
             

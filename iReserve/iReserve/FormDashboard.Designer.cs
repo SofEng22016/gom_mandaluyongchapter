@@ -62,6 +62,7 @@
             this.btnAddRoom.TabIndex = 8;
             this.btnAddRoom.Text = "Add Room";
             this.btnAddRoom.UseVisualStyleBackColor = true;
+            this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             // 
             // btnRemoveRoom
             // 

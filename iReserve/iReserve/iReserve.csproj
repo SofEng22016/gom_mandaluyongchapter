@@ -92,6 +92,9 @@
     <EmbeddedResource Include="AddFloor.resx">
       <DependentUpon>AddFloor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddRoom.resx">
+      <DependentUpon>AddRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>

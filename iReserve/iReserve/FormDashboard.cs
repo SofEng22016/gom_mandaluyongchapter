@@ -36,5 +36,10 @@ namespace WindowsFormsApplication1
             RemoveRoom removeRoom = new RemoveRoom();
             removeRoom.ShowDialog();
         }
+
+        private void btnAddRoom_Click(object sender, EventArgs e)
+        {
+            new AddRoom().ShowDialog();
+        }
     }
 }

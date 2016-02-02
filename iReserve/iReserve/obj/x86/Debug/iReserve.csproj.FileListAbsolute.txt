@@ -16,3 +16,4 @@ C:\Users\ralphbausas\Documents\Visual Studio 2010\Projects\iReserve\iReserve\bin
 C:\Users\ralphbausas\Documents\Visual Studio 2010\Projects\iReserve\iReserve\bin\Debug\iReserveDBDataSet.xss
 C:\Users\ralphbausas\Documents\Visual Studio 2010\Projects\iReserve\iReserve\bin\Debug\iReserveDB.mdb
 C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.RemoveRoom.resources
+C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.AddRoom.resources
