@@ -39,9 +39,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRemoveFloor = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnViewReservation = new System.Windows.Forms.Button();
-            this.btnMakeReservation = new System.Windows.Forms.Button();
             this.btnViewSchedules = new System.Windows.Forms.Button();
+            this.btnMakeReservation = new System.Windows.Forms.Button();
+            this.btnViewReservation = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.iReserveDBDataSet = new WindowsFormsApplication1.iReserveDBDataSet();
             this.reservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -65,10 +65,10 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(306, 75);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Location = new System.Drawing.Point(408, 92);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(60, 25);
+            this.btnExit.Size = new System.Drawing.Size(80, 31);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -76,10 +76,10 @@
             // 
             // btnAddFloor
             // 
-            this.btnAddFloor.Location = new System.Drawing.Point(18, 18);
-            this.btnAddFloor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddFloor.Location = new System.Drawing.Point(24, 22);
+            this.btnAddFloor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddFloor.Name = "btnAddFloor";
-            this.btnAddFloor.Size = new System.Drawing.Size(101, 25);
+            this.btnAddFloor.Size = new System.Drawing.Size(135, 31);
             this.btnAddFloor.TabIndex = 7;
             this.btnAddFloor.Text = "Add Floor";
             this.btnAddFloor.UseVisualStyleBackColor = true;
@@ -87,10 +87,10 @@
             // 
             // btnAddRoom
             // 
-            this.btnAddRoom.Location = new System.Drawing.Point(18, 47);
-            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddRoom.Location = new System.Drawing.Point(24, 58);
+            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddRoom.Name = "btnAddRoom";
-            this.btnAddRoom.Size = new System.Drawing.Size(101, 25);
+            this.btnAddRoom.Size = new System.Drawing.Size(135, 31);
             this.btnAddRoom.TabIndex = 8;
             this.btnAddRoom.Text = "Add Room";
             this.btnAddRoom.UseVisualStyleBackColor = true;
@@ -98,10 +98,10 @@
             // 
             // btnRemoveRoom
             // 
-            this.btnRemoveRoom.Location = new System.Drawing.Point(18, 114);
-            this.btnRemoveRoom.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRemoveRoom.Location = new System.Drawing.Point(24, 140);
+            this.btnRemoveRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemoveRoom.Name = "btnRemoveRoom";
-            this.btnRemoveRoom.Size = new System.Drawing.Size(101, 25);
+            this.btnRemoveRoom.Size = new System.Drawing.Size(135, 31);
             this.btnRemoveRoom.TabIndex = 9;
             this.btnRemoveRoom.Text = "Remove Room";
             this.btnRemoveRoom.UseVisualStyleBackColor = true;
@@ -109,10 +109,10 @@
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(306, 47);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogOut.Location = new System.Drawing.Point(408, 58);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(60, 25);
+            this.btnLogOut.Size = new System.Drawing.Size(80, 31);
             this.btnLogOut.TabIndex = 10;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
@@ -120,18 +120,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(306, 9);
+            this.label1.Location = new System.Drawing.Point(408, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.Size = new System.Drawing.Size(72, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "22/1/2016";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(318, 23);
+            this.label2.Location = new System.Drawing.Point(424, 28);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(44, 17);
             this.label2.TabIndex = 12;
             this.label2.Text = "21:00";
             // 
@@ -141,19 +143,21 @@
             this.groupBox1.Controls.Add(this.btnAddFloor);
             this.groupBox1.Controls.Add(this.btnAddRoom);
             this.groupBox1.Controls.Add(this.btnRemoveRoom);
-            this.groupBox1.Location = new System.Drawing.Point(266, 122);
+            this.groupBox1.Location = new System.Drawing.Point(355, 150);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(132, 150);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(176, 185);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Building Modification";
             // 
             // btnRemoveFloor
             // 
-            this.btnRemoveFloor.Location = new System.Drawing.Point(18, 85);
-            this.btnRemoveFloor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRemoveFloor.Location = new System.Drawing.Point(24, 105);
+            this.btnRemoveFloor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemoveFloor.Name = "btnRemoveFloor";
-            this.btnRemoveFloor.Size = new System.Drawing.Size(101, 25);
+            this.btnRemoveFloor.Size = new System.Drawing.Size(135, 31);
             this.btnRemoveFloor.TabIndex = 10;
             this.btnRemoveFloor.Text = "Remove Floor";
             this.btnRemoveFloor.UseVisualStyleBackColor = true;
@@ -163,48 +167,52 @@
             this.groupBox2.Controls.Add(this.btnViewSchedules);
             this.groupBox2.Controls.Add(this.btnMakeReservation);
             this.groupBox2.Controls.Add(this.btnViewReservation);
-            this.groupBox2.Location = new System.Drawing.Point(13, 9);
+            this.groupBox2.Location = new System.Drawing.Point(17, 11);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(287, 91);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(383, 112);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Manage Schedule";
             // 
-            // btnViewReservation
-            // 
-            this.btnViewReservation.Location = new System.Drawing.Point(21, 57);
-            this.btnViewReservation.Name = "btnViewReservation";
-            this.btnViewReservation.Size = new System.Drawing.Size(247, 25);
-            this.btnViewReservation.TabIndex = 0;
-            this.btnViewReservation.Text = "View / Cancel Reservations";
-            this.btnViewReservation.UseVisualStyleBackColor = true;
-            // 
-            // btnMakeReservation
-            // 
-            this.btnMakeReservation.Location = new System.Drawing.Point(21, 18);
-            this.btnMakeReservation.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMakeReservation.Name = "btnMakeReservation";
-            this.btnMakeReservation.Size = new System.Drawing.Size(120, 25);
-            this.btnMakeReservation.TabIndex = 11;
-            this.btnMakeReservation.Text = "Make Reservation";
-            this.btnMakeReservation.UseVisualStyleBackColor = true;
-            // 
             // btnViewSchedules
             // 
-            this.btnViewSchedules.Location = new System.Drawing.Point(148, 18);
-            this.btnViewSchedules.Margin = new System.Windows.Forms.Padding(2);
+            this.btnViewSchedules.Location = new System.Drawing.Point(197, 22);
+            this.btnViewSchedules.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewSchedules.Name = "btnViewSchedules";
-            this.btnViewSchedules.Size = new System.Drawing.Size(120, 25);
+            this.btnViewSchedules.Size = new System.Drawing.Size(160, 31);
             this.btnViewSchedules.TabIndex = 12;
             this.btnViewSchedules.Text = "View All Schedules";
             this.btnViewSchedules.UseVisualStyleBackColor = true;
             // 
+            // btnMakeReservation
+            // 
+            this.btnMakeReservation.Location = new System.Drawing.Point(28, 22);
+            this.btnMakeReservation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMakeReservation.Name = "btnMakeReservation";
+            this.btnMakeReservation.Size = new System.Drawing.Size(160, 31);
+            this.btnMakeReservation.TabIndex = 11;
+            this.btnMakeReservation.Text = "Make Reservation";
+            this.btnMakeReservation.UseVisualStyleBackColor = true;
+            // 
+            // btnViewReservation
+            // 
+            this.btnViewReservation.Location = new System.Drawing.Point(28, 70);
+            this.btnViewReservation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnViewReservation.Name = "btnViewReservation";
+            this.btnViewReservation.Size = new System.Drawing.Size(329, 31);
+            this.btnViewReservation.TabIndex = 0;
+            this.btnViewReservation.Text = "View / Cancel Reservations";
+            this.btnViewReservation.UseVisualStyleBackColor = true;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 107);
+            this.label3.Location = new System.Drawing.Point(17, 132);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 13);
+            this.label3.Size = new System.Drawing.Size(153, 17);
             this.label3.TabIndex = 15;
             this.label3.Text = "Today\'s Reservations: ";
             // 
@@ -246,9 +254,10 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.reservationsDataGridView.DataSource = this.reservationsBindingSource;
-            this.reservationsDataGridView.Location = new System.Drawing.Point(16, 135);
+            this.reservationsDataGridView.Location = new System.Drawing.Point(21, 166);
+            this.reservationsDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reservationsDataGridView.Name = "reservationsDataGridView";
-            this.reservationsDataGridView.Size = new System.Drawing.Size(244, 131);
+            this.reservationsDataGridView.Size = new System.Drawing.Size(325, 161);
             this.reservationsDataGridView.TabIndex = 16;
             // 
             // dataGridViewTextBoxColumn1
@@ -307,9 +316,9 @@
             // 
             // frmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 284);
+            this.ClientSize = new System.Drawing.Size(573, 371);
             this.ControlBox = false;
             this.Controls.Add(this.reservationsDataGridView);
             this.Controls.Add(this.label3);
@@ -320,7 +329,7 @@
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
