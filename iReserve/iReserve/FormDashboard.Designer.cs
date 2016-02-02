@@ -28,17 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnAddFloor = new System.Windows.Forms.Button();
             this.btnAddRoom = new System.Windows.Forms.Button();
             this.btnRemoveRoom = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRemoveFloor = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnViewReservation = new System.Windows.Forms.Button();
+            this.btnMakeReservation = new System.Windows.Forms.Button();
+            this.btnViewSchedules = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.iReserveDBDataSet = new WindowsFormsApplication1.iReserveDBDataSet();
+            this.reservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reservationsTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.reservationsTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager();
+            this.reservationsDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservationsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(177, 185);
+            this.btnExit.Location = new System.Drawing.Point(306, 75);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(80, 32);
+            this.btnExit.Size = new System.Drawing.Size(60, 25);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -46,9 +76,10 @@
             // 
             // btnAddFloor
             // 
-            this.btnAddFloor.Location = new System.Drawing.Point(12, 12);
+            this.btnAddFloor.Location = new System.Drawing.Point(18, 18);
+            this.btnAddFloor.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddFloor.Name = "btnAddFloor";
-            this.btnAddFloor.Size = new System.Drawing.Size(110, 23);
+            this.btnAddFloor.Size = new System.Drawing.Size(101, 25);
             this.btnAddFloor.TabIndex = 7;
             this.btnAddFloor.Text = "Add Floor";
             this.btnAddFloor.UseVisualStyleBackColor = true;
@@ -56,9 +87,10 @@
             // 
             // btnAddRoom
             // 
-            this.btnAddRoom.Location = new System.Drawing.Point(13, 42);
+            this.btnAddRoom.Location = new System.Drawing.Point(18, 47);
+            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddRoom.Name = "btnAddRoom";
-            this.btnAddRoom.Size = new System.Drawing.Size(109, 23);
+            this.btnAddRoom.Size = new System.Drawing.Size(101, 25);
             this.btnAddRoom.TabIndex = 8;
             this.btnAddRoom.Text = "Add Room";
             this.btnAddRoom.UseVisualStyleBackColor = true;
@@ -66,29 +98,240 @@
             // 
             // btnRemoveRoom
             // 
-            this.btnRemoveRoom.Location = new System.Drawing.Point(13, 71);
+            this.btnRemoveRoom.Location = new System.Drawing.Point(18, 114);
+            this.btnRemoveRoom.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoveRoom.Name = "btnRemoveRoom";
-            this.btnRemoveRoom.Size = new System.Drawing.Size(143, 23);
+            this.btnRemoveRoom.Size = new System.Drawing.Size(101, 25);
             this.btnRemoveRoom.TabIndex = 9;
             this.btnRemoveRoom.Text = "Remove Room";
             this.btnRemoveRoom.UseVisualStyleBackColor = true;
             this.btnRemoveRoom.Click += new System.EventHandler(this.btnRemoveRoom_Click);
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Location = new System.Drawing.Point(306, 47);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(60, 25);
+            this.btnLogOut.TabIndex = 10;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(306, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "22/1/2016";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(318, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "21:00";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnRemoveFloor);
+            this.groupBox1.Controls.Add(this.btnAddFloor);
+            this.groupBox1.Controls.Add(this.btnAddRoom);
+            this.groupBox1.Controls.Add(this.btnRemoveRoom);
+            this.groupBox1.Location = new System.Drawing.Point(266, 122);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(132, 150);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Building Modification";
+            // 
+            // btnRemoveFloor
+            // 
+            this.btnRemoveFloor.Location = new System.Drawing.Point(18, 85);
+            this.btnRemoveFloor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRemoveFloor.Name = "btnRemoveFloor";
+            this.btnRemoveFloor.Size = new System.Drawing.Size(101, 25);
+            this.btnRemoveFloor.TabIndex = 10;
+            this.btnRemoveFloor.Text = "Remove Floor";
+            this.btnRemoveFloor.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnViewSchedules);
+            this.groupBox2.Controls.Add(this.btnMakeReservation);
+            this.groupBox2.Controls.Add(this.btnViewReservation);
+            this.groupBox2.Location = new System.Drawing.Point(13, 9);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(287, 91);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Manage Schedule";
+            // 
+            // btnViewReservation
+            // 
+            this.btnViewReservation.Location = new System.Drawing.Point(21, 57);
+            this.btnViewReservation.Name = "btnViewReservation";
+            this.btnViewReservation.Size = new System.Drawing.Size(247, 25);
+            this.btnViewReservation.TabIndex = 0;
+            this.btnViewReservation.Text = "View / Cancel Reservations";
+            this.btnViewReservation.UseVisualStyleBackColor = true;
+            // 
+            // btnMakeReservation
+            // 
+            this.btnMakeReservation.Location = new System.Drawing.Point(21, 18);
+            this.btnMakeReservation.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMakeReservation.Name = "btnMakeReservation";
+            this.btnMakeReservation.Size = new System.Drawing.Size(120, 25);
+            this.btnMakeReservation.TabIndex = 11;
+            this.btnMakeReservation.Text = "Make Reservation";
+            this.btnMakeReservation.UseVisualStyleBackColor = true;
+            // 
+            // btnViewSchedules
+            // 
+            this.btnViewSchedules.Location = new System.Drawing.Point(148, 18);
+            this.btnViewSchedules.Margin = new System.Windows.Forms.Padding(2);
+            this.btnViewSchedules.Name = "btnViewSchedules";
+            this.btnViewSchedules.Size = new System.Drawing.Size(120, 25);
+            this.btnViewSchedules.TabIndex = 12;
+            this.btnViewSchedules.Text = "View All Schedules";
+            this.btnViewSchedules.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Today\'s Reservations: ";
+            // 
+            // iReserveDBDataSet
+            // 
+            this.iReserveDBDataSet.DataSetName = "iReserveDBDataSet";
+            this.iReserveDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reservationsBindingSource
+            // 
+            this.reservationsBindingSource.DataMember = "reservations";
+            this.reservationsBindingSource.DataSource = this.iReserveDBDataSet;
+            // 
+            // reservationsTableAdapter
+            // 
+            this.reservationsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.floorsTableAdapter = null;
+            this.tableAdapterManager.reservationsTableAdapter = this.reservationsTableAdapter;
+            this.tableAdapterManager.roomsTableAdapter = null;
+            this.tableAdapterManager.schedulesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = null;
+            // 
+            // reservationsDataGridView
+            // 
+            this.reservationsDataGridView.AutoGenerateColumns = false;
+            this.reservationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.reservationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.reservationsDataGridView.DataSource = this.reservationsBindingSource;
+            this.reservationsDataGridView.Location = new System.Drawing.Point(16, 135);
+            this.reservationsDataGridView.Name = "reservationsDataGridView";
+            this.reservationsDataGridView.Size = new System.Drawing.Size(244, 131);
+            this.reservationsDataGridView.TabIndex = 16;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "reservee";
+            this.dataGridViewTextBoxColumn2.HeaderText = "reservee";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "admin";
+            this.dataGridViewTextBoxColumn3.HeaderText = "admin";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "roomID";
+            this.dataGridViewTextBoxColumn4.HeaderText = "RoomId";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Purpose";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Purpose";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "term";
+            this.dataGridViewTextBoxColumn6.HeaderText = "term";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "sy";
+            this.dataGridViewTextBoxColumn7.HeaderText = "sy";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "dateReserved";
+            this.dataGridViewTextBoxColumn8.HeaderText = "dateReserved";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Visible = false;
+            // 
             // frmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.ClientSize = new System.Drawing.Size(406, 284);
             this.ControlBox = false;
-            this.Controls.Add(this.btnRemoveRoom);
-            this.Controls.Add(this.btnAddRoom);
-            this.Controls.Add(this.btnAddFloor);
+            this.Controls.Add(this.reservationsDataGridView);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.frmDashboard_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservationsDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -98,5 +341,28 @@
         private System.Windows.Forms.Button btnAddFloor;
         private System.Windows.Forms.Button btnAddRoom;
         private System.Windows.Forms.Button btnRemoveRoom;
+        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnRemoveFloor;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnViewSchedules;
+        private System.Windows.Forms.Button btnMakeReservation;
+        private System.Windows.Forms.Button btnViewReservation;
+        private System.Windows.Forms.Label label3;
+        private iReserveDBDataSet iReserveDBDataSet;
+        private System.Windows.Forms.BindingSource reservationsBindingSource;
+        private iReserveDBDataSetTableAdapters.reservationsTableAdapter reservationsTableAdapter;
+        private iReserveDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView reservationsDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

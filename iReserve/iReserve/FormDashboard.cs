@@ -41,5 +41,22 @@ namespace WindowsFormsApplication1
         {
             new AddRoom().ShowDialog();
         }
+
+        private void reservationsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.reservationsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.iReserveDBDataSet);
+
+        }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'iReserveDBDataSet.reservations' table. You can move, or remove it, as needed.
+            this.reservationsTableAdapter.Fill(this.iReserveDBDataSet.reservations);
+
+        }
+
+        
     }
 }
