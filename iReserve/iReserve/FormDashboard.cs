@@ -57,6 +57,16 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnRemoveFloor_Click(object sender, EventArgs e)
+        {
+            new RemoveFloor().ShowDialog();
+        }
+
         
     }
 }

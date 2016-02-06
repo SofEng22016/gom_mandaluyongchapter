@@ -16,6 +16,11 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void floorsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -31,11 +36,6 @@ namespace WindowsFormsApplication1
             // TODO: This line of code loads data into the 'iReserveDBDataSet.floors' table. You can move, or remove it, as needed.
             this.floorsTableAdapter.Fill(this.iReserveDBDataSet.floors);
 
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

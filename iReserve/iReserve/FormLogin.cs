@@ -42,9 +42,15 @@ namespace WindowsFormsApplication1
                 this.Visible = false;
                 
                 Dashboard.ShowDialog();
-                this.DestroyHandle();
-                this.Close();
-                
+                try
+                {
+                    this.txtPassword.Text = "";
+                    this.txtUsername.Text = "";
+                    this.Visible = true;
+                }
+                catch (Exception ex)
+                {
+                }
             }
             else
             {

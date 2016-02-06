@@ -739,6 +739,10 @@ namespace WindowsFormsApplication1 {
             
             private global::System.Data.DataColumn columndateReserved;
             
+            private global::System.Data.DataColumn columnendTime;
+            
+            private global::System.Data.DataColumn columnstartTime;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public reservationsDataTable() {
@@ -838,6 +842,22 @@ namespace WindowsFormsApplication1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn endTimeColumn {
+                get {
+                    return this.columnendTime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn startTimeColumn {
+                get {
+                    return this.columnstartTime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -873,7 +893,7 @@ namespace WindowsFormsApplication1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public reservationsRow AddreservationsRow(string reservee, usersRow parentusersRowByusersreservations, schedulesRow parentschedulesRowByschedulesreservations, string Purpose, int term, int sy, int dateReserved) {
+            public reservationsRow AddreservationsRow(string reservee, usersRow parentusersRowByusersreservations, schedulesRow parentschedulesRowByschedulesreservations, string Purpose, int term, int sy, int dateReserved, System.DateTime endTime, System.DateTime startTime) {
                 reservationsRow rowreservationsRow = ((reservationsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -883,7 +903,9 @@ namespace WindowsFormsApplication1 {
                         Purpose,
                         term,
                         sy,
-                        dateReserved};
+                        dateReserved,
+                        endTime,
+                        startTime};
                 if ((parentusersRowByusersreservations != null)) {
                     columnValuesArray[2] = parentusersRowByusersreservations[0];
                 }
@@ -927,6 +949,8 @@ namespace WindowsFormsApplication1 {
                 this.columnterm = base.Columns["term"];
                 this.columnsy = base.Columns["sy"];
                 this.columndateReserved = base.Columns["dateReserved"];
+                this.columnendTime = base.Columns["endTime"];
+                this.columnstartTime = base.Columns["startTime"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -948,6 +972,10 @@ namespace WindowsFormsApplication1 {
                 base.Columns.Add(this.columnsy);
                 this.columndateReserved = new global::System.Data.DataColumn("dateReserved", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndateReserved);
+                this.columnendTime = new global::System.Data.DataColumn("endTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnendTime);
+                this.columnstartTime = new global::System.Data.DataColumn("startTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstartTime);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -2294,6 +2322,38 @@ namespace WindowsFormsApplication1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime endTime {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablereservations.endTimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'endTime\' in table \'reservations\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablereservations.endTimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime startTime {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablereservations.startTimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'startTime\' in table \'reservations\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablereservations.startTimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public schedulesRow schedulesRow {
                 get {
                     return ((schedulesRow)(this.GetParentRow(this.Table.ParentRelations["schedulesreservations"])));
@@ -2396,6 +2456,30 @@ namespace WindowsFormsApplication1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetdateReservedNull() {
                 this[this.tablereservations.dateReservedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsendTimeNull() {
+                return this.IsNull(this.tablereservations.endTimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetendTimeNull() {
+                this[this.tablereservations.endTimeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsstartTimeNull() {
+                return this.IsNull(this.tablereservations.startTimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetstartTimeNull() {
+                this[this.tablereservations.startTimeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4264,7 +4348,7 @@ namespace WindowsFormsApplication1.iReserveDBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[5];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[6];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, roomName, description, floor, reservationID FROM rooms";
@@ -4292,6 +4376,11 @@ namespace WindowsFormsApplication1.iReserveDBDataSetTableAdapters {
             this._commandCollection[4].CommandText = "SELECT ID, roomName, description\r\nFROM     rooms\r\nWhere floor = ?";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("floor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "floor", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[5] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT COUNT(*) AS Expr1\r\nFROM     rooms\r\nWHERE  (floor = ?)";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("floor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "floor", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4657,6 +4746,40 @@ namespace WindowsFormsApplication1.iReserveDBDataSetTableAdapters {
                 }
             }
             return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> isFloorEmpty(global::System.Nullable<int> floor) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[5];
+            if ((floor.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(floor.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
         }
     }
     

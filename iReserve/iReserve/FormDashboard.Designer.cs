@@ -43,10 +43,6 @@
             this.btnMakeReservation = new System.Windows.Forms.Button();
             this.btnViewReservation = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.iReserveDBDataSet = new WindowsFormsApplication1.iReserveDBDataSet();
-            this.reservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reservationsTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.reservationsTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager();
             this.reservationsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,11 +52,15 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iReserveDBDataSet = new WindowsFormsApplication1.iReserveDBDataSet();
+            this.reservationsTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.reservationsTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -116,6 +116,7 @@
             this.btnLogOut.TabIndex = 10;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // label1
             // 
@@ -144,9 +145,9 @@
             this.groupBox1.Controls.Add(this.btnAddRoom);
             this.groupBox1.Controls.Add(this.btnRemoveRoom);
             this.groupBox1.Location = new System.Drawing.Point(355, 150);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(176, 185);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -161,6 +162,7 @@
             this.btnRemoveFloor.TabIndex = 10;
             this.btnRemoveFloor.Text = "Remove Floor";
             this.btnRemoveFloor.UseVisualStyleBackColor = true;
+            this.btnRemoveFloor.Click += new System.EventHandler(this.btnRemoveFloor_Click);
             // 
             // groupBox2
             // 
@@ -168,9 +170,9 @@
             this.groupBox2.Controls.Add(this.btnMakeReservation);
             this.groupBox2.Controls.Add(this.btnViewReservation);
             this.groupBox2.Location = new System.Drawing.Point(17, 11);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(383, 112);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
@@ -199,7 +201,7 @@
             // btnViewReservation
             // 
             this.btnViewReservation.Location = new System.Drawing.Point(28, 70);
-            this.btnViewReservation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnViewReservation.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewReservation.Name = "btnViewReservation";
             this.btnViewReservation.Size = new System.Drawing.Size(329, 31);
             this.btnViewReservation.TabIndex = 0;
@@ -216,30 +218,6 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Today\'s Reservations: ";
             // 
-            // iReserveDBDataSet
-            // 
-            this.iReserveDBDataSet.DataSetName = "iReserveDBDataSet";
-            this.iReserveDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // reservationsBindingSource
-            // 
-            this.reservationsBindingSource.DataMember = "reservations";
-            this.reservationsBindingSource.DataSource = this.iReserveDBDataSet;
-            // 
-            // reservationsTableAdapter
-            // 
-            this.reservationsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.floorsTableAdapter = null;
-            this.tableAdapterManager.reservationsTableAdapter = this.reservationsTableAdapter;
-            this.tableAdapterManager.roomsTableAdapter = null;
-            this.tableAdapterManager.schedulesTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usersTableAdapter = null;
-            // 
             // reservationsDataGridView
             // 
             this.reservationsDataGridView.AutoGenerateColumns = false;
@@ -255,7 +233,7 @@
             this.dataGridViewTextBoxColumn8});
             this.reservationsDataGridView.DataSource = this.reservationsBindingSource;
             this.reservationsDataGridView.Location = new System.Drawing.Point(21, 166);
-            this.reservationsDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reservationsDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.reservationsDataGridView.Name = "reservationsDataGridView";
             this.reservationsDataGridView.Size = new System.Drawing.Size(325, 161);
             this.reservationsDataGridView.TabIndex = 16;
@@ -314,6 +292,30 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Visible = false;
             // 
+            // reservationsBindingSource
+            // 
+            this.reservationsBindingSource.DataMember = "reservations";
+            this.reservationsBindingSource.DataSource = this.iReserveDBDataSet;
+            // 
+            // iReserveDBDataSet
+            // 
+            this.iReserveDBDataSet.DataSetName = "iReserveDBDataSet";
+            this.iReserveDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reservationsTableAdapter
+            // 
+            this.reservationsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.floorsTableAdapter = null;
+            this.tableAdapterManager.reservationsTableAdapter = this.reservationsTableAdapter;
+            this.tableAdapterManager.roomsTableAdapter = null;
+            this.tableAdapterManager.schedulesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = null;
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -336,9 +338,9 @@
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
