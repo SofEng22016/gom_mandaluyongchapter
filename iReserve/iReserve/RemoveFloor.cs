@@ -37,5 +37,55 @@ namespace WindowsFormsApplication1
             this.floorsTableAdapter.Fill(this.iReserveDBDataSet.floors);
 
         }
+
+        private void cBoxFloors_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.btnRemove.Enabled = false;
+            lblResult.Visible = false;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            //check success
+
+            
+
+            if ((int)roomsTableAdapter.isFloorEmpty((int)floorsTableAdapter.GetID(this.cBoxFloors.Text)) == 0)
+            {
+                btnRemove.Enabled = true;
+                lblResult.ForeColor = Color.Green;
+                lblResult.Visible = true;
+
+                lblResult.Text = "This floor is empty and available for removal";
+            }
+            //floor has rooms
+            else
+            {
+                lblResult.Visible = true;
+                lblResult.ForeColor = Color.Red;
+                lblResult.Text = "This floor still has rooms!";
+
+            }
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            String toMessage = "";
+            this.Validate();
+            this.floorsBindingSource.EndEdit();
+            this.iReserveDBDataSet.AcceptChanges();
+            toMessage += this.cBoxFloors.Text;
+            if (MessageBox.Show("Are you sure you want to delete\n" + toMessage, "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                this.floorsTableAdapter.DeleteFloor(this.cBoxFloors.Text);
+                //TODO: add code to update the data inside the combo box.
+            }
+        }
+
     }
 }

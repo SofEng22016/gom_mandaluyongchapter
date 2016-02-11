@@ -4751,7 +4751,7 @@ namespace WindowsFormsApplication1.iReserveDBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> isFloorEmpty(global::System.Nullable<int> floor) {
+        public virtual object isFloorEmpty(global::System.Nullable<int> floor) {
             global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[5];
             if ((floor.HasValue == true)) {
                 command.Parameters[0].Value = ((int)(floor.Value));
@@ -4775,10 +4775,10 @@ namespace WindowsFormsApplication1.iReserveDBDataSetTableAdapters {
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
+                return null;
             }
             else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
+                return ((object)(returnValue));
             }
         }
     }
