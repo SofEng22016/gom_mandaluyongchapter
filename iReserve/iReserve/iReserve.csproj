@@ -95,6 +95,12 @@
     <Compile Include="RemoveRoom.Designer.cs">
       <DependentUpon>RemoveRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReserveRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReserveRoom.Designer.cs">
+      <DependentUpon>ReserveRoom.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddFloor.resx">
       <DependentUpon>AddFloor.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RemoveRoom.resx">
       <DependentUpon>RemoveRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReserveRoom.resx">
+      <DependentUpon>ReserveRoom.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="iReserveDBDataSet.xsc">

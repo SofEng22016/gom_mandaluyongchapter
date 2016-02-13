@@ -26,15 +26,14 @@ namespace WindowsFormsApplication1
 
         private void btnAddFloor_Click(object sender, EventArgs e)
         {
-            AddFloor af = new AddFloor();
-            af.ShowDialog();
+            new AddFloor().ShowDialog();
         }
 
         private void btnRemoveRoom_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Please Delete Records one at a time.");
-            RemoveRoom removeRoom = new RemoveRoom();
-            removeRoom.ShowDialog();
+            new RemoveRoom().ShowDialog();
+            
         }
 
         private void btnAddRoom_Click(object sender, EventArgs e)
@@ -65,6 +64,11 @@ namespace WindowsFormsApplication1
         private void btnRemoveFloor_Click(object sender, EventArgs e)
         {
             new RemoveFloor().ShowDialog();
+        }
+
+        private void btnMakeReservation_Click(object sender, EventArgs e)
+        {
+            new ReserveRoom().ShowDialog();
         }
 
         

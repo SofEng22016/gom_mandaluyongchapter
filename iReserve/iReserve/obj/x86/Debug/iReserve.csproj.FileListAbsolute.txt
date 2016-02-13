@@ -19,3 +19,4 @@ C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj
 C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.AddRoom.resources
 D:\TV\Generation\iReserve\iReserve\bin\Debug\iReserve.exe.config
 C:\Users\ralphbausas\Documents\Visual Studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.RemoveFloor.resources
+C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ReserveRoom.resources
