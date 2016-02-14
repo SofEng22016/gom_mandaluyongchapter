@@ -12,15 +12,46 @@ namespace WindowsFormsApplication1
     public partial class ReserveRoom : Form
     {
         String strDate = "";
+        String strWeekDay = "";
         String startTime = "";
         String endTime = "";
 
         TimeSpan spanStart;
         TimeSpan spanEnd;
+        
 
-        public String convertToMilitary(String input){
-            //String array[];
-            return "";
+        public int convertToMilitary(String input){
+            String [] array;
+            String [] time;
+            array = input.Split(' ');
+
+            time = array[0].Split(':');
+
+            int hours = Convert.ToInt16(time[0]);
+            int minutes = Convert.ToInt16(time[1]);
+            
+            if (array[1].Equals("PM") && hours != 12)
+            {
+                hours += 12;
+                hours *= 100;
+            }
+            else if (array[1].Equals("PM") && hours == 12)
+            {
+                hours *= 100;
+            }
+            else if (array[1].Equals("AM") && hours == 12)
+            {
+                hours = 0;
+            }
+            else
+            {
+                hours *= 100;
+            }
+
+            
+
+
+            return hours + minutes;
         }
 
         public ReserveRoom()
@@ -28,6 +59,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             this.startTimePicker.CustomFormat = "hh:mm tt";
             this.endTimePicker.CustomFormat = "hh:mm tt";
+            this.btnReserve.Enabled = false;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -38,6 +70,10 @@ namespace WindowsFormsApplication1
         private void dateReserved_ValueChanged(object sender, EventArgs e)
         {
             this.strDate = this.dateReserved.Text;
+            String[] temp;
+            temp = this.strDate.Split(',');
+            this.strWeekDay = temp[0];
+            //MessageBox.Show(this.strWeekDay);
             
         }
 
@@ -46,7 +82,7 @@ namespace WindowsFormsApplication1
             this.startTime = this.startTimePicker.Text;
             
             //TimeSpan.TryParse(this.startTime+"-"+this.endTime, out spanStart);
-            //MessageBox.Show(this.spanStart.ToString());
+            //MessageBox.Show(""+convertToMilitary(this.startTime));
         }
 
         private void endTimePicker_ValueChanged(object sender, EventArgs e)
@@ -54,7 +90,7 @@ namespace WindowsFormsApplication1
             this.endTime = this.endTimePicker.Text;
             
             //TimeSpan.TryParse(this.startTime, out spanEnd);
-            //MessageBox.Show(this.spanEnd.ToString());
+            //MessageBox.Show("" + convertToMilitary(this.endTime));
         }
 
         private void floorsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -94,6 +130,11 @@ namespace WindowsFormsApplication1
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                this.lblResult.Visible = false;
+                this.btnReserve.Enabled = false;
+            }
         }
 
         private void roomsDataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -105,6 +146,10 @@ namespace WindowsFormsApplication1
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
+            //Check for conflicts with schedules
+
+            //Check for conflicts with reservations
+
             if (MessageBox.Show("Simulate", "Simulate", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 //if there is no conflict within the schedule on the said room
@@ -112,6 +157,7 @@ namespace WindowsFormsApplication1
                 lblResult.Text = "The Schedule is Available!";
                 lblResult.ForeColor = Color.Green;
                 lblResult.Visible = true;
+                this.btnReserve.Enabled = true;
             }
             else
             {
@@ -121,6 +167,49 @@ namespace WindowsFormsApplication1
                 lblResult.ForeColor = Color.Red;
                 lblResult.Visible = true;
             }
+        }
+
+        private void roomsDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            this.lblResult.Visible = false;
+            this.btnReserve.Enabled = false;
+        }
+
+        private void btnReserve_Click(object sender, EventArgs e)
+        {
+            //TODO: Checking for conflict
+
+            try
+            {
+                //String toMessage = "";
+                this.Validate();
+                this.roomsBindingSource.EndEdit();
+                this.iReserveDBDataSet.AcceptChanges();
+                //this.roomsTableAdapter.Update(this.iReserveDBDataSet.rooms);
+
+                foreach (DataGridViewRow row in roomsDataGridView.SelectedRows)
+                {
+                    String value1 = row.Cells[0].Value.ToString();//ID of room is now in value1
+                    String value2 = row.Cells[1].Value.ToString();
+                    String value3 = row.Cells[2].Value.ToString();
+                    //toMessage += "Room: " + value2 + " " + value3 + "\n";
+                    reservationsTableAdapter.AddReservation(this.txtReqeust.Text, 1, Convert.ToInt32(value1), this.txtPurpose.Text, 3, "2015-2016", this.strDate, this.strWeekDay, convertToMilitary(this.startTime), convertToMilitary(this.endTime));
+                    //FIX THE DATA TYPES
+                    MessageBox.Show("Reservation Successful");
+                    this.Close();
+                }
+
+                //MessageBox.Show("Update successful");
+                //this.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+                MessageBox.Show("Update failed");
+                //this.Close();
+            }
+
+            //Right now default values for admin term and sy are being used we should change the form so we can have that as input aswell
         }
 
         

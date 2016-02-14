@@ -69,6 +69,8 @@ namespace WindowsFormsApplication1
         private void btnMakeReservation_Click(object sender, EventArgs e)
         {
             new ReserveRoom().ShowDialog();
+            // TODO: This line of code loads data into the 'iReserveDBDataSet.reservations' table. You can move, or remove it, as needed.
+            this.reservationsTableAdapter.Fill(this.iReserveDBDataSet.reservations);
         }
 
         

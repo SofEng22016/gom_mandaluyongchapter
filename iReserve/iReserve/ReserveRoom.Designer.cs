@@ -58,7 +58,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPurpose = new System.Windows.Forms.TextBox();
             this.lblResult = new System.Windows.Forms.Label();
             this.btnCheck = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).BeginInit();
@@ -88,6 +88,7 @@
             this.btnReserve.TabIndex = 1;
             this.btnReserve.Text = "Reserve";
             this.btnReserve.UseVisualStyleBackColor = true;
+            this.btnReserve.Click += new System.EventHandler(this.btnReserve_Click);
             // 
             // label1
             // 
@@ -262,6 +263,7 @@
             this.roomsDataGridView.Size = new System.Drawing.Size(293, 101);
             this.roomsDataGridView.TabIndex = 13;
             this.roomsDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.roomsDataGridView_DataBindingComplete);
+            this.roomsDataGridView.SelectionChanged += new System.EventHandler(this.roomsDataGridView_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -307,12 +309,12 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Purpose:";
             // 
-            // textBox1
+            // txtPurpose
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 339);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(487, 22);
-            this.textBox1.TabIndex = 16;
+            this.txtPurpose.Location = new System.Drawing.Point(119, 339);
+            this.txtPurpose.Name = "txtPurpose";
+            this.txtPurpose.Size = new System.Drawing.Size(487, 22);
+            this.txtPurpose.TabIndex = 16;
             // 
             // lblResult
             // 
@@ -342,7 +344,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.lblResult);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPurpose);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.roomsDataGridView);
@@ -404,7 +406,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPurpose;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Button btnCheck;
     }

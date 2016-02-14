@@ -101,6 +101,7 @@ namespace WindowsFormsApplication1
                     toMessage += "Room: " + value2 + " " + value3 + "\n";  
                     if(MessageBox.Show("Are you sure you want to delete\n"+toMessage, "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK){
                     roomsTableAdapter.DeleteRoom(Convert.ToInt32(value1));
+                    //MessageBox.Show(value1);
                     //code to refill the table
                     this.roomsTableAdapter.FillByFloor(this.iReserveDBDataSet.rooms, (int)this.floorsTableAdapter.GetID(this.comboBox1.Text));
                     }
