@@ -33,12 +33,15 @@ namespace WindowsFormsApplication1
                 //Potential resource leak here ask for better solution
                 username = txtUsername.Text;
                 password = txtPassword.Text;
-                valid = (int)usersTableAdapter.LoginValidation(username, password);
+                try { valid = (int)usersTableAdapter.LoginValidation(username, password); }
+            catch(Exception ewan){
+                
+            }
             if (valid > 0)
             {
                 MessageBox.Show("Login Successful.");
                 
-                frmDashboard Dashboard = new frmDashboard();
+                frmDashboard Dashboard = new frmDashboard(valid);
                 this.Visible = false;
                 
                 Dashboard.ShowDialog();

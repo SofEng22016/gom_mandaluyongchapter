@@ -15,9 +15,10 @@ namespace WindowsFormsApplication1
         String strWeekDay = "";
         String startTime = "";
         String endTime = "";
+        int idOfRoom = 1;
+        int adminID = 0;
 
-        TimeSpan spanStart;
-        TimeSpan spanEnd;
+        
         
 
         public int convertToMilitary(String input){
@@ -54,12 +55,13 @@ namespace WindowsFormsApplication1
             return hours + minutes;
         }
 
-        public ReserveRoom()
+        public ReserveRoom(int id)
         {
             InitializeComponent();
             this.startTimePicker.CustomFormat = "hh:mm tt";
             this.endTimePicker.CustomFormat = "hh:mm tt";
             this.btnReserve.Enabled = false;
+            this.adminID = id;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -146,11 +148,24 @@ namespace WindowsFormsApplication1
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
+            this.startTime = this.startTimePicker.Text;
+            this.endTime = this.endTimePicker.Text;
+
+            this.strDate = this.dateReserved.Text;
+            String[] temp;
+            temp = this.strDate.Split(',');
+            this.strWeekDay = temp[0];
+
+            //TODO: Checking for conflict
+
             //Check for conflicts with schedules
 
             //Check for conflicts with reservations
 
-            if (MessageBox.Show("Simulate", "Simulate", MessageBoxButtons.OKCancel) == DialogResult.OK)
+
+
+
+            if (0 == (int)reservationsTableAdapter.CheckConflict(this.idOfRoom, this.strDate, convertToMilitary(this.endTime), convertToMilitary(this.startTime)))
             {
                 //if there is no conflict within the schedule on the said room
                 
@@ -173,11 +188,6 @@ namespace WindowsFormsApplication1
         {
             this.lblResult.Visible = false;
             this.btnReserve.Enabled = false;
-        }
-
-        private void btnReserve_Click(object sender, EventArgs e)
-        {
-            //TODO: Checking for conflict
 
             try
             {
@@ -193,7 +203,40 @@ namespace WindowsFormsApplication1
                     String value2 = row.Cells[1].Value.ToString();
                     String value3 = row.Cells[2].Value.ToString();
                     //toMessage += "Room: " + value2 + " " + value3 + "\n";
-                    reservationsTableAdapter.AddReservation(this.txtReqeust.Text, 1, Convert.ToInt32(value1), this.txtPurpose.Text, 3, "2015-2016", this.strDate, this.strWeekDay, convertToMilitary(this.startTime), convertToMilitary(this.endTime));
+
+                    this.idOfRoom = Convert.ToInt32(value1);
+                }
+
+                //MessageBox.Show("Update successful");
+                //this.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+                //MessageBox.Show("Update failed");
+                //this.Close();
+            }
+        }
+
+        private void btnReserve_Click(object sender, EventArgs e)
+        {
+         
+
+            try
+            {
+                //String toMessage = "";
+                this.Validate();
+                this.roomsBindingSource.EndEdit();
+                this.iReserveDBDataSet.AcceptChanges();
+                //this.roomsTableAdapter.Update(this.iReserveDBDataSet.rooms);
+
+                foreach (DataGridViewRow row in roomsDataGridView.SelectedRows)
+                {
+                    String value1 = row.Cells[0].Value.ToString();//ID of room is now in value1
+                    String value2 = row.Cells[1].Value.ToString();
+                    String value3 = row.Cells[2].Value.ToString();
+                    //toMessage += "Room: " + value2 + " " + value3 + "\n";
+                    reservationsTableAdapter.AddReservation(this.txtReqeust.Text, adminID, Convert.ToInt32(value1), this.txtPurpose.Text, 3, "2015-2016", this.strDate, this.strWeekDay, convertToMilitary(this.startTime), convertToMilitary(this.endTime));
                     //FIX THE DATA TYPES
                     MessageBox.Show("Reservation Successful");
                     this.Close();

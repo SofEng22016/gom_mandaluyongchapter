@@ -11,9 +11,11 @@ namespace WindowsFormsApplication1
 {
     public partial class frmDashboard : Form
     {
-        public frmDashboard()
+        int adminID = 0;
+        public frmDashboard(int id)
         {
             InitializeComponent();
+            this.adminID = id;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -68,7 +70,7 @@ namespace WindowsFormsApplication1
 
         private void btnMakeReservation_Click(object sender, EventArgs e)
         {
-            new ReserveRoom().ShowDialog();
+            new ReserveRoom(adminID).ShowDialog();
             // TODO: This line of code loads data into the 'iReserveDBDataSet.reservations' table. You can move, or remove it, as needed.
             this.reservationsTableAdapter.Fill(this.iReserveDBDataSet.reservations);
         }
