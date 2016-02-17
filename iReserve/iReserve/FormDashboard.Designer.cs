@@ -34,8 +34,8 @@
             this.btnAddRoom = new System.Windows.Forms.Button();
             this.btnRemoveRoom = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRemoveFloor = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -43,26 +43,23 @@
             this.btnMakeReservation = new System.Windows.Forms.Button();
             this.btnViewReservation = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.reservationsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iReserveDBDataSet = new WindowsFormsApplication1.iReserveDBDataSet();
-            this.reservationsTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.reservationsTableAdapter();
             this.tableAdapterManager = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager();
+            this.floorsXroomsXReservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.floorsXroomsXReservationsTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.floorsXroomsXReservationsTableAdapter();
+            this.floorsXroomsXReservationsDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reservationsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXReservationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXReservationsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -120,25 +117,25 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // label1
+            // lblDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(527, 212);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 17);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "22/1/2016";
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(527, 212);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(72, 17);
+            this.lblDate.TabIndex = 11;
+            this.lblDate.Text = "22/1/2016";
             // 
-            // label2
+            // lblTime
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(543, 229);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 17);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "21:00";
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(527, 229);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(44, 17);
+            this.lblTime.TabIndex = 12;
+            this.lblTime.Text = "21:00";
             // 
             // groupBox1
             // 
@@ -189,6 +186,7 @@
             this.btnViewSchedules.TabIndex = 12;
             this.btnViewSchedules.Text = "View All Schedules";
             this.btnViewSchedules.UseVisualStyleBackColor = true;
+            this.btnViewSchedules.Click += new System.EventHandler(this.btnViewSchedules_Click);
             // 
             // btnMakeReservation
             // 
@@ -210,6 +208,7 @@
             this.btnViewReservation.TabIndex = 0;
             this.btnViewReservation.Text = "View / Cancel Reservations";
             this.btnViewReservation.UseVisualStyleBackColor = true;
+            this.btnViewReservation.Click += new System.EventHandler(this.btnViewReservation_Click);
             // 
             // label3
             // 
@@ -221,130 +220,102 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Today\'s Reservations: ";
             // 
-            // reservationsDataGridView
-            // 
-            this.reservationsDataGridView.AutoGenerateColumns = false;
-            this.reservationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.reservationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.startTime,
-            this.endTime});
-            this.reservationsDataGridView.DataSource = this.reservationsBindingSource;
-            this.reservationsDataGridView.Location = new System.Drawing.Point(13, 155);
-            this.reservationsDataGridView.Margin = new System.Windows.Forms.Padding(4);
-            this.reservationsDataGridView.Name = "reservationsDataGridView";
-            this.reservationsDataGridView.Size = new System.Drawing.Size(442, 172);
-            this.reservationsDataGridView.TabIndex = 16;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "reservee";
-            this.dataGridViewTextBoxColumn2.HeaderText = "reservee";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "admin";
-            this.dataGridViewTextBoxColumn3.HeaderText = "admin";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "roomID";
-            this.dataGridViewTextBoxColumn4.HeaderText = "RoomId";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Purpose";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Purpose";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "term";
-            this.dataGridViewTextBoxColumn6.HeaderText = "term";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "sy";
-            this.dataGridViewTextBoxColumn7.HeaderText = "sy";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "dateReserved";
-            this.dataGridViewTextBoxColumn8.HeaderText = "dateReserved";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Visible = false;
-            // 
-            // startTime
-            // 
-            this.startTime.DataPropertyName = "startTime";
-            this.startTime.HeaderText = "startTime";
-            this.startTime.Name = "startTime";
-            // 
-            // endTime
-            // 
-            this.endTime.DataPropertyName = "endTime";
-            this.endTime.HeaderText = "endTime";
-            this.endTime.Name = "endTime";
-            // 
-            // reservationsBindingSource
-            // 
-            this.reservationsBindingSource.DataMember = "reservations";
-            this.reservationsBindingSource.DataSource = this.iReserveDBDataSet;
-            // 
             // iReserveDBDataSet
             // 
             this.iReserveDBDataSet.DataSetName = "iReserveDBDataSet";
             this.iReserveDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reservationsTableAdapter
-            // 
-            this.reservationsTableAdapter.ClearBeforeFill = true;
-            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.floorsTableAdapter = null;
-            this.tableAdapterManager.reservationsTableAdapter = this.reservationsTableAdapter;
             this.tableAdapterManager.roomsTableAdapter = null;
             this.tableAdapterManager.schedulesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = null;
             // 
+            // floorsXroomsXReservationsBindingSource
+            // 
+            this.floorsXroomsXReservationsBindingSource.DataMember = "floorsXroomsXReservations";
+            this.floorsXroomsXReservationsBindingSource.DataSource = this.iReserveDBDataSet;
+            // 
+            // floorsXroomsXReservationsTableAdapter
+            // 
+            this.floorsXroomsXReservationsTableAdapter.ClearBeforeFill = true;
+            // 
+            // floorsXroomsXReservationsDataGridView
+            // 
+            this.floorsXroomsXReservationsDataGridView.AutoGenerateColumns = false;
+            this.floorsXroomsXReservationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.floorsXroomsXReservationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
+            this.floorsXroomsXReservationsDataGridView.DataSource = this.floorsXroomsXReservationsBindingSource;
+            this.floorsXroomsXReservationsDataGridView.Location = new System.Drawing.Point(20, 152);
+            this.floorsXroomsXReservationsDataGridView.Name = "floorsXroomsXReservationsDataGridView";
+            this.floorsXroomsXReservationsDataGridView.RowTemplate.Height = 24;
+            this.floorsXroomsXReservationsDataGridView.Size = new System.Drawing.Size(442, 220);
+            this.floorsXroomsXReservationsDataGridView.TabIndex = 16;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "floorName";
+            this.dataGridViewTextBoxColumn9.HeaderText = "floorName";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "roomName";
+            this.dataGridViewTextBoxColumn10.HeaderText = "roomName";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "reservee";
+            this.dataGridViewTextBoxColumn11.HeaderText = "reservee";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Purpose";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Purpose";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "dateReserved";
+            this.dataGridViewTextBoxColumn13.HeaderText = "dateReserved";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "startTime";
+            this.dataGridViewTextBoxColumn14.HeaderText = "startTime";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "endTime";
+            this.dataGridViewTextBoxColumn15.HeaderText = "endTime";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 346);
+            this.ClientSize = new System.Drawing.Size(680, 387);
             this.ControlBox = false;
-            this.Controls.Add(this.reservationsDataGridView);
+            this.Controls.Add(this.floorsXroomsXReservationsDataGridView);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -355,9 +326,9 @@
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.reservationsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXReservationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXReservationsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,8 +341,8 @@
         private System.Windows.Forms.Button btnAddRoom;
         private System.Windows.Forms.Button btnRemoveRoom;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRemoveFloor;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -380,19 +351,16 @@
         private System.Windows.Forms.Button btnViewReservation;
         private System.Windows.Forms.Label label3;
         private iReserveDBDataSet iReserveDBDataSet;
-        private System.Windows.Forms.BindingSource reservationsBindingSource;
-        private iReserveDBDataSetTableAdapters.reservationsTableAdapter reservationsTableAdapter;
         private iReserveDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView reservationsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endTime;
+        private System.Windows.Forms.BindingSource floorsXroomsXReservationsBindingSource;
+        private iReserveDBDataSetTableAdapters.floorsXroomsXReservationsTableAdapter floorsXroomsXReservationsTableAdapter;
+        private System.Windows.Forms.DataGridView floorsXroomsXReservationsDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
     }
 }

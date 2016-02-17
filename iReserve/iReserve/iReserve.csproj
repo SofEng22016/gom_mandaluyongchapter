@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="iReserve, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -101,6 +104,12 @@
     <Compile Include="ReserveRoom.Designer.cs">
       <DependentUpon>ReserveRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewReservations.Designer.cs">
+      <DependentUpon>ViewReservations.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddFloor.resx">
       <DependentUpon>AddFloor.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReserveRoom.resx">
       <DependentUpon>ReserveRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewReservations.resx">
+      <DependentUpon>ViewReservations.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="iReserveDBDataSet.xsc">

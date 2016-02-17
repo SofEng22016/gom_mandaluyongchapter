@@ -1,4 +1,3 @@
-C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\bin\Debug\iReserve.exe
 C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\bin\Debug\iReserve.pdb
 C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\iReserve.csproj.GenerateResource.Cache
@@ -20,3 +19,4 @@ C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj
 D:\TV\Generation\iReserve\iReserve\bin\Debug\iReserve.exe.config
 C:\Users\ralphbausas\Documents\Visual Studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.RemoveFloor.resources
 C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ReserveRoom.resources
+C:\Users\ralphbausas\documents\visual studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewReservations.resources
