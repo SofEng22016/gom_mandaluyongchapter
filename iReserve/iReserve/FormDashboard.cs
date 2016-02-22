@@ -97,5 +97,15 @@ namespace WindowsFormsApplication1
             new ViewReservations().ShowDialog();
             this.floorsXroomsXReservationsTableAdapter.Fill(this.iReserveDBDataSet.floorsXroomsXReservations);
         }
+
+        private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTime_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
