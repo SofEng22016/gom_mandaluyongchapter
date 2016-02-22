@@ -124,7 +124,6 @@ namespace WindowsFormsApplication1
             try
             {
                 int x = (int)this.floorsTableAdapter.GetID(this.cBoxFloors.Text);
-                //MessageBox.Show("" + x);
                 this.roomsTableAdapter.FillByFloor(this.iReserveDBDataSet.rooms, x);
 
             }
@@ -132,11 +131,10 @@ namespace WindowsFormsApplication1
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-            finally
-            {
+            
                 this.lblResult.Visible = false;
                 this.btnReserve.Enabled = false;
-            }
+            
         }
 
         private void roomsDataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

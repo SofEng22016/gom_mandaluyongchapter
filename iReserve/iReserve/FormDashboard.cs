@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
         private void frmDashboard_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'iReserveDBDataSet.floorsXroomsXReservations' table. You can move, or remove it, as needed.
-            this.floorsXroomsXReservationsTableAdapter.Fill(this.iReserveDBDataSet.floorsXroomsXReservations);
+            this.floorsXroomsXReservationsTableAdapter.FillByToday(this.iReserveDBDataSet.floorsXroomsXReservations, DateTime.Now.ToString("dddd, MMMM dd, yyyy"));
             
             Timer tmr = new Timer();
             tmr.Interval = 1000;//ticks every 1 second
@@ -78,7 +78,7 @@ namespace WindowsFormsApplication1
             new ReserveRoom(adminID).ShowDialog();
             // TODO: This line of code loads data into the 'iReserveDBDataSet.reservations' table. You can move, or remove it, as needed.
             //this.reservationsTableAdapter.Fill(this.iReserveDBDataSet.reservations);
-            this.floorsXroomsXReservationsTableAdapter.Fill(this.iReserveDBDataSet.floorsXroomsXReservations);
+            this.floorsXroomsXReservationsTableAdapter.FillByToday(this.iReserveDBDataSet.floorsXroomsXReservations, lblDate.Text);
         }
 
         private void btnViewSchedules_Click(object sender, EventArgs e)
@@ -88,24 +88,14 @@ namespace WindowsFormsApplication1
 
         private void tmr_Tick(object sender, EventArgs e)
         {
-            lblDate.Text = DateTime.Now.ToString("MM/dd/yyyy");
+            lblDate.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy");
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
         private void btnViewReservation_Click(object sender, EventArgs e)
         {
             new ViewReservations().ShowDialog();
-            this.floorsXroomsXReservationsTableAdapter.Fill(this.iReserveDBDataSet.floorsXroomsXReservations);
-        }
-
-        private void lblDate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTime_Click(object sender, EventArgs e)
-        {
-
+            this.floorsXroomsXReservationsTableAdapter.FillByToday(this.iReserveDBDataSet.floorsXroomsXReservations, lblDate.Text);
         }
     }
 }
