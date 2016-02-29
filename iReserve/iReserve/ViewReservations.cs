@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1
 
         private void txtSearch_MouseClick(object sender, MouseEventArgs e)
         {
-            this.txtSearch.Text = "";
+            
         }
 
         private void txtSearch_MouseLeave(object sender, EventArgs e)
@@ -56,6 +56,7 @@ namespace WindowsFormsApplication1
         {
             if (this.txtSearch.Text.Equals(""))
             {
+                this.txtSearch.ForeColor = Color.Gray;
                 this.txtSearch.Text = "Search for Floor, Room, Reservee, Date, Purpose";
             }
         }
@@ -81,7 +82,7 @@ namespace WindowsFormsApplication1
                 }
             }
             //refill the table
-            this.floorsXroomsXReservationsTableAdapter.Fill(this.iReserveDBDataSet.floorsXroomsXReservations);
+            this.floorsXroomsXReservationsTableAdapter.FillBySearch(this.iReserveDBDataSet.floorsXroomsXReservations, this.txtSearch.Text, this.txtSearch.Text, this.txtSearch.Text, this.txtSearch.Text, this.txtSearch.Text);
 
             
             
@@ -93,6 +94,12 @@ namespace WindowsFormsApplication1
             {
                 btnDelete_Click(sender, e);
             }
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            this.txtSearch.Text = "";
+            txtSearch.ForeColor = Color.Black;
         }
     }
 }

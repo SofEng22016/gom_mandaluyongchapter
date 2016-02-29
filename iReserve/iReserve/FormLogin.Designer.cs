@@ -41,14 +41,17 @@
             this.usersTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.usersTableAdapter();
             this.tableAdapterManager = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager();
             this.schedulesTableAdapter1 = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.schedulesTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 56);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(75, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 0;
@@ -57,7 +60,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 100);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(75, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 1;
@@ -65,7 +69,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(105, 53);
+            this.txtUsername.Location = new System.Drawing.Point(168, 119);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(165, 22);
             this.txtUsername.TabIndex = 2;
@@ -73,7 +77,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(105, 95);
+            this.txtPassword.Location = new System.Drawing.Point(168, 161);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(165, 22);
             this.txtPassword.TabIndex = 3;
@@ -82,7 +86,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(212, 172);
+            this.btnLogin.Location = new System.Drawing.Point(151, 220);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(85, 32);
             this.btnLogin.TabIndex = 4;
@@ -92,7 +96,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(105, 172);
+            this.btnExit.Location = new System.Drawing.Point(253, 220);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(80, 32);
             this.btnExit.TabIndex = 5;
@@ -103,11 +107,12 @@
             // lblBuild
             // 
             this.lblBuild.AutoSize = true;
-            this.lblBuild.Location = new System.Drawing.Point(12, 227);
+            this.lblBuild.BackColor = System.Drawing.Color.Transparent;
+            this.lblBuild.Location = new System.Drawing.Point(75, 284);
             this.lblBuild.Name = "lblBuild";
             this.lblBuild.Size = new System.Drawing.Size(135, 17);
             this.lblBuild.TabIndex = 6;
-            this.lblBuild.Text = "iReserve Build 0.2.1";
+            this.lblBuild.Text = "iReserve Build 0.2.3";
             // 
             // iReserveDBDataSet
             // 
@@ -137,12 +142,22 @@
             // 
             this.schedulesTableAdapter1.ClearBeforeFill = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.dean;
+            this.pictureBox1.Location = new System.Drawing.Point(168, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(104, 90);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 310);
+            this.ClientSize = new System.Drawing.Size(438, 358);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblBuild);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
@@ -157,6 +172,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,6 +192,7 @@
         private iReserveDBDataSetTableAdapters.usersTableAdapter usersTableAdapter;
         private iReserveDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private iReserveDBDataSetTableAdapters.schedulesTableAdapter schedulesTableAdapter1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
