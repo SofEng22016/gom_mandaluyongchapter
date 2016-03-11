@@ -72,8 +72,8 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(123, 314);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Location = new System.Drawing.Point(148, 337);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(74, 42);
             this.btnCancel.TabIndex = 0;
@@ -83,8 +83,8 @@
             // 
             // btnReserve
             // 
-            this.btnReserve.Location = new System.Drawing.Point(254, 314);
-            this.btnReserve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReserve.Location = new System.Drawing.Point(302, 337);
+            this.btnReserve.Margin = new System.Windows.Forms.Padding(2);
             this.btnReserve.Name = "btnReserve";
             this.btnReserve.Size = new System.Drawing.Size(74, 42);
             this.btnReserve.TabIndex = 1;
@@ -95,7 +95,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 29);
+            this.label1.Location = new System.Drawing.Point(61, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 13);
@@ -104,25 +104,25 @@
             // 
             // txtReqeust
             // 
-            this.txtReqeust.Location = new System.Drawing.Point(190, 29);
-            this.txtReqeust.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReqeust.Location = new System.Drawing.Point(191, 26);
+            this.txtReqeust.Margin = new System.Windows.Forms.Padding(2);
             this.txtReqeust.Name = "txtReqeust";
-            this.txtReqeust.Size = new System.Drawing.Size(198, 20);
+            this.txtReqeust.Size = new System.Drawing.Size(252, 20);
             this.txtReqeust.TabIndex = 3;
             // 
             // dateReserved
             // 
-            this.dateReserved.Location = new System.Drawing.Point(190, 68);
-            this.dateReserved.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateReserved.Location = new System.Drawing.Point(193, 62);
+            this.dateReserved.Margin = new System.Windows.Forms.Padding(2);
             this.dateReserved.Name = "dateReserved";
-            this.dateReserved.Size = new System.Drawing.Size(198, 20);
+            this.dateReserved.Size = new System.Drawing.Size(215, 20);
             this.dateReserved.TabIndex = 4;
             this.dateReserved.ValueChanged += new System.EventHandler(this.dateReserved_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(94, 68);
+            this.label2.Location = new System.Drawing.Point(86, 68);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 13);
@@ -132,29 +132,29 @@
             // startTimePicker
             // 
             this.startTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.startTimePicker.Location = new System.Drawing.Point(112, 25);
-            this.startTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startTimePicker.Location = new System.Drawing.Point(110, 25);
+            this.startTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.startTimePicker.Name = "startTimePicker";
             this.startTimePicker.ShowUpDown = true;
-            this.startTimePicker.Size = new System.Drawing.Size(62, 20);
+            this.startTimePicker.Size = new System.Drawing.Size(95, 20);
             this.startTimePicker.TabIndex = 6;
             this.startTimePicker.ValueChanged += new System.EventHandler(this.startTimePicker_ValueChanged);
             // 
             // endTimePicker
             // 
             this.endTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.endTimePicker.Location = new System.Drawing.Point(262, 25);
-            this.endTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.endTimePicker.Location = new System.Drawing.Point(277, 24);
+            this.endTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.endTimePicker.Name = "endTimePicker";
             this.endTimePicker.ShowUpDown = true;
-            this.endTimePicker.Size = new System.Drawing.Size(63, 20);
+            this.endTimePicker.Size = new System.Drawing.Size(107, 20);
             this.endTimePicker.TabIndex = 7;
             this.endTimePicker.ValueChanged += new System.EventHandler(this.endTimePicker_ValueChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 25);
+            this.label3.Location = new System.Drawing.Point(68, 27);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
@@ -164,7 +164,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(230, 25);
+            this.label4.Location = new System.Drawing.Point(243, 27);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
@@ -229,7 +229,7 @@
             this.cBoxFloors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxFloors.FormattingEnabled = true;
             this.cBoxFloors.Location = new System.Drawing.Point(74, 184);
-            this.cBoxFloors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cBoxFloors.Margin = new System.Windows.Forms.Padding(2);
             this.cBoxFloors.Name = "cBoxFloors";
             this.cBoxFloors.Size = new System.Drawing.Size(92, 21);
             this.cBoxFloors.TabIndex = 10;
@@ -239,7 +239,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 187);
+            this.label5.Location = new System.Drawing.Point(35, 187);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
@@ -249,7 +249,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(188, 187);
+            this.label6.Location = new System.Drawing.Point(193, 181);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
@@ -267,14 +267,14 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.roomsDataGridView.DataSource = this.roomsBindingSource;
-            this.roomsDataGridView.Location = new System.Drawing.Point(235, 177);
-            this.roomsDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomsDataGridView.Location = new System.Drawing.Point(244, 177);
+            this.roomsDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.roomsDataGridView.MultiSelect = false;
             this.roomsDataGridView.Name = "roomsDataGridView";
             this.roomsDataGridView.ReadOnly = true;
             this.roomsDataGridView.RowTemplate.Height = 24;
             this.roomsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.roomsDataGridView.Size = new System.Drawing.Size(220, 82);
+            this.roomsDataGridView.Size = new System.Drawing.Size(243, 82);
             this.roomsDataGridView.TabIndex = 13;
             this.roomsDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.roomsDataGridView_DataBindingComplete);
             this.roomsDataGridView.SelectionChanged += new System.EventHandler(this.roomsDataGridView_SelectionChanged);
@@ -309,10 +309,10 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.endTimePicker);
             this.groupBox1.Location = new System.Drawing.Point(38, 99);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(416, 60);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(449, 60);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Time";
@@ -320,25 +320,26 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 275);
+            this.label7.Location = new System.Drawing.Point(41, 295);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 15;
             this.label7.Text = "Purpose:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtPurpose
             // 
-            this.txtPurpose.Location = new System.Drawing.Point(89, 275);
-            this.txtPurpose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPurpose.Location = new System.Drawing.Point(94, 292);
+            this.txtPurpose.Margin = new System.Windows.Forms.Padding(2);
             this.txtPurpose.Name = "txtPurpose";
-            this.txtPurpose.Size = new System.Drawing.Size(366, 20);
+            this.txtPurpose.Size = new System.Drawing.Size(381, 20);
             this.txtPurpose.TabIndex = 16;
             // 
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(36, 245);
+            this.lblResult.Location = new System.Drawing.Point(41, 254);
             this.lblResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(71, 13);
@@ -348,8 +349,8 @@
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(64, 217);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheck.Location = new System.Drawing.Point(39, 223);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(122, 20);
             this.btnCheck.TabIndex = 18;
@@ -361,7 +362,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 375);
+            this.ClientSize = new System.Drawing.Size(513, 390);
             this.ControlBox = false;
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.lblResult);
@@ -379,7 +380,7 @@
             this.Controls.Add(this.btnReserve);
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReserveRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReserveRoom";

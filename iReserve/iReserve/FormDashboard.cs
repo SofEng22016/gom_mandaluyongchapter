@@ -26,10 +26,22 @@ namespace WindowsFormsApplication1
                 btn.ForeColor = Color.Black;
                 btn.BackColor = Color.White;
 
+
             }
             foreach (Label lbl in this.Controls.OfType<Label>())
-            {//this will controll all button inside form
+            {//this will controll all label inside form
                 lbl.BackColor = Color.Transparent;
+
+            }
+            foreach (GroupBox groupBox in this.Controls.OfType<GroupBox>())
+            {//this will controll all label inside form
+                foreach (Button groupBtn in groupBox.Controls.OfType<Button>())
+                {//this will controll all label inside form
+                    groupBtn.FlatStyle = FlatStyle.Standard;
+                    groupBtn.ForeColor = Color.Black;
+                    groupBtn.BackColor = Color.White;
+
+                }
 
             }
         }
@@ -112,6 +124,21 @@ namespace WindowsFormsApplication1
         {
             new ViewReservations().ShowDialog();
             this.floorsXroomsXReservationsTableAdapter.FillByToday(this.iReserveDBDataSet.floorsXroomsXReservations, lblDate.Text);
+        }
+
+        private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void floorsXroomsXReservationsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

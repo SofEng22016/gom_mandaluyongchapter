@@ -269,6 +269,11 @@ namespace WindowsFormsApplication1
             //Right now default values for admin term and sy are being used we should change the form so we can have that as input aswell
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }
