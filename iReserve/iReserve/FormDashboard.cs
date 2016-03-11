@@ -140,5 +140,12 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void floorsXroomsXReservationsDataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.floorsXroomsXReservationsDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.floorsXroomsXReservationsDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.floorsXroomsXReservationsDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
     }
 }
