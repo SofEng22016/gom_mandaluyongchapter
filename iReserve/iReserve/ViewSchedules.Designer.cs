@@ -28,116 +28,161 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.roomNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.term = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBack = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.iReserveDBDataSet = new WindowsFormsApplication1.iReserveDBDataSet();
+            this.floorsXroomsXSchedulesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.floorsXroomsXSchedulesTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.floorsXroomsXSchedulesTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager();
+            this.floorsXroomsXSchedulesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXSchedulesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXSchedulesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(663, 15);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Location = new System.Drawing.Point(884, 18);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(104, 33);
+            this.btnSearch.Size = new System.Drawing.Size(139, 41);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.Gray;
-            this.txtSearch.Location = new System.Drawing.Point(112, 17);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Location = new System.Drawing.Point(149, 21);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(527, 26);
+            this.txtSearch.Size = new System.Drawing.Size(701, 30);
             this.txtSearch.TabIndex = 5;
             this.txtSearch.Text = "Search";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.roomNum,
-            this.roomDesc,
-            this.day,
-            this.startTime,
-            this.endTime,
-            this.term,
-            this.year});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 66);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(744, 310);
-            this.dataGridView1.TabIndex = 7;
-            // 
-            // roomNum
-            // 
-            this.roomNum.HeaderText = "Room No.";
-            this.roomNum.Name = "roomNum";
-            // 
-            // roomDesc
-            // 
-            this.roomDesc.HeaderText = "Room Description";
-            this.roomDesc.Name = "roomDesc";
-            // 
-            // day
-            // 
-            this.day.HeaderText = "Day";
-            this.day.Name = "day";
-            // 
-            // startTime
-            // 
-            this.startTime.HeaderText = "Start Time";
-            this.startTime.Name = "startTime";
-            // 
-            // endTime
-            // 
-            this.endTime.HeaderText = "End Time";
-            this.endTime.Name = "endTime";
-            // 
-            // term
-            // 
-            this.term.HeaderText = "Term";
-            this.term.Name = "term";
-            // 
-            // year
-            // 
-            this.year.HeaderText = "Year";
-            this.year.Name = "year";
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(333, 396);
+            this.btnBack.Location = new System.Drawing.Point(448, 494);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(103, 36);
+            this.btnBack.Size = new System.Drawing.Size(137, 44);
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.button1_Click);
             // 
+            // iReserveDBDataSet
+            // 
+            this.iReserveDBDataSet.DataSetName = "iReserveDBDataSet";
+            this.iReserveDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // floorsXroomsXSchedulesBindingSource
+            // 
+            this.floorsXroomsXSchedulesBindingSource.DataMember = "floorsXroomsXSchedules";
+            this.floorsXroomsXSchedulesBindingSource.DataSource = this.iReserveDBDataSet;
+            // 
+            // floorsXroomsXSchedulesTableAdapter
+            // 
+            this.floorsXroomsXSchedulesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.floorsTableAdapter = null;
+            this.tableAdapterManager.reservationsTableAdapter = null;
+            this.tableAdapterManager.roomsTableAdapter = null;
+            this.tableAdapterManager.schedulesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = null;
+            // 
+            // floorsXroomsXSchedulesDataGridView
+            // 
+            this.floorsXroomsXSchedulesDataGridView.AutoGenerateColumns = false;
+            this.floorsXroomsXSchedulesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.floorsXroomsXSchedulesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.floorsXroomsXSchedulesDataGridView.DataSource = this.floorsXroomsXSchedulesBindingSource;
+            this.floorsXroomsXSchedulesDataGridView.Location = new System.Drawing.Point(29, 63);
+            this.floorsXroomsXSchedulesDataGridView.Name = "floorsXroomsXSchedulesDataGridView";
+            this.floorsXroomsXSchedulesDataGridView.RowTemplate.Height = 24;
+            this.floorsXroomsXSchedulesDataGridView.Size = new System.Drawing.Size(1012, 424);
+            this.floorsXroomsXSchedulesDataGridView.TabIndex = 9;
+            this.floorsXroomsXSchedulesDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.floorsXroomsXSchedulesDataGridView_DataBindingComplete);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "floorName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "floorName";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "roomName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "roomName";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "subj";
+            this.dataGridViewTextBoxColumn3.HeaderText = "subj";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "weekDay";
+            this.dataGridViewTextBoxColumn4.HeaderText = "weekDay";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "startTime";
+            this.dataGridViewTextBoxColumn5.HeaderText = "startTime";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "endTime";
+            this.dataGridViewTextBoxColumn6.HeaderText = "endTime";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
             // ViewSchedules
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 444);
+            this.ClientSize = new System.Drawing.Size(1065, 551);
+            this.ControlBox = false;
+            this.Controls.Add(this.floorsXroomsXSchedulesDataGridView);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ViewSchedules";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewSchedules";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ViewSchedules_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXSchedulesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXSchedulesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,14 +192,17 @@
 
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roomNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roomDesc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn day;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn term;
-        private System.Windows.Forms.DataGridViewTextBoxColumn year;
         private System.Windows.Forms.Button btnBack;
+        private iReserveDBDataSet iReserveDBDataSet;
+        private System.Windows.Forms.BindingSource floorsXroomsXSchedulesBindingSource;
+        private iReserveDBDataSetTableAdapters.floorsXroomsXSchedulesTableAdapter floorsXroomsXSchedulesTableAdapter;
+        private iReserveDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView floorsXroomsXSchedulesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }

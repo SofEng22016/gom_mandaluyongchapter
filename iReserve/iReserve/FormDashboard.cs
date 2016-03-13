@@ -111,7 +111,7 @@ namespace WindowsFormsApplication1
 
         private void btnViewSchedules_Click(object sender, EventArgs e)
         {
-
+            new ViewSchedules().ShowDialog();
         }
 
         private void tmr_Tick(object sender, EventArgs e)
@@ -139,6 +139,13 @@ namespace WindowsFormsApplication1
         private void floorsXroomsXReservationsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void floorsXroomsXReservationsDataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.floorsXroomsXReservationsDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.floorsXroomsXReservationsDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.floorsXroomsXReservationsDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }

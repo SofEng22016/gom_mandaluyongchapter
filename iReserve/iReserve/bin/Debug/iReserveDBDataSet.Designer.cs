@@ -36,6 +36,8 @@ namespace WindowsFormsApplication1 {
         
         private floorsXroomsXReservationsDataTable tablefloorsXroomsXReservations;
         
+        private floorsXroomsXSchedulesDataTable tablefloorsXroomsXSchedules;
+        
         private global::System.Data.DataRelation relationschedulesreservations;
         
         private global::System.Data.DataRelation relationusersreservations;
@@ -91,6 +93,9 @@ namespace WindowsFormsApplication1 {
                 }
                 if ((ds.Tables["floorsXroomsXReservations"] != null)) {
                     base.Tables.Add(new floorsXroomsXReservationsDataTable(ds.Tables["floorsXroomsXReservations"]));
+                }
+                if ((ds.Tables["floorsXroomsXSchedules"] != null)) {
+                    base.Tables.Add(new floorsXroomsXSchedulesDataTable(ds.Tables["floorsXroomsXSchedules"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -167,6 +172,16 @@ namespace WindowsFormsApplication1 {
         public floorsXroomsXReservationsDataTable floorsXroomsXReservations {
             get {
                 return this.tablefloorsXroomsXReservations;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public floorsXroomsXSchedulesDataTable floorsXroomsXSchedules {
+            get {
+                return this.tablefloorsXroomsXSchedules;
             }
         }
         
@@ -255,6 +270,9 @@ namespace WindowsFormsApplication1 {
                 if ((ds.Tables["floorsXroomsXReservations"] != null)) {
                     base.Tables.Add(new floorsXroomsXReservationsDataTable(ds.Tables["floorsXroomsXReservations"]));
                 }
+                if ((ds.Tables["floorsXroomsXSchedules"] != null)) {
+                    base.Tables.Add(new floorsXroomsXSchedulesDataTable(ds.Tables["floorsXroomsXSchedules"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -324,6 +342,12 @@ namespace WindowsFormsApplication1 {
                     this.tablefloorsXroomsXReservations.InitVars();
                 }
             }
+            this.tablefloorsXroomsXSchedules = ((floorsXroomsXSchedulesDataTable)(base.Tables["floorsXroomsXSchedules"]));
+            if ((initTable == true)) {
+                if ((this.tablefloorsXroomsXSchedules != null)) {
+                    this.tablefloorsXroomsXSchedules.InitVars();
+                }
+            }
             this.relationschedulesreservations = this.Relations["schedulesreservations"];
             this.relationusersreservations = this.Relations["usersreservations"];
             this.relationfloorsrooms = this.Relations["floorsrooms"];
@@ -351,6 +375,8 @@ namespace WindowsFormsApplication1 {
             base.Tables.Add(this.tableusers);
             this.tablefloorsXroomsXReservations = new floorsXroomsXReservationsDataTable();
             base.Tables.Add(this.tablefloorsXroomsXReservations);
+            this.tablefloorsXroomsXSchedules = new floorsXroomsXSchedulesDataTable();
+            base.Tables.Add(this.tablefloorsXroomsXSchedules);
             this.relationschedulesreservations = new global::System.Data.DataRelation("schedulesreservations", new global::System.Data.DataColumn[] {
                         this.tableschedules.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tablereservations.roomIDColumn}, false);
@@ -406,6 +432,12 @@ namespace WindowsFormsApplication1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializefloorsXroomsXReservations() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializefloorsXroomsXSchedules() {
             return false;
         }
         
@@ -481,6 +513,9 @@ namespace WindowsFormsApplication1 {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void floorsXroomsXReservationsRowChangeEventHandler(object sender, floorsXroomsXReservationsRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void floorsXroomsXSchedulesRowChangeEventHandler(object sender, floorsXroomsXSchedulesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1666,7 +1701,7 @@ namespace WindowsFormsApplication1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public schedulesRow AddschedulesRow(roomsRow parentroomsRowByroomsschedules, string weekDay, short startTime, short endTime, string purpose, int Term, int SY, string subj, string section) {
+            public schedulesRow AddschedulesRow(roomsRow parentroomsRowByroomsschedules, string weekDay, int startTime, int endTime, string purpose, int Term, string SY, string subj, string section) {
                 schedulesRow rowschedulesRow = ((schedulesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1732,15 +1767,15 @@ namespace WindowsFormsApplication1 {
                 base.Columns.Add(this.columnroomID);
                 this.columnweekDay = new global::System.Data.DataColumn("weekDay", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnweekDay);
-                this.columnstartTime = new global::System.Data.DataColumn("startTime", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnstartTime = new global::System.Data.DataColumn("startTime", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstartTime);
-                this.columnendTime = new global::System.Data.DataColumn("endTime", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnendTime = new global::System.Data.DataColumn("endTime", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnendTime);
                 this.columnpurpose = new global::System.Data.DataColumn("purpose", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpurpose);
                 this.columnTerm = new global::System.Data.DataColumn("Term", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTerm);
-                this.columnSY = new global::System.Data.DataColumn("SY", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnSY = new global::System.Data.DataColumn("SY", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSY);
                 this.columnsubj = new global::System.Data.DataColumn("subj", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsubj);
@@ -2528,6 +2563,327 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class floorsXroomsXSchedulesDataTable : global::System.Data.TypedTableBase<floorsXroomsXSchedulesRow> {
+            
+            private global::System.Data.DataColumn columnfloorName;
+            
+            private global::System.Data.DataColumn columnroomName;
+            
+            private global::System.Data.DataColumn columnsubj;
+            
+            private global::System.Data.DataColumn columnweekDay;
+            
+            private global::System.Data.DataColumn columnstartTime;
+            
+            private global::System.Data.DataColumn columnendTime;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public floorsXroomsXSchedulesDataTable() {
+                this.TableName = "floorsXroomsXSchedules";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal floorsXroomsXSchedulesDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected floorsXroomsXSchedulesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn floorNameColumn {
+                get {
+                    return this.columnfloorName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn roomNameColumn {
+                get {
+                    return this.columnroomName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn subjColumn {
+                get {
+                    return this.columnsubj;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn weekDayColumn {
+                get {
+                    return this.columnweekDay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn startTimeColumn {
+                get {
+                    return this.columnstartTime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn endTimeColumn {
+                get {
+                    return this.columnendTime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public floorsXroomsXSchedulesRow this[int index] {
+                get {
+                    return ((floorsXroomsXSchedulesRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event floorsXroomsXSchedulesRowChangeEventHandler floorsXroomsXSchedulesRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event floorsXroomsXSchedulesRowChangeEventHandler floorsXroomsXSchedulesRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event floorsXroomsXSchedulesRowChangeEventHandler floorsXroomsXSchedulesRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event floorsXroomsXSchedulesRowChangeEventHandler floorsXroomsXSchedulesRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddfloorsXroomsXSchedulesRow(floorsXroomsXSchedulesRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public floorsXroomsXSchedulesRow AddfloorsXroomsXSchedulesRow(string floorName, string roomName, string subj, string weekDay, int startTime, int endTime) {
+                floorsXroomsXSchedulesRow rowfloorsXroomsXSchedulesRow = ((floorsXroomsXSchedulesRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        floorName,
+                        roomName,
+                        subj,
+                        weekDay,
+                        startTime,
+                        endTime};
+                rowfloorsXroomsXSchedulesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowfloorsXroomsXSchedulesRow);
+                return rowfloorsXroomsXSchedulesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                floorsXroomsXSchedulesDataTable cln = ((floorsXroomsXSchedulesDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new floorsXroomsXSchedulesDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnfloorName = base.Columns["floorName"];
+                this.columnroomName = base.Columns["roomName"];
+                this.columnsubj = base.Columns["subj"];
+                this.columnweekDay = base.Columns["weekDay"];
+                this.columnstartTime = base.Columns["startTime"];
+                this.columnendTime = base.Columns["endTime"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnfloorName = new global::System.Data.DataColumn("floorName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfloorName);
+                this.columnroomName = new global::System.Data.DataColumn("roomName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnroomName);
+                this.columnsubj = new global::System.Data.DataColumn("subj", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsubj);
+                this.columnweekDay = new global::System.Data.DataColumn("weekDay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnweekDay);
+                this.columnstartTime = new global::System.Data.DataColumn("startTime", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstartTime);
+                this.columnendTime = new global::System.Data.DataColumn("endTime", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnendTime);
+                this.columnfloorName.MaxLength = 255;
+                this.columnroomName.MaxLength = 255;
+                this.columnsubj.MaxLength = 255;
+                this.columnweekDay.MaxLength = 255;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public floorsXroomsXSchedulesRow NewfloorsXroomsXSchedulesRow() {
+                return ((floorsXroomsXSchedulesRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new floorsXroomsXSchedulesRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(floorsXroomsXSchedulesRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.floorsXroomsXSchedulesRowChanged != null)) {
+                    this.floorsXroomsXSchedulesRowChanged(this, new floorsXroomsXSchedulesRowChangeEvent(((floorsXroomsXSchedulesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.floorsXroomsXSchedulesRowChanging != null)) {
+                    this.floorsXroomsXSchedulesRowChanging(this, new floorsXroomsXSchedulesRowChangeEvent(((floorsXroomsXSchedulesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.floorsXroomsXSchedulesRowDeleted != null)) {
+                    this.floorsXroomsXSchedulesRowDeleted(this, new floorsXroomsXSchedulesRowChangeEvent(((floorsXroomsXSchedulesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.floorsXroomsXSchedulesRowDeleting != null)) {
+                    this.floorsXroomsXSchedulesRowDeleting(this, new floorsXroomsXSchedulesRowChangeEvent(((floorsXroomsXSchedulesRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemovefloorsXroomsXSchedulesRow(floorsXroomsXSchedulesRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                iReserveDBDataSet ds = new iReserveDBDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "floorsXroomsXSchedulesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class floorsRow : global::System.Data.DataRow {
@@ -3150,10 +3506,10 @@ namespace WindowsFormsApplication1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short startTime {
+            public int startTime {
                 get {
                     try {
-                        return ((short)(this[this.tableschedules.startTimeColumn]));
+                        return ((int)(this[this.tableschedules.startTimeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'startTime\' in table \'schedules\' is DBNull.", e);
@@ -3166,10 +3522,10 @@ namespace WindowsFormsApplication1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short endTime {
+            public int endTime {
                 get {
                     try {
-                        return ((short)(this[this.tableschedules.endTimeColumn]));
+                        return ((int)(this[this.tableschedules.endTimeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'endTime\' in table \'schedules\' is DBNull.", e);
@@ -3214,10 +3570,10 @@ namespace WindowsFormsApplication1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int SY {
+            public string SY {
                 get {
                     try {
-                        return ((int)(this[this.tableschedules.SYColumn]));
+                        return ((string)(this[this.tableschedules.SYColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'SY\' in table \'schedules\' is DBNull.", e);
@@ -3736,6 +4092,189 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class floorsXroomsXSchedulesRow : global::System.Data.DataRow {
+            
+            private floorsXroomsXSchedulesDataTable tablefloorsXroomsXSchedules;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal floorsXroomsXSchedulesRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablefloorsXroomsXSchedules = ((floorsXroomsXSchedulesDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string floorName {
+                get {
+                    try {
+                        return ((string)(this[this.tablefloorsXroomsXSchedules.floorNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'floorName\' in table \'floorsXroomsXSchedules\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablefloorsXroomsXSchedules.floorNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string roomName {
+                get {
+                    try {
+                        return ((string)(this[this.tablefloorsXroomsXSchedules.roomNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'roomName\' in table \'floorsXroomsXSchedules\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablefloorsXroomsXSchedules.roomNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string subj {
+                get {
+                    try {
+                        return ((string)(this[this.tablefloorsXroomsXSchedules.subjColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'subj\' in table \'floorsXroomsXSchedules\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablefloorsXroomsXSchedules.subjColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string weekDay {
+                get {
+                    try {
+                        return ((string)(this[this.tablefloorsXroomsXSchedules.weekDayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'weekDay\' in table \'floorsXroomsXSchedules\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablefloorsXroomsXSchedules.weekDayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int startTime {
+                get {
+                    try {
+                        return ((int)(this[this.tablefloorsXroomsXSchedules.startTimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'startTime\' in table \'floorsXroomsXSchedules\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablefloorsXroomsXSchedules.startTimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int endTime {
+                get {
+                    try {
+                        return ((int)(this[this.tablefloorsXroomsXSchedules.endTimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'endTime\' in table \'floorsXroomsXSchedules\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablefloorsXroomsXSchedules.endTimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsfloorNameNull() {
+                return this.IsNull(this.tablefloorsXroomsXSchedules.floorNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetfloorNameNull() {
+                this[this.tablefloorsXroomsXSchedules.floorNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsroomNameNull() {
+                return this.IsNull(this.tablefloorsXroomsXSchedules.roomNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetroomNameNull() {
+                this[this.tablefloorsXroomsXSchedules.roomNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssubjNull() {
+                return this.IsNull(this.tablefloorsXroomsXSchedules.subjColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsubjNull() {
+                this[this.tablefloorsXroomsXSchedules.subjColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsweekDayNull() {
+                return this.IsNull(this.tablefloorsXroomsXSchedules.weekDayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetweekDayNull() {
+                this[this.tablefloorsXroomsXSchedules.weekDayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsstartTimeNull() {
+                return this.IsNull(this.tablefloorsXroomsXSchedules.startTimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetstartTimeNull() {
+                this[this.tablefloorsXroomsXSchedules.startTimeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsendTimeNull() {
+                return this.IsNull(this.tablefloorsXroomsXSchedules.endTimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetendTimeNull() {
+                this[this.tablefloorsXroomsXSchedules.endTimeColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -3925,6 +4464,40 @@ namespace WindowsFormsApplication1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public floorsXroomsXReservationsRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class floorsXroomsXSchedulesRowChangeEvent : global::System.EventArgs {
+            
+            private floorsXroomsXSchedulesRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public floorsXroomsXSchedulesRowChangeEvent(floorsXroomsXSchedulesRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public floorsXroomsXSchedulesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7158,6 +7731,237 @@ WHERE (reservations.dateReserved = ?)";
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(dateReserved));
             }
             iReserveDBDataSet.floorsXroomsXReservationsDataTable dataTable = new iReserveDBDataSet.floorsXroomsXReservationsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class floorsXroomsXSchedulesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public floorsXroomsXSchedulesTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "floorsXroomsXSchedules";
+            tableMapping.ColumnMappings.Add("floorName", "floorName");
+            tableMapping.ColumnMappings.Add("roomName", "roomName");
+            tableMapping.ColumnMappings.Add("subj", "subj");
+            tableMapping.ColumnMappings.Add("weekDay", "weekDay");
+            tableMapping.ColumnMappings.Add("startTime", "startTime");
+            tableMapping.ColumnMappings.Add("endTime", "endTime");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::WindowsFormsApplication1.Properties.Settings.Default.iReserveDBConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT floors.floorName, rooms.roomName, schedules.subj, schedules.weekDay, schedules.startTime, schedules.endTime
+FROM     ((schedules INNER JOIN
+                  rooms ON schedules.roomID = rooms.ID) INNER JOIN
+                  floors ON rooms.floor = floors.ID)
+WHERE  (floors.floorName LIKE '%' + ? + '%') OR
+                  (rooms.roomName LIKE '%' + ? + '%') OR
+                  (schedules.subj LIKE '%' + ? + '%') OR
+                  (schedules.weekDay LIKE '%' + ? + '%')";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("floorName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "floorName", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("roomName", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "roomName", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("subj", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "subj", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("weekDay", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "weekDay", global::System.Data.DataRowVersion.Current, false, null));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int FillBySearch(iReserveDBDataSet.floorsXroomsXSchedulesDataTable dataTable, string floorName, string roomName, string subj, string weekDay) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((floorName == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(floorName));
+            }
+            if ((roomName == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(roomName));
+            }
+            if ((subj == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(subj));
+            }
+            if ((weekDay == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(weekDay));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual iReserveDBDataSet.floorsXroomsXSchedulesDataTable GetDataBySearch(string floorName, string roomName, string subj, string weekDay) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((floorName == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(floorName));
+            }
+            if ((roomName == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(roomName));
+            }
+            if ((subj == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(subj));
+            }
+            if ((weekDay == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(weekDay));
+            }
+            iReserveDBDataSet.floorsXroomsXSchedulesDataTable dataTable = new iReserveDBDataSet.floorsXroomsXSchedulesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
