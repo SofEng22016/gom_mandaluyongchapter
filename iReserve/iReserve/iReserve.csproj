@@ -110,6 +110,12 @@
     <Compile Include="ViewReservations.Designer.cs">
       <DependentUpon>ViewReservations.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewSchedules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSchedules.Designer.cs">
+      <DependentUpon>ViewSchedules.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddFloor.resx">
       <DependentUpon>AddFloor.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewReservations.resx">
       <DependentUpon>ViewReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSchedules.resx">
+      <DependentUpon>ViewSchedules.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="iReserveDBDataSet.xsc">
