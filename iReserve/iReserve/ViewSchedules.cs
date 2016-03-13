@@ -14,6 +14,26 @@ namespace WindowsFormsApplication1
         public ViewSchedules()
         {
             InitializeComponent();
+            modifyFormDesign();
+        }
+        private void modifyFormDesign()
+        {
+            this.BackgroundImage = Properties.Resources.formBackground;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+
+            foreach (Button btn in this.Controls.OfType<Button>())
+            {//this will controll all button inside form
+                btn.FlatStyle = FlatStyle.Standard;
+                btn.ForeColor = Color.Black;
+                btn.BackColor = Color.White;
+
+
+            }
+            foreach (Label lbl in this.Controls.OfType<Label>())
+            {//this will controll all label inside form
+                lbl.BackColor = Color.Transparent;
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

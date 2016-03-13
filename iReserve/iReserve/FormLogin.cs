@@ -15,25 +15,28 @@ namespace WindowsFormsApplication1
         public frmLogin()
         {
             InitializeComponent();
+            modifyFormDesign();
+        }
+        private void modifyFormDesign() {
 
             foreach (Button btn in this.Controls.OfType<Button>())
             {//this will controll all button inside form
                 btn.FlatStyle = FlatStyle.Standard;
                 btn.ForeColor = Color.Black;
                 btn.BackColor = Color.White;
-                
+
             }
             foreach (TextBox txtbox in this.Controls.OfType<TextBox>())
             {//this will controll all textbox inside form
                 txtbox.BorderStyle = BorderStyle.None;
-                
+
             }
 
             //background
             this.BackgroundImage = Properties.Resources.bg;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
-            gp.AddEllipse(0, 0, pictureBox1.Width - 3, pictureBox1.Height - 3);
+            gp.AddEllipse(0, 0, pictureBox1.Width, pictureBox1.Height);
             Region rg = new Region(gp);
             pictureBox1.Region = rg;
         }

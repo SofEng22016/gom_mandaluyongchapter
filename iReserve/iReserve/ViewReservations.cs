@@ -14,7 +14,11 @@ namespace WindowsFormsApplication1
         public ViewReservations()
         {
             InitializeComponent();
-
+            modifyFormDesign();
+          
+        }
+        private void modifyFormDesign()
+        {
             this.BackgroundImage = Properties.Resources.formBackground;
             this.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -31,7 +35,6 @@ namespace WindowsFormsApplication1
 
             }
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();

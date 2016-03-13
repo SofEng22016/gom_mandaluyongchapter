@@ -14,7 +14,11 @@ namespace WindowsFormsApplication1
         public RemoveFloor()
         {
             InitializeComponent();
-
+            modifyFormDesign();
+            
+        }
+        private void modifyFormDesign()
+        {
             this.BackgroundImage = Properties.Resources.formBackground;
             this.BackgroundImageLayout = ImageLayout.Stretch;
 

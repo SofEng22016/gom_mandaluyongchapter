@@ -54,10 +54,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(319, 394);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(239, 320);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(149, 48);
+            this.btnCancel.Size = new System.Drawing.Size(112, 39);
             this.btnCancel.TabIndex = 0;
             this.btnCancel.Text = "Done";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -68,6 +68,7 @@
             this.floorsXroomsXReservationsDataGridView.AllowUserToAddRows = false;
             this.floorsXroomsXReservationsDataGridView.AllowUserToDeleteRows = false;
             this.floorsXroomsXReservationsDataGridView.AutoGenerateColumns = false;
+            this.floorsXroomsXReservationsDataGridView.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.floorsXroomsXReservationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.floorsXroomsXReservationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -79,13 +80,13 @@
             this.dataGridViewTextBoxColumn7,
             this.ID});
             this.floorsXroomsXReservationsDataGridView.DataSource = this.floorsXroomsXReservationsBindingSource;
-            this.floorsXroomsXReservationsDataGridView.Location = new System.Drawing.Point(24, 95);
-            this.floorsXroomsXReservationsDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.floorsXroomsXReservationsDataGridView.Location = new System.Drawing.Point(18, 77);
+            this.floorsXroomsXReservationsDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.floorsXroomsXReservationsDataGridView.Name = "floorsXroomsXReservationsDataGridView";
             this.floorsXroomsXReservationsDataGridView.ReadOnly = true;
             this.floorsXroomsXReservationsDataGridView.RowTemplate.Height = 24;
             this.floorsXroomsXReservationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.floorsXroomsXReservationsDataGridView.Size = new System.Drawing.Size(992, 272);
+            this.floorsXroomsXReservationsDataGridView.Size = new System.Drawing.Size(744, 221);
             this.floorsXroomsXReservationsDataGridView.TabIndex = 2;
             this.floorsXroomsXReservationsDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.floorsXroomsXReservationsDataGridView_DataBindingComplete);
             this.floorsXroomsXReservationsDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.floorsXroomsXReservationsDataGridView_KeyDown);
@@ -161,10 +162,10 @@
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.Gray;
-            this.txtSearch.Location = new System.Drawing.Point(53, 33);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearch.Location = new System.Drawing.Point(40, 27);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(701, 30);
+            this.txtSearch.Size = new System.Drawing.Size(527, 26);
             this.txtSearch.TabIndex = 3;
             this.txtSearch.Text = "Search for Floor, Room, Reservee, Date, Purpose";
             this.txtSearch.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSearch_MouseClick);
@@ -176,10 +177,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(771, 31);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Location = new System.Drawing.Point(578, 25);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(139, 41);
+            this.btnSearch.Size = new System.Drawing.Size(104, 33);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -187,10 +188,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(571, 394);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(428, 320);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(149, 48);
+            this.btnDelete.Size = new System.Drawing.Size(112, 39);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -217,9 +218,9 @@
             // 
             // ViewReservations
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 459);
+            this.ClientSize = new System.Drawing.Size(782, 373);
             this.ControlBox = false;
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSearch);
@@ -227,7 +228,7 @@
             this.Controls.Add(this.floorsXroomsXReservationsDataGridView);
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ViewReservations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewReservations";

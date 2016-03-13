@@ -15,6 +15,11 @@ namespace WindowsFormsApplication1
         public AddFloor()
         {
             InitializeComponent();
+            modifyFormDesign();
+            
+        }
+        private void modifyFormDesign()
+        {
             this.btnDone.Enabled = false;
             this.lblMessage.Visible = false;
             this.lblGreen.Visible = false;
@@ -36,7 +41,6 @@ namespace WindowsFormsApplication1
 
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             int valid;
@@ -113,6 +117,11 @@ namespace WindowsFormsApplication1
             this.Validate();
             this.floorsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.iReserveDBDataSet);
+
+        }
+
+        private void AddFloor_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -50,10 +50,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(884, 18);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Location = new System.Drawing.Point(663, 15);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(139, 41);
+            this.btnSearch.Size = new System.Drawing.Size(104, 33);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -63,10 +63,10 @@
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.Gray;
-            this.txtSearch.Location = new System.Drawing.Point(149, 21);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearch.Location = new System.Drawing.Point(112, 17);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(701, 30);
+            this.txtSearch.Size = new System.Drawing.Size(527, 26);
             this.txtSearch.TabIndex = 5;
             this.txtSearch.Text = "Search";
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -76,10 +76,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(448, 494);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBack.Location = new System.Drawing.Point(336, 401);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(137, 44);
+            this.btnBack.Size = new System.Drawing.Size(103, 36);
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -113,6 +112,7 @@
             // floorsXroomsXSchedulesDataGridView
             // 
             this.floorsXroomsXSchedulesDataGridView.AutoGenerateColumns = false;
+            this.floorsXroomsXSchedulesDataGridView.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.floorsXroomsXSchedulesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.floorsXroomsXSchedulesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -122,10 +122,11 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.floorsXroomsXSchedulesDataGridView.DataSource = this.floorsXroomsXSchedulesBindingSource;
-            this.floorsXroomsXSchedulesDataGridView.Location = new System.Drawing.Point(29, 63);
+            this.floorsXroomsXSchedulesDataGridView.Location = new System.Drawing.Point(22, 51);
+            this.floorsXroomsXSchedulesDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.floorsXroomsXSchedulesDataGridView.Name = "floorsXroomsXSchedulesDataGridView";
             this.floorsXroomsXSchedulesDataGridView.RowTemplate.Height = 24;
-            this.floorsXroomsXSchedulesDataGridView.Size = new System.Drawing.Size(1012, 424);
+            this.floorsXroomsXSchedulesDataGridView.Size = new System.Drawing.Size(759, 344);
             this.floorsXroomsXSchedulesDataGridView.TabIndex = 9;
             this.floorsXroomsXSchedulesDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.floorsXroomsXSchedulesDataGridView_DataBindingComplete);
             // 
@@ -167,16 +168,15 @@
             // 
             // ViewSchedules
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 551);
+            this.ClientSize = new System.Drawing.Size(799, 448);
             this.ControlBox = false;
             this.Controls.Add(this.floorsXroomsXSchedulesDataGridView);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ViewSchedules";

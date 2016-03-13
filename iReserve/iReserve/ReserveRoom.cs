@@ -63,6 +63,11 @@ namespace WindowsFormsApplication1
             this.btnReserve.Enabled = false;
             this.adminID = id;
 
+            modifyFormDesign();
+           
+        }
+        private void modifyFormDesign()
+        {
             this.BackgroundImage = Properties.Resources.formBackground;
             this.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -79,7 +84,6 @@ namespace WindowsFormsApplication1
 
             }
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();

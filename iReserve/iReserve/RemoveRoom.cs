@@ -14,6 +14,11 @@ namespace WindowsFormsApplication1
         public RemoveRoom()
         {
             InitializeComponent();
+            modifyFormDesgin();
+            
+        }
+        private void modifyFormDesgin()
+        {
             this.BackgroundImage = Properties.Resources.formBackground;
             this.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -29,8 +34,12 @@ namespace WindowsFormsApplication1
                 lbl.BackColor = Color.Transparent;
 
             }
+            foreach (ComboBox comboBox in this.Controls.OfType<ComboBox>())
+            {//this will controll all button inside form
+                comboBox.BackColor = Color.White;
+                
+            }
         }
-
         private void roomsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();

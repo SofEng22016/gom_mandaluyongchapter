@@ -17,6 +17,12 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             this.adminID = id;
 
+            modifyFormDesign(this);
+
+            
+        }
+        private void modifyFormDesign(object form)
+        {
             this.BackgroundImage = Properties.Resources.formBackground;
             this.BackgroundImageLayout = ImageLayout.Stretch;
 

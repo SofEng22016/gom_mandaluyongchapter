@@ -72,7 +72,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(148, 337);
+            this.btnCancel.Location = new System.Drawing.Point(143, 366);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(74, 42);
@@ -83,7 +83,7 @@
             // 
             // btnReserve
             // 
-            this.btnReserve.Location = new System.Drawing.Point(302, 337);
+            this.btnReserve.Location = new System.Drawing.Point(297, 366);
             this.btnReserve.Margin = new System.Windows.Forms.Padding(2);
             this.btnReserve.Name = "btnReserve";
             this.btnReserve.Size = new System.Drawing.Size(74, 42);
@@ -261,6 +261,7 @@
             this.roomsDataGridView.AllowUserToAddRows = false;
             this.roomsDataGridView.AllowUserToDeleteRows = false;
             this.roomsDataGridView.AutoGenerateColumns = false;
+            this.roomsDataGridView.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.roomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.roomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -274,7 +275,7 @@
             this.roomsDataGridView.ReadOnly = true;
             this.roomsDataGridView.RowTemplate.Height = 24;
             this.roomsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.roomsDataGridView.Size = new System.Drawing.Size(243, 82);
+            this.roomsDataGridView.Size = new System.Drawing.Size(243, 118);
             this.roomsDataGridView.TabIndex = 13;
             this.roomsDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.roomsDataGridView_DataBindingComplete);
             this.roomsDataGridView.SelectionChanged += new System.EventHandler(this.roomsDataGridView_SelectionChanged);
@@ -320,7 +321,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(41, 295);
+            this.label7.Location = new System.Drawing.Point(36, 324);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
@@ -330,10 +331,10 @@
             // 
             // txtPurpose
             // 
-            this.txtPurpose.Location = new System.Drawing.Point(94, 292);
+            this.txtPurpose.Location = new System.Drawing.Point(89, 321);
             this.txtPurpose.Margin = new System.Windows.Forms.Padding(2);
             this.txtPurpose.Name = "txtPurpose";
-            this.txtPurpose.Size = new System.Drawing.Size(381, 20);
+            this.txtPurpose.Size = new System.Drawing.Size(398, 20);
             this.txtPurpose.TabIndex = 16;
             // 
             // lblResult
@@ -362,7 +363,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 390);
+            this.ClientSize = new System.Drawing.Size(535, 432);
             this.ControlBox = false;
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.lblResult);

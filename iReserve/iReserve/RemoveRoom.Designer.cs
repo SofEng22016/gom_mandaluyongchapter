@@ -38,12 +38,12 @@
             this.roomsTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.roomsTableAdapter();
             this.tableAdapterManager = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager();
             this.roomsDataGridView = new System.Windows.Forms.DataGridView();
-            this.floorsTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.floorsTableAdapter();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.floorsTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.floorsTableAdapter();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.floorsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
@@ -57,7 +57,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(49, 24);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(118, 21);
             this.comboBox1.TabIndex = 0;
@@ -119,6 +119,7 @@
             this.roomsDataGridView.AllowUserToAddRows = false;
             this.roomsDataGridView.AllowUserToDeleteRows = false;
             this.roomsDataGridView.AutoGenerateColumns = false;
+            this.roomsDataGridView.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.roomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.roomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -126,7 +127,7 @@
             this.dataGridViewTextBoxColumn3});
             this.roomsDataGridView.DataSource = this.roomsBindingSource;
             this.roomsDataGridView.Location = new System.Drawing.Point(49, 58);
-            this.roomsDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomsDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.roomsDataGridView.MultiSelect = false;
             this.roomsDataGridView.Name = "roomsDataGridView";
             this.roomsDataGridView.ReadOnly = true;
@@ -138,32 +139,6 @@
             this.roomsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.roomsDataGridView_CellContentClick);
             this.roomsDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.roomsDataGridView_DataBindingComplete);
             this.roomsDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.roomsDataGridView_KeyDown);
-            // 
-            // floorsTableAdapter
-            // 
-            this.floorsTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(368, 68);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(63, 32);
-            this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "Done";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(368, 118);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(63, 32);
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -188,6 +163,32 @@
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 150;
             // 
+            // floorsTableAdapter
+            // 
+            this.floorsTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(368, 68);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(63, 32);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Text = "Done";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(368, 118);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(63, 32);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.button1_Click);
+            // 
             // RemoveRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,7 +202,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RemoveRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RemoveRoom";

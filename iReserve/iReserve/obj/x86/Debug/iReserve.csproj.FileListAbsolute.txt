@@ -170,3 +170,25 @@ C:\Users\Coleen Mae\Desktop\SE21\SE CODES\iReserve\iReserve\obj\x86\Debug\iReser
 C:\Users\ralphbausas\Documents\gom_mandaluyongchapter\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewSchedules.resources
 C:\Users\ralphbausas\Documents\Visual Studio 2010\Projects\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewSchedules.resources
 D:\Work\SoftEngEditspace\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewSchedules.resources
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\bin\Debug\iReserve.exe.config
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\iReserve.exe
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\iReserve.pdb
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\bin\Debug\iReserveDB.mdb
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\bin\Debug\iReserveDBDataSet.cs
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\bin\Debug\iReserveDBDataSet.Designer.cs
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\bin\Debug\iReserveDBDataSet.xsc
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\bin\Debug\iReserveDBDataSet.xsd
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\bin\Debug\iReserveDBDataSet.xss
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\bin\Debug\iReserve.pdb
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\iReserve.csprojResolveAssemblyReference.cache
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.AddFloor.resources
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.AddRoom.resources
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.frmLogin.resources
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.frmDashboard.resources
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.RemoveFloor.resources
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.RemoveRoom.resources
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ReserveRoom.resources
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewReservations.resources
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewSchedules.resources
+C:\Users\Ruby\Desktop\REPO MAn - Copy\iReserve\iReserve\obj\x86\Debug\iReserve.csproj.GenerateResource.Cache
