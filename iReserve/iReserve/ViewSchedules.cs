@@ -54,5 +54,33 @@ namespace WindowsFormsApplication1
                 btnSearch_Click(sender, e);
             }
         }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+            txtSearch.ForeColor = Color.Black;
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            txtSearch.ForeColor = Color.Gray;
+            txtSearch.Text = "Search for Floor name, Room name, Subject, or Weekday";
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text.Equals(""))
+            {
+                btnSearch.Enabled = false;
+                this.floorsXroomsXSchedulesTableAdapter.FillBySearch(this.iReserveDBDataSet.floorsXroomsXSchedules, "", "", "", "");
+               
+
+            }
+            else
+            {
+                //this.floorsXroomsXSchedulesTableAdapter.FillBySearch(this.iReserveDBDataSet.floorsXroomsXSchedules, txtSearch.Text, txtSearch.Text, txtSearch.Text, txtSearch.Text);
+                btnSearch.Enabled = true;
+            }
+        }
     }
 }

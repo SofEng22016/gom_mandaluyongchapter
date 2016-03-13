@@ -69,7 +69,10 @@
             this.txtSearch.Size = new System.Drawing.Size(701, 30);
             this.txtSearch.TabIndex = 5;
             this.txtSearch.Text = "Search";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
             // btnBack
             // 
@@ -129,37 +132,37 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "floorName";
-            this.dataGridViewTextBoxColumn1.HeaderText = "floorName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Floor Name";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "roomName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "roomName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Room Name";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "subj";
-            this.dataGridViewTextBoxColumn3.HeaderText = "subj";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Subject";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "weekDay";
-            this.dataGridViewTextBoxColumn4.HeaderText = "weekDay";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Weekday";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "startTime";
-            this.dataGridViewTextBoxColumn5.HeaderText = "startTime";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Start Time";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "endTime";
-            this.dataGridViewTextBoxColumn6.HeaderText = "endTime";
+            this.dataGridViewTextBoxColumn6.HeaderText = "End Time";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // ViewSchedules

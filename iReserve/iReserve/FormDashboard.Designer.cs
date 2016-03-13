@@ -153,9 +153,9 @@
             this.groupBox1.Controls.Add(this.btnAddRoom);
             this.groupBox1.Controls.Add(this.btnRemoveRoom);
             this.groupBox1.Location = new System.Drawing.Point(588, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(401, 112);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -180,9 +180,9 @@
             this.groupBox2.Controls.Add(this.btnViewReservation);
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(21, 15);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(523, 112);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
@@ -213,7 +213,7 @@
             // btnViewReservation
             // 
             this.btnViewReservation.Location = new System.Drawing.Point(100, 69);
-            this.btnViewReservation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnViewReservation.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewReservation.Name = "btnViewReservation";
             this.btnViewReservation.Size = new System.Drawing.Size(329, 31);
             this.btnViewReservation.TabIndex = 0;
@@ -329,7 +329,7 @@
             this.panel1.Controls.Add(this.lblDate);
             this.panel1.Controls.Add(this.lblTime);
             this.panel1.Location = new System.Drawing.Point(1047, 82);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(199, 67);
             this.panel1.TabIndex = 17;
@@ -338,7 +338,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1261, 423);
+            this.ClientSize = new System.Drawing.Size(1261, 460);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.floorsXroomsXReservationsDataGridView);
