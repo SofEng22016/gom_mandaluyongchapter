@@ -72,10 +72,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(143, 366);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(191, 450);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(74, 42);
+            this.btnCancel.Size = new System.Drawing.Size(99, 52);
             this.btnCancel.TabIndex = 0;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -83,10 +83,10 @@
             // 
             // btnReserve
             // 
-            this.btnReserve.Location = new System.Drawing.Point(297, 366);
-            this.btnReserve.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReserve.Location = new System.Drawing.Point(396, 450);
+            this.btnReserve.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReserve.Name = "btnReserve";
-            this.btnReserve.Size = new System.Drawing.Size(74, 42);
+            this.btnReserve.Size = new System.Drawing.Size(99, 52);
             this.btnReserve.TabIndex = 1;
             this.btnReserve.Text = "Reserve";
             this.btnReserve.UseVisualStyleBackColor = true;
@@ -95,79 +95,75 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(81, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 13);
+            this.label1.Size = new System.Drawing.Size(162, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Requesting Department:";
             // 
             // txtReqeust
             // 
-            this.txtReqeust.Location = new System.Drawing.Point(191, 26);
-            this.txtReqeust.Margin = new System.Windows.Forms.Padding(2);
+            this.txtReqeust.Location = new System.Drawing.Point(255, 32);
+            this.txtReqeust.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtReqeust.Name = "txtReqeust";
-            this.txtReqeust.Size = new System.Drawing.Size(252, 20);
+            this.txtReqeust.Size = new System.Drawing.Size(335, 22);
             this.txtReqeust.TabIndex = 3;
             // 
             // dateReserved
             // 
-            this.dateReserved.Location = new System.Drawing.Point(193, 62);
-            this.dateReserved.Margin = new System.Windows.Forms.Padding(2);
+            this.dateReserved.Location = new System.Drawing.Point(257, 76);
+            this.dateReserved.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateReserved.Name = "dateReserved";
-            this.dateReserved.Size = new System.Drawing.Size(215, 20);
+            this.dateReserved.Size = new System.Drawing.Size(285, 22);
             this.dateReserved.TabIndex = 4;
             this.dateReserved.ValueChanged += new System.EventHandler(this.dateReserved_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(86, 68);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(115, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.Size = new System.Drawing.Size(122, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Reservation Date:";
             // 
             // startTimePicker
             // 
             this.startTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.startTimePicker.Location = new System.Drawing.Point(110, 25);
-            this.startTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.startTimePicker.Location = new System.Drawing.Point(147, 31);
+            this.startTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startTimePicker.Name = "startTimePicker";
             this.startTimePicker.ShowUpDown = true;
-            this.startTimePicker.Size = new System.Drawing.Size(95, 20);
+            this.startTimePicker.Size = new System.Drawing.Size(125, 22);
             this.startTimePicker.TabIndex = 6;
             this.startTimePicker.ValueChanged += new System.EventHandler(this.startTimePicker_ValueChanged);
             // 
             // endTimePicker
             // 
             this.endTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.endTimePicker.Location = new System.Drawing.Point(277, 24);
-            this.endTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.endTimePicker.Location = new System.Drawing.Point(369, 30);
+            this.endTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.endTimePicker.Name = "endTimePicker";
             this.endTimePicker.ShowUpDown = true;
-            this.endTimePicker.Size = new System.Drawing.Size(107, 20);
+            this.endTimePicker.Size = new System.Drawing.Size(141, 22);
             this.endTimePicker.TabIndex = 7;
             this.endTimePicker.ValueChanged += new System.EventHandler(this.endTimePicker_ValueChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 27);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(91, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Start:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(243, 27);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(324, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 13);
+            this.label4.Size = new System.Drawing.Size(37, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "End:";
             // 
@@ -228,10 +224,10 @@
             this.cBoxFloors.DisplayMember = "floorName";
             this.cBoxFloors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxFloors.FormattingEnabled = true;
-            this.cBoxFloors.Location = new System.Drawing.Point(74, 184);
-            this.cBoxFloors.Margin = new System.Windows.Forms.Padding(2);
+            this.cBoxFloors.Location = new System.Drawing.Point(99, 226);
+            this.cBoxFloors.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBoxFloors.Name = "cBoxFloors";
-            this.cBoxFloors.Size = new System.Drawing.Size(92, 21);
+            this.cBoxFloors.Size = new System.Drawing.Size(121, 24);
             this.cBoxFloors.TabIndex = 10;
             this.cBoxFloors.ValueMember = "floorName";
             this.cBoxFloors.SelectedIndexChanged += new System.EventHandler(this.cBoxFloors_SelectedIndexChanged);
@@ -239,20 +235,18 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 187);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(47, 230);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.Size = new System.Drawing.Size(44, 17);
             this.label5.TabIndex = 12;
             this.label5.Text = "Floor:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(193, 181);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(257, 223);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.Size = new System.Drawing.Size(56, 17);
             this.label6.TabIndex = 13;
             this.label6.Text = "Rooms:";
             // 
@@ -268,14 +262,14 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.roomsDataGridView.DataSource = this.roomsBindingSource;
-            this.roomsDataGridView.Location = new System.Drawing.Point(244, 177);
-            this.roomsDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.roomsDataGridView.Location = new System.Drawing.Point(325, 218);
+            this.roomsDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roomsDataGridView.MultiSelect = false;
             this.roomsDataGridView.Name = "roomsDataGridView";
             this.roomsDataGridView.ReadOnly = true;
             this.roomsDataGridView.RowTemplate.Height = 24;
             this.roomsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.roomsDataGridView.Size = new System.Drawing.Size(243, 118);
+            this.roomsDataGridView.Size = new System.Drawing.Size(324, 145);
             this.roomsDataGridView.TabIndex = 13;
             this.roomsDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.roomsDataGridView_DataBindingComplete);
             this.roomsDataGridView.SelectionChanged += new System.EventHandler(this.roomsDataGridView_SelectionChanged);
@@ -309,11 +303,11 @@
             this.groupBox1.Controls.Add(this.startTimePicker);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.endTimePicker);
-            this.groupBox1.Location = new System.Drawing.Point(38, 99);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(51, 122);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(449, 60);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(599, 74);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Time";
@@ -321,39 +315,37 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 324);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(48, 399);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.Size = new System.Drawing.Size(65, 17);
             this.label7.TabIndex = 15;
             this.label7.Text = "Purpose:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtPurpose
             // 
-            this.txtPurpose.Location = new System.Drawing.Point(89, 321);
-            this.txtPurpose.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPurpose.Location = new System.Drawing.Point(119, 395);
+            this.txtPurpose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPurpose.Name = "txtPurpose";
-            this.txtPurpose.Size = new System.Drawing.Size(398, 20);
+            this.txtPurpose.Size = new System.Drawing.Size(529, 22);
             this.txtPurpose.TabIndex = 16;
             // 
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(41, 254);
-            this.lblResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblResult.Location = new System.Drawing.Point(55, 313);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(71, 13);
+            this.lblResult.Size = new System.Drawing.Size(94, 17);
             this.lblResult.TabIndex = 17;
             this.lblResult.Text = "Results Label";
             this.lblResult.Visible = false;
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(39, 223);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCheck.Location = new System.Drawing.Point(52, 274);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(122, 20);
+            this.btnCheck.Size = new System.Drawing.Size(163, 25);
             this.btnCheck.TabIndex = 18;
             this.btnCheck.Text = "Check Availability";
             this.btnCheck.UseVisualStyleBackColor = true;
@@ -361,9 +353,9 @@
             // 
             // ReserveRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 432);
+            this.ClientSize = new System.Drawing.Size(716, 535);
             this.ControlBox = false;
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.lblResult);
@@ -381,7 +373,7 @@
             this.Controls.Add(this.btnReserve);
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ReserveRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReserveRoom";

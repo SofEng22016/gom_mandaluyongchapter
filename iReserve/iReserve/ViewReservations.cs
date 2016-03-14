@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             modifyFormDesign();
+            this.btnSearch.Visible = false;
           
         }
         private void modifyFormDesign()
@@ -126,6 +127,15 @@ namespace WindowsFormsApplication1
              if (this.txtSearch.Text.Equals(""))
             {
                 this.floorsXroomsXReservationsTableAdapter.FillBySearch(this.iReserveDBDataSet.floorsXroomsXReservations, this.txtSearch.Text, this.txtSearch.Text, this.txtSearch.Text, this.txtSearch.Text, this.txtSearch.Text);
+            }
+             else if (txtSearch.Text.Equals("Search for Floor, Room, Reservee, Date, Purpose"))
+            {
+
+            }
+            else
+            {
+                this.floorsXroomsXReservationsTableAdapter.FillBySearch(this.iReserveDBDataSet.floorsXroomsXReservations, this.txtSearch.Text, this.txtSearch.Text, this.txtSearch.Text, this.txtSearch.Text, this.txtSearch.Text);
+                 btnSearch.Enabled = true;
             }
         }
 

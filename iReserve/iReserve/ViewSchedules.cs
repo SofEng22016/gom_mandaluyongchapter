@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             modifyFormDesign();
+            this.btnSearch.Visible = false;
         }
         private void modifyFormDesign()
         {
@@ -96,9 +97,12 @@ namespace WindowsFormsApplication1
                
 
             }
+            else if(txtSearch.Text.Equals("Search for Floor name, Room name, Subject, or Weekday")){
+            
+            }
             else
             {
-                //this.floorsXroomsXSchedulesTableAdapter.FillBySearch(this.iReserveDBDataSet.floorsXroomsXSchedules, txtSearch.Text, txtSearch.Text, txtSearch.Text, txtSearch.Text);
+                this.floorsXroomsXSchedulesTableAdapter.FillBySearch(this.iReserveDBDataSet.floorsXroomsXSchedules, txtSearch.Text, txtSearch.Text, txtSearch.Text, txtSearch.Text);
                 btnSearch.Enabled = true;
             }
         }
