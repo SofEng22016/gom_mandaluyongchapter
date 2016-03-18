@@ -74,6 +74,11 @@ namespace WindowsFormsApplication1
             {
                 btnSearch_Click(sender, e);
             }
+            //if escape key is pressed
+            else if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
 
         private void txtSearch_Enter(object sender, EventArgs e)
@@ -104,6 +109,20 @@ namespace WindowsFormsApplication1
             {
                 this.floorsXroomsXSchedulesTableAdapter.FillBySearch(this.iReserveDBDataSet.floorsXroomsXSchedules, txtSearch.Text, txtSearch.Text, txtSearch.Text, txtSearch.Text);
                 btnSearch.Enabled = true;
+            }
+        }
+
+        private void ViewSchedules_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void floorsXroomsXSchedulesDataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if escape key is pressed
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
             }
         }
     }

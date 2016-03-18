@@ -134,42 +134,49 @@
             this.floorsXroomsXSchedulesDataGridView.Size = new System.Drawing.Size(1012, 423);
             this.floorsXroomsXSchedulesDataGridView.TabIndex = 9;
             this.floorsXroomsXSchedulesDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.floorsXroomsXSchedulesDataGridView_DataBindingComplete);
+            this.floorsXroomsXSchedulesDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.floorsXroomsXSchedulesDataGridView_KeyDown);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "floorName";
             this.dataGridViewTextBoxColumn1.HeaderText = "Floor Name";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "roomName";
             this.dataGridViewTextBoxColumn2.HeaderText = "Room Name";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "subj";
             this.dataGridViewTextBoxColumn3.HeaderText = "Subject";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "weekDay";
             this.dataGridViewTextBoxColumn4.HeaderText = "Weekday";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "startTime";
             this.dataGridViewTextBoxColumn5.HeaderText = "Start Time";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "endTime";
             this.dataGridViewTextBoxColumn6.HeaderText = "End Time";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // ViewSchedules
             // 
@@ -189,6 +196,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewSchedules";
             this.Load += new System.EventHandler(this.ViewSchedules_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ViewSchedules_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXSchedulesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXSchedulesDataGridView)).EndInit();

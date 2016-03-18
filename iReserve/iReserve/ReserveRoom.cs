@@ -17,7 +17,8 @@ namespace WindowsFormsApplication1
         String endTime = "";
         int idOfRoom = 1;
         int adminID = 0;
-
+        int selected = 0;
+        bool doThisOnce = true;
         
         
 
@@ -63,6 +64,7 @@ namespace WindowsFormsApplication1
             this.btnReserve.Enabled = false;
             this.adminID = id;
 
+
             modifyFormDesign();
            
         }
@@ -78,9 +80,28 @@ namespace WindowsFormsApplication1
                 btn.BackColor = Color.White;
 
             }
-            foreach (Label lbl in this.Controls.OfType<Label>())
+            
+            foreach (TabControl tabCtrl in this.Controls.OfType<TabControl>())
             {//this will controll all button inside form
-                lbl.BackColor = Color.Transparent;
+             
+                foreach (TabPage tabPage in tabCtrl.Controls.OfType<TabPage>())
+                {//this will controll all button inside form
+                    tabPage.BackgroundImage = Properties.Resources.bg;
+                    tabPage.BackgroundImageLayout = ImageLayout.Stretch;
+
+                    foreach (Label lbl in tabPage.Controls.OfType<Label>())
+                    {//this will controll all button inside form
+                        lbl.BackColor = Color.Transparent;
+
+                    }
+                    foreach (Button btn in tabPage.Controls.OfType<Button>())
+                    {//this will controll all button inside form
+                        btn.FlatStyle = FlatStyle.Standard;
+                        btn.ForeColor = Color.Black;
+                        btn.BackColor = Color.White;
+
+                    }
+                }
 
             }
         }
@@ -126,15 +147,6 @@ namespace WindowsFormsApplication1
         private void ReserveRoom_Load(object sender, EventArgs e)
         {
             
-            // TODO: This line of code loads data into the 'iReserveDBDataSet.schedules' table. You can move, or remove it, as needed.
-            this.schedulesTableAdapter.Fill(this.iReserveDBDataSet.schedules);
-            // TODO: This line of code loads data into the 'iReserveDBDataSet.reservations' table. You can move, or remove it, as needed.
-            this.reservationsTableAdapter.Fill(this.iReserveDBDataSet.reservations);
-            // TODO: This line of code loads data into the 'iReserveDBDataSet.floors' table. You can move, or remove it, as needed.
-            this.floorsTableAdapter.Fill(this.iReserveDBDataSet.floors);
-
-            // TODO: This line of code loads data into the 'iReserveDBDataSet.rooms' table. You can move, or remove it, as needed.
-            this.roomsTableAdapter.FillByFloor(this.iReserveDBDataSet.rooms, (int)this.floorsTableAdapter.GetID(this.cBoxFloors.Text));
 
             
         }
@@ -143,9 +155,10 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                int x = (int)this.floorsTableAdapter.GetID(this.cBoxFloors.Text);
+                String dummy = this.cBoxFloors.Text;
+                int x = (int)this.floorsTableAdapter.GetID(dummy);
                 this.roomsTableAdapter.FillByFloor(this.iReserveDBDataSet.rooms, x);
-
+                this.lblFloor.Text = "" + dummy;
             }
             catch (System.Exception ex)
             {
@@ -190,7 +203,7 @@ namespace WindowsFormsApplication1
                 lblResult.Text = "The Schedule is Available!";
                 lblResult.ForeColor = Color.Green;
                 lblResult.Visible = true;
-                this.btnReserve.Enabled = true;
+                //this.btnReserve.Enabled = true;
             }
             else
             {
@@ -223,8 +236,11 @@ namespace WindowsFormsApplication1
                     //toMessage += "Room: " + value2 + " " + value3 + "\n";
 
                     this.idOfRoom = Convert.ToInt32(value1);
+                    this.lblRoom.Text = value2;
                 }
 
+                
+                //MessageBox.Show(toMessage);
                 //MessageBox.Show("Update successful");
                 //this.Close();
             }
@@ -275,6 +291,117 @@ namespace WindowsFormsApplication1
 
         private void label7_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnNextTab1_Click(object sender, EventArgs e)
+        {
+            selected = 1;
+            tabControlReserve.SelectedIndex = 1;
+            
+        }
+
+        private void tabControlReserve_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (selected != 1)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                selected = 0;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            selected = 1;
+            tabControlReserve.SelectedIndex = 2;
+
+            if (doThisOnce)
+            {
+                // TODO: This line of code loads data into the 'iReserveDBDataSet.schedules' table. You can move, or remove it, as needed.
+                this.schedulesTableAdapter.Fill(this.iReserveDBDataSet.schedules);
+                // TODO: This line of code loads data into the 'iReserveDBDataSet.reservations' table. You can move, or remove it, as needed.
+                this.reservationsTableAdapter.Fill(this.iReserveDBDataSet.reservations);
+                // TODO: This line of code loads data into the 'iReserveDBDataSet.floors' table. You can move, or remove it, as needed.
+                this.floorsTableAdapter.Fill(this.iReserveDBDataSet.floors);
+                // TODO: This line of code loads data into the 'iReserveDBDataSet.rooms' table. You can move, or remove it, as needed.
+                this.roomsTableAdapter.FillByFloor(this.iReserveDBDataSet.rooms, (int)this.floorsTableAdapter.GetID(this.cBoxFloors.Text));
+                doThisOnce = false;
+            }
+           
+           
+            
+        }
+
+        
+        
+
+        private void btnBack4_Click_1(object sender, EventArgs e)
+        {
+            selected = 1;
+            tabControlReserve.SelectedIndex = 2;
+
+
+        }
+
+        private void btnNextPage3_Click(object sender, EventArgs e)
+        {
+            selected = 1;
+            tabControlReserve.SelectedIndex = 3;
+
+            this.lblDepartment.Text = this.txtReqeust.Text;
+            this.lblPurpose.Text = this.txtPurpose.Text;
+            this.lblStartTime.Text = this.startTime;
+            this.lblEndTime.Text = this.endTime;
+            this.lblDate.Text = this.strDate;
+            
+
+        }
+
+        private void btnBack3_Click(object sender, EventArgs e)
+        {
+            selected = 1;
+            tabControlReserve.SelectedIndex = 1;
+        }
+
+        private void btnBack2_Click(object sender, EventArgs e)
+        {
+            selected = 1;
+            tabControlReserve.SelectedIndex = 0;
+        }
+
+        private void tabPage3_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tabControlReserve_ControlAdded(object sender, ControlEventArgs e)
+        {
+            // TODO: This line of code loads data into the 'iReserveDBDataSet.schedules' table. You can move, or remove it, as needed.
+            this.schedulesTableAdapter.Fill(this.iReserveDBDataSet.schedules);
+            // TODO: This line of code loads data into the 'iReserveDBDataSet.reservations' table. You can move, or remove it, as needed.
+            this.reservationsTableAdapter.Fill(this.iReserveDBDataSet.reservations);
+            // TODO: This line of code loads data into the 'iReserveDBDataSet.floors' table. You can move, or remove it, as needed.
+            this.floorsTableAdapter.Fill(this.iReserveDBDataSet.floors);
+            // TODO: This line of code loads data into the 'iReserveDBDataSet.rooms' table. You can move, or remove it, as needed.
+            this.roomsTableAdapter.FillByFloor(this.iReserveDBDataSet.rooms, (int)this.floorsTableAdapter.GetID(this.cBoxFloors.Text));
+            
+
+        }
+
+        private void btnYes_Click(object sender, EventArgs e)
+        {
+            if (this.lblResult.Text.Equals("The Schedule is Available!"))
+            {
+                this.btnReserve.Enabled = true;
+                MessageBox.Show("You may now click on Reserve.");
+            }
+            else
+            {
+                MessageBox.Show("Please Check if Schedule is available in Step 3.");
+            }
 
         }
 

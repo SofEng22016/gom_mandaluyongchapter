@@ -64,8 +64,10 @@ namespace WindowsFormsApplication1
             if (valid > 0)
             {
                 MessageBox.Show("Login Successful.");
+
+                String uName = (String)usersTableAdapter.getUserName(valid);
                 
-                frmDashboard Dashboard = new frmDashboard(valid);
+                frmDashboard Dashboard = new frmDashboard(valid, uName);
                 this.Visible = false;
                 
                 Dashboard.ShowDialog();

@@ -12,10 +12,13 @@ namespace WindowsFormsApplication1
     public partial class frmDashboard : Form
     {
         int adminID = 0;
-        public frmDashboard(int id)
+        String userName = "";
+        public frmDashboard(int id, String uName)
         {
             InitializeComponent();
             this.adminID = id;
+            this.userName = uName;
+            this.lblUser.Text = userName;
 
             modifyFormDesign(this);
 
