@@ -83,16 +83,6 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap blue {
-            get {
-                object obj = ResourceManager.GetObject("blue", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap dean {
             get {
                 object obj = ResourceManager.GetObject("dean", resourceCulture);
@@ -126,16 +116,6 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap green4 {
             get {
                 object obj = ResourceManager.GetObject("green4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap green5 {
-            get {
-                object obj = ResourceManager.GetObject("green5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
