@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             this.adminID = id;
             this.userName = uName;
-            this.lblUser.Text = userName;
+            this.lblUser.Text = "Hello, " + userName.ToUpper() + ".";
 
             modifyFormDesign(this);
 
@@ -155,6 +155,11 @@ namespace WindowsFormsApplication1
             this.floorsXroomsXReservationsDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.floorsXroomsXReservationsDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.floorsXroomsXReservationsDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+        private void lblUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

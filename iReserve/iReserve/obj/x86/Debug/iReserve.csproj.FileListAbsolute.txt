@@ -236,3 +236,5 @@ C:\Users\ralphbausas\Downloads\iReserve\iReserve\obj\x86\Debug\WindowsFormsAppli
 C:\Users\ralphbausas\Downloads\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewReservations.resources
 C:\Users\ralphbausas\Downloads\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewSchedules.resources
 C:\Users\ralphbausas\Downloads\iReserve\iReserve\obj\x86\Debug\iReserve.csproj.GenerateResource.Cache
+C:\Users\Coleen Mae\Desktop\SE21\SE CODES\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewSchedules.resources
+C:\Users\Coleen Mae\Desktop\SE21\SE CODES\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.MakeSchedule.resources

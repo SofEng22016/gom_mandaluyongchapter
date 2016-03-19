@@ -83,11 +83,14 @@ namespace WindowsFormsApplication1
             
             foreach (TabControl tabCtrl in this.Controls.OfType<TabControl>())
             {//this will controll all button inside form
+                tabControlReserve.BackColor = Color.White;
              
                 foreach (TabPage tabPage in tabCtrl.Controls.OfType<TabPage>())
                 {//this will controll all button inside form
-                    tabPage.BackgroundImage = Properties.Resources.bg;
+                    tabPage.BackgroundImage = Properties.Resources.white;
                     tabPage.BackgroundImageLayout = ImageLayout.Stretch;
+                    
+                    
 
                     foreach (Label lbl in tabPage.Controls.OfType<Label>())
                     {//this will controll all button inside form
