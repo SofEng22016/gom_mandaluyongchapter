@@ -46,6 +46,8 @@ namespace WindowsFormsApplication1
 
         private void ViewSchedules_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'iReserveDBDataSet.schedules' table. You can move, or remove it, as needed.
+            this.schedulesTableAdapter.Fill(this.iReserveDBDataSet.schedules);
             // TODO: This line of code loads data into the 'iReserveDBDataSet.floorsXroomsXSchedules' table. You can move, or remove it, as needed.
             this.floorsXroomsXSchedulesTableAdapter.FillBySearch(this.iReserveDBDataSet.floorsXroomsXSchedules,"","","","");
             
@@ -124,6 +126,25 @@ namespace WindowsFormsApplication1
             {
                 this.Close();
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.iReserveDBDataSet.AcceptChanges();
+
+            foreach (DataGridViewRow row in floorsXroomsXSchedulesDataGridView.SelectedRows)
+            {
+                String value1 = row.Cells[0].Value.ToString();
+                
+                if (MessageBox.Show("Are you sure you want to delete this schedule", "Cancel", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    this.schedulesTableAdapter.DeleteSchedule(Convert.ToInt32(value1));
+                }
+            }
+            //refill the table
+            this.floorsXroomsXSchedulesTableAdapter.FillBySearch(this.iReserveDBDataSet.floorsXroomsXSchedules, "", "", "", "");
+
         }
     }
 }

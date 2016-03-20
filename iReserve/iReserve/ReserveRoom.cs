@@ -302,6 +302,7 @@ namespace WindowsFormsApplication1
             selected = 1;
             tabControlReserve.SelectedIndex = 1;
             
+            
         }
 
         private void tabControlReserve_Selecting(object sender, TabControlCancelEventArgs e)
@@ -320,6 +321,12 @@ namespace WindowsFormsApplication1
         {
             selected = 1;
             tabControlReserve.SelectedIndex = 2;
+            this.strDate = this.dateReserved.Text;
+            String[] temp;
+            temp = this.strDate.Split(',');
+            this.strWeekDay = temp[0];
+            this.startTime = this.startTimePicker.Text;
+            this.endTime = this.endTimePicker.Text;
 
             if (doThisOnce)
             {
@@ -332,6 +339,9 @@ namespace WindowsFormsApplication1
                 // TODO: This line of code loads data into the 'iReserveDBDataSet.rooms' table. You can move, or remove it, as needed.
                 this.roomsTableAdapter.FillByFloor(this.iReserveDBDataSet.rooms, (int)this.floorsTableAdapter.GetID(this.cBoxFloors.Text));
                 doThisOnce = false;
+
+                roomsDataGridView_SelectionChanged(sender, e);
+                cBoxFloors_SelectedIndexChanged(sender, e);
             }
            
            
@@ -353,6 +363,8 @@ namespace WindowsFormsApplication1
         {
             selected = 1;
             tabControlReserve.SelectedIndex = 3;
+            
+            
 
             this.lblDepartment.Text = this.txtReqeust.Text;
             this.lblPurpose.Text = this.txtPurpose.Text;

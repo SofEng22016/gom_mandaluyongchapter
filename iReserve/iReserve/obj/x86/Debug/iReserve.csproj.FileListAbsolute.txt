@@ -261,3 +261,4 @@ C:\Users\Ruby\Desktop\RepoMAN - Copy\iReserve\iReserve\obj\x86\Debug\WindowsForm
 C:\Users\Ruby\Desktop\RepoMAN - Copy\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewReservations.resources
 C:\Users\Ruby\Desktop\RepoMAN - Copy\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewSchedules.resources
 C:\Users\Ruby\Desktop\RepoMAN - Copy\iReserve\iReserve\obj\x86\Debug\iReserve.csproj.GenerateResource.Cache
+C:\Users\ralphbausas\Documents\gom_mandaluyongchapter\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.MakeSchedule.resources
