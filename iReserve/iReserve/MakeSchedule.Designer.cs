@@ -48,6 +48,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnBack3 = new System.Windows.Forms.Button();
             this.btnNextTab3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -77,9 +80,6 @@
             this.label = new System.Windows.Forms.Label();
             this.btnBack4 = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnCheck = new System.Windows.Forms.Button();
-            this.lblResult = new System.Windows.Forms.Label();
             this.tabControlMakeSched.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -123,7 +123,7 @@
             // btnNextTab1
             // 
             this.btnNextTab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNextTab1.Location = new System.Drawing.Point(355, 303);
+            this.btnNextTab1.Location = new System.Drawing.Point(377, 293);
             this.btnNextTab1.Name = "btnNextTab1";
             this.btnNextTab1.Size = new System.Drawing.Size(73, 35);
             this.btnNextTab1.TabIndex = 13;
@@ -248,7 +248,7 @@
             // btnBack2
             // 
             this.btnBack2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack2.Location = new System.Drawing.Point(260, 298);
+            this.btnBack2.Location = new System.Drawing.Point(277, 293);
             this.btnBack2.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack2.Name = "btnBack2";
             this.btnBack2.Size = new System.Drawing.Size(73, 35);
@@ -259,7 +259,7 @@
             // btnNextPage2
             // 
             this.btnNextPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNextPage2.Location = new System.Drawing.Point(352, 298);
+            this.btnNextPage2.Location = new System.Drawing.Point(377, 293);
             this.btnNextPage2.Margin = new System.Windows.Forms.Padding(2);
             this.btnNextPage2.Name = "btnNextPage2";
             this.btnNextPage2.Size = new System.Drawing.Size(73, 35);
@@ -304,10 +304,47 @@
             this.tabPage3.Text = "Step 3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(172, 224);
+            this.lblResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(278, 16);
+            this.lblResult.TabIndex = 28;
+            this.lblResult.Text = "Check conflict with room and weekly schedule";
+            this.lblResult.Visible = false;
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheck.Location = new System.Drawing.Point(21, 218);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(130, 29);
+            this.btnCheck.TabIndex = 27;
+            this.btnCheck.Text = "Check Availability";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"});
+            this.comboBox1.Location = new System.Drawing.Point(100, 29);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 26;
+            // 
             // btnBack3
             // 
             this.btnBack3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack3.Location = new System.Drawing.Point(257, 304);
+            this.btnBack3.Location = new System.Drawing.Point(277, 293);
             this.btnBack3.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack3.Name = "btnBack3";
             this.btnBack3.Size = new System.Drawing.Size(73, 35);
@@ -318,7 +355,7 @@
             // btnNextTab3
             // 
             this.btnNextTab3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNextTab3.Location = new System.Drawing.Point(349, 304);
+            this.btnNextTab3.Location = new System.Drawing.Point(377, 293);
             this.btnNextTab3.Name = "btnNextTab3";
             this.btnNextTab3.Size = new System.Drawing.Size(73, 35);
             this.btnNextTab3.TabIndex = 24;
@@ -445,7 +482,7 @@
             // btnReserve
             // 
             this.btnReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReserve.Location = new System.Drawing.Point(345, 296);
+            this.btnReserve.Location = new System.Drawing.Point(377, 293);
             this.btnReserve.Margin = new System.Windows.Forms.Padding(2);
             this.btnReserve.Name = "btnReserve";
             this.btnReserve.Size = new System.Drawing.Size(73, 35);
@@ -608,7 +645,7 @@
             // btnBack4
             // 
             this.btnBack4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack4.Location = new System.Drawing.Point(253, 296);
+            this.btnBack4.Location = new System.Drawing.Point(277, 293);
             this.btnBack4.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack4.Name = "btnBack4";
             this.btnBack4.Size = new System.Drawing.Size(73, 35);
@@ -624,43 +661,6 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"});
-            this.comboBox1.Location = new System.Drawing.Point(100, 29);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 26;
-            // 
-            // btnCheck
-            // 
-            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheck.Location = new System.Drawing.Point(64, 218);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(130, 29);
-            this.btnCheck.TabIndex = 27;
-            this.btnCheck.Text = "Check Availability";
-            this.btnCheck.UseVisualStyleBackColor = true;
-            // 
-            // lblResult
-            // 
-            this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(215, 224);
-            this.lblResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(278, 16);
-            this.lblResult.TabIndex = 28;
-            this.lblResult.Text = "Check conflict with room and weekly schedule";
-            this.lblResult.Visible = false;
             // 
             // MakeSchedule
             // 
