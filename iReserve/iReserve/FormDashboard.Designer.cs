@@ -39,6 +39,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRemoveFloor = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnMakeSchedule = new System.Windows.Forms.Button();
             this.btnViewSchedules = new System.Windows.Forms.Button();
             this.btnMakeReservation = new System.Windows.Forms.Button();
             this.btnViewReservation = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.iReserveDBDataSet = new WindowsFormsApplication1.iReserveDBDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
-            this.btnMakeSchedule = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXReservationsDataGridView)).BeginInit();
@@ -184,6 +184,16 @@
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Manage Schedule";
+            // 
+            // btnMakeSchedule
+            // 
+            this.btnMakeSchedule.Location = new System.Drawing.Point(12, 25);
+            this.btnMakeSchedule.Name = "btnMakeSchedule";
+            this.btnMakeSchedule.Size = new System.Drawing.Size(120, 25);
+            this.btnMakeSchedule.TabIndex = 13;
+            this.btnMakeSchedule.Text = "Make Schedule";
+            this.btnMakeSchedule.UseVisualStyleBackColor = true;
+            this.btnMakeSchedule.Click += new System.EventHandler(this.btnMakeSchedule_Click);
             // 
             // btnViewSchedules
             // 
@@ -349,15 +359,6 @@
             this.lblUser.TabIndex = 18;
             this.lblUser.Text = "label1";
             this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
-            // 
-            // btnMakeSchedule
-            // 
-            this.btnMakeSchedule.Location = new System.Drawing.Point(12, 25);
-            this.btnMakeSchedule.Name = "btnMakeSchedule";
-            this.btnMakeSchedule.Size = new System.Drawing.Size(120, 25);
-            this.btnMakeSchedule.TabIndex = 13;
-            this.btnMakeSchedule.Text = "Make Schedule";
-            this.btnMakeSchedule.UseVisualStyleBackColor = true;
             // 
             // frmDashboard
             // 

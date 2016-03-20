@@ -192,15 +192,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\white.png" />
-    <None Include="Resources\green5.jpg" />
-    <None Include="Resources\blue.jpg" />
-    <None Include="Resources\red.jpg" />
     <None Include="Resources\green4.jpg" />
-    <None Include="Resources\green3.jpg" />
-    <None Include="Resources\green2.jpg" />
-    <None Include="Resources\green.jpg" />
-    <None Include="Resources\unicorn.png" />
-    <None Include="Resources\ice.png" />
     <None Include="Resources\goat.png" />
     <None Include="Resources\formBackground.jpg" />
     <None Include="Resources\dean.jpg" />

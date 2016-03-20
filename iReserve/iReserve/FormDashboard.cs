@@ -161,5 +161,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void btnMakeSchedule_Click(object sender, EventArgs e)
+        {
+            new MakeSchedule().ShowDialog();
+        }
     }
 }
