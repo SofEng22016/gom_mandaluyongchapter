@@ -38,30 +38,26 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.roomsDataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cBoxFloors = new System.Windows.Forms.ComboBox();
+            this.btnBack2 = new System.Windows.Forms.Button();
+            this.btnNextPage2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.btnBack3 = new System.Windows.Forms.Button();
             this.btnNextTab3 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.startTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.endTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.roomsDataGridView = new System.Windows.Forms.DataGridView();
-            this.cBoxFloors = new System.Windows.Forms.ComboBox();
-            this.btnBack2 = new System.Windows.Forms.Button();
-            this.lblResult = new System.Windows.Forms.Label();
-            this.btnCheck = new System.Windows.Forms.Button();
-            this.btnNextPage2 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.lblSubject = new System.Windows.Forms.Label();
             this.lblReset = new System.Windows.Forms.Label();
             this.btnReserve = new System.Windows.Forms.Button();
             this.btnYes = new System.Windows.Forms.Button();
@@ -80,19 +76,21 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.btnBack4 = new System.Windows.Forms.Button();
-            this.lblSubject = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.lblResult = new System.Windows.Forms.Label();
             this.tabControlMakeSched.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomsDataGridView)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMakeSched
             // 
-            this.tabControlMakeSched.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControlMakeSched.Controls.Add(this.tabPage1);
             this.tabControlMakeSched.Controls.Add(this.tabPage2);
             this.tabControlMakeSched.Controls.Add(this.tabPage3);
@@ -114,10 +112,10 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(25, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(448, 367);
+            this.tabPage1.Size = new System.Drawing.Size(469, 346);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Step 1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -185,88 +183,126 @@
             this.tabPage2.Controls.Add(this.roomsDataGridView);
             this.tabPage2.Controls.Add(this.cBoxFloors);
             this.tabPage2.Controls.Add(this.btnBack2);
-            this.tabPage2.Controls.Add(this.lblResult);
-            this.tabPage2.Controls.Add(this.btnCheck);
             this.tabPage2.Controls.Add(this.btnNextPage2);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Location = new System.Drawing.Point(25, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(448, 367);
+            this.tabPage2.Size = new System.Drawing.Size(469, 346);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Step 2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // roomsDataGridView
+            // 
+            this.roomsDataGridView.AllowUserToAddRows = false;
+            this.roomsDataGridView.AllowUserToDeleteRows = false;
+            this.roomsDataGridView.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.roomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.roomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.roomName,
+            this.description});
+            this.roomsDataGridView.Location = new System.Drawing.Point(27, 54);
+            this.roomsDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.roomsDataGridView.MultiSelect = false;
+            this.roomsDataGridView.Name = "roomsDataGridView";
+            this.roomsDataGridView.ReadOnly = true;
+            this.roomsDataGridView.RowTemplate.Height = 24;
+            this.roomsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.roomsDataGridView.Size = new System.Drawing.Size(258, 131);
+            this.roomsDataGridView.TabIndex = 28;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // roomName
+            // 
+            this.roomName.HeaderText = "Room Name";
+            this.roomName.Name = "roomName";
+            this.roomName.ReadOnly = true;
+            // 
+            // description
+            // 
+            this.description.HeaderText = "Description";
+            this.description.Name = "description";
+            this.description.ReadOnly = true;
+            // 
+            // cBoxFloors
+            // 
+            this.cBoxFloors.DisplayMember = "floorName";
+            this.cBoxFloors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBoxFloors.FormattingEnabled = true;
+            this.cBoxFloors.Location = new System.Drawing.Point(311, 55);
+            this.cBoxFloors.Margin = new System.Windows.Forms.Padding(2);
+            this.cBoxFloors.Name = "cBoxFloors";
+            this.cBoxFloors.Size = new System.Drawing.Size(92, 24);
+            this.cBoxFloors.TabIndex = 27;
+            this.cBoxFloors.ValueMember = "floorName";
+            // 
+            // btnBack2
+            // 
+            this.btnBack2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack2.Location = new System.Drawing.Point(260, 298);
+            this.btnBack2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack2.Name = "btnBack2";
+            this.btnBack2.Size = new System.Drawing.Size(73, 35);
+            this.btnBack2.TabIndex = 22;
+            this.btnBack2.Text = "Go Back";
+            this.btnBack2.UseVisualStyleBackColor = true;
+            // 
+            // btnNextPage2
+            // 
+            this.btnNextPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNextPage2.Location = new System.Drawing.Point(352, 298);
+            this.btnNextPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNextPage2.Name = "btnNextPage2";
+            this.btnNextPage2.Size = new System.Drawing.Size(73, 35);
+            this.btnNextPage2.TabIndex = 21;
+            this.btnNextPage2.Text = "Next";
+            this.btnNextPage2.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(23, 34);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 16);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Rooms:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(308, 34);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 16);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Floor:";
+            // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.checkedListBox1);
+            this.tabPage3.Controls.Add(this.lblResult);
+            this.tabPage3.Controls.Add(this.btnCheck);
+            this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.Controls.Add(this.btnBack3);
             this.tabPage3.Controls.Add(this.btnNextTab3);
-            this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.groupBox1);
-            this.tabPage3.Location = new System.Drawing.Point(25, 4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(448, 367);
+            this.tabPage3.Size = new System.Drawing.Size(469, 346);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Step 3";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.lblSubject);
-            this.tabPage4.Controls.Add(this.lblReset);
-            this.tabPage4.Controls.Add(this.btnReserve);
-            this.tabPage4.Controls.Add(this.btnYes);
-            this.tabPage4.Controls.Add(this.label14);
-            this.tabPage4.Controls.Add(this.lblFloor);
-            this.tabPage4.Controls.Add(this.lblRoom);
-            this.tabPage4.Controls.Add(this.lblEndTime);
-            this.tabPage4.Controls.Add(this.label15);
-            this.tabPage4.Controls.Add(this.lblStartTime);
-            this.tabPage4.Controls.Add(this.lblDay);
-            this.tabPage4.Controls.Add(this.lblProf);
-            this.tabPage4.Controls.Add(this.lblSubjCode);
-            this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.label11);
-            this.tabPage4.Controls.Add(this.label10);
-            this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.label);
-            this.tabPage4.Controls.Add(this.btnBack4);
-            this.tabPage4.Location = new System.Drawing.Point(25, 4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(448, 367);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Step 4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(51, 432);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(124, 42);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday ",
-            "Friday",
-            "Saturday"});
-            this.checkedListBox1.Location = new System.Drawing.Point(131, 28);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(268, 38);
-            this.checkedListBox1.TabIndex = 26;
             // 
             // btnBack3
             // 
@@ -289,15 +325,6 @@
             this.btnNextTab3.Text = "Next";
             this.btnNextTab3.UseVisualStyleBackColor = true;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 88);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 16);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Duration";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -314,7 +341,7 @@
             this.groupBox1.Controls.Add(this.startTimePicker);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.endTimePicker);
-            this.groupBox1.Location = new System.Drawing.Point(30, 150);
+            this.groupBox1.Location = new System.Drawing.Point(33, 110);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -363,124 +390,49 @@
             this.endTimePicker.Size = new System.Drawing.Size(107, 22);
             this.endTimePicker.TabIndex = 7;
             // 
-            // roomsDataGridView
+            // tabPage4
             // 
-            this.roomsDataGridView.AllowUserToAddRows = false;
-            this.roomsDataGridView.AllowUserToDeleteRows = false;
-            this.roomsDataGridView.BackgroundColor = System.Drawing.Color.DarkSlateGray;
-            this.roomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.roomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.roomName,
-            this.description});
-            this.roomsDataGridView.Location = new System.Drawing.Point(27, 54);
-            this.roomsDataGridView.Margin = new System.Windows.Forms.Padding(2);
-            this.roomsDataGridView.MultiSelect = false;
-            this.roomsDataGridView.Name = "roomsDataGridView";
-            this.roomsDataGridView.ReadOnly = true;
-            this.roomsDataGridView.RowTemplate.Height = 24;
-            this.roomsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.roomsDataGridView.Size = new System.Drawing.Size(245, 131);
-            this.roomsDataGridView.TabIndex = 28;
+            this.tabPage4.Controls.Add(this.lblSubject);
+            this.tabPage4.Controls.Add(this.lblReset);
+            this.tabPage4.Controls.Add(this.btnReserve);
+            this.tabPage4.Controls.Add(this.btnYes);
+            this.tabPage4.Controls.Add(this.label14);
+            this.tabPage4.Controls.Add(this.lblFloor);
+            this.tabPage4.Controls.Add(this.lblRoom);
+            this.tabPage4.Controls.Add(this.lblEndTime);
+            this.tabPage4.Controls.Add(this.label15);
+            this.tabPage4.Controls.Add(this.lblStartTime);
+            this.tabPage4.Controls.Add(this.lblDay);
+            this.tabPage4.Controls.Add(this.lblProf);
+            this.tabPage4.Controls.Add(this.lblSubjCode);
+            this.tabPage4.Controls.Add(this.label12);
+            this.tabPage4.Controls.Add(this.label11);
+            this.tabPage4.Controls.Add(this.label10);
+            this.tabPage4.Controls.Add(this.label13);
+            this.tabPage4.Controls.Add(this.label);
+            this.tabPage4.Controls.Add(this.btnBack4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(469, 346);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Step 4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // cBoxFloors
+            // lblSubject
             // 
-            this.cBoxFloors.DisplayMember = "floorName";
-            this.cBoxFloors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cBoxFloors.FormattingEnabled = true;
-            this.cBoxFloors.Location = new System.Drawing.Point(311, 55);
-            this.cBoxFloors.Margin = new System.Windows.Forms.Padding(2);
-            this.cBoxFloors.Name = "cBoxFloors";
-            this.cBoxFloors.Size = new System.Drawing.Size(92, 24);
-            this.cBoxFloors.TabIndex = 27;
-            this.cBoxFloors.ValueMember = "floorName";
-            // 
-            // btnBack2
-            // 
-            this.btnBack2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack2.Location = new System.Drawing.Point(260, 298);
-            this.btnBack2.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBack2.Name = "btnBack2";
-            this.btnBack2.Size = new System.Drawing.Size(73, 35);
-            this.btnBack2.TabIndex = 22;
-            this.btnBack2.Text = "Go Back";
-            this.btnBack2.UseVisualStyleBackColor = true;
-            // 
-            // lblResult
-            // 
-            this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(270, 230);
-            this.lblResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(90, 16);
-            this.lblResult.TabIndex = 25;
-            this.lblResult.Text = "Results Label";
-            this.lblResult.Visible = false;
-            // 
-            // btnCheck
-            // 
-            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheck.Location = new System.Drawing.Point(41, 224);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(130, 29);
-            this.btnCheck.TabIndex = 26;
-            this.btnCheck.Text = "Check Availability";
-            this.btnCheck.UseVisualStyleBackColor = true;
-            // 
-            // btnNextPage2
-            // 
-            this.btnNextPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNextPage2.Location = new System.Drawing.Point(352, 298);
-            this.btnNextPage2.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNextPage2.Name = "btnNextPage2";
-            this.btnNextPage2.Size = new System.Drawing.Size(73, 35);
-            this.btnNextPage2.TabIndex = 21;
-            this.btnNextPage2.Text = "Next";
-            this.btnNextPage2.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(23, 34);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 16);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Rooms:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(308, 34);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 16);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Floor:";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // roomName
-            // 
-            this.roomName.HeaderText = "Room Name";
-            this.roomName.Name = "roomName";
-            this.roomName.ReadOnly = true;
-            // 
-            // description
-            // 
-            this.description.HeaderText = "Description";
-            this.description.Name = "description";
-            this.description.ReadOnly = true;
+            this.lblSubject.AutoSize = true;
+            this.lblSubject.Location = new System.Drawing.Point(298, 35);
+            this.lblSubject.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSubject.Name = "lblSubject";
+            this.lblSubject.Size = new System.Drawing.Size(81, 16);
+            this.lblSubject.TabIndex = 38;
+            this.lblSubject.Text = "subjectHere";
             // 
             // lblReset
             // 
             this.lblReset.AutoSize = true;
+            this.lblReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReset.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblReset.Location = new System.Drawing.Point(155, 236);
@@ -664,15 +616,51 @@
             this.btnBack4.Text = "Go Back";
             this.btnBack4.UseVisualStyleBackColor = true;
             // 
-            // lblSubject
+            // btnCancel
             // 
-            this.lblSubject.AutoSize = true;
-            this.lblSubject.Location = new System.Drawing.Point(298, 35);
-            this.lblSubject.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(81, 16);
-            this.lblSubject.TabIndex = 38;
-            this.lblSubject.Text = "subjectHere";
+            this.btnCancel.Location = new System.Drawing.Point(51, 432);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(124, 42);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"});
+            this.comboBox1.Location = new System.Drawing.Point(100, 29);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 26;
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheck.Location = new System.Drawing.Point(64, 218);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(130, 29);
+            this.btnCheck.TabIndex = 27;
+            this.btnCheck.Text = "Check Availability";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(215, 224);
+            this.lblResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(278, 16);
+            this.lblResult.TabIndex = 28;
+            this.lblResult.Text = "Check conflict with room and weekly schedule";
+            this.lblResult.Visible = false;
             // 
             // MakeSchedule
             // 
@@ -686,18 +674,19 @@
             this.MinimizeBox = false;
             this.Name = "MakeSchedule";
             this.Text = "Make Schedule";
+            this.Load += new System.EventHandler(this.MakeSchedule_Load);
             this.tabControlMakeSched.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.roomsDataGridView)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roomsDataGridView)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -717,10 +706,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button btnBack3;
         private System.Windows.Forms.Button btnNextTab3;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
@@ -730,8 +717,6 @@
         private System.Windows.Forms.DataGridView roomsDataGridView;
         private System.Windows.Forms.ComboBox cBoxFloors;
         private System.Windows.Forms.Button btnBack2;
-        private System.Windows.Forms.Label lblResult;
-        private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.Button btnNextPage2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -757,5 +742,8 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button btnBack4;
         private System.Windows.Forms.Label lblSubject;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Button btnCheck;
     }
 }

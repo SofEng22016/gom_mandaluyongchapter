@@ -408,6 +408,18 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void lblReset_Click(object sender, EventArgs e)
+        {
+            selected = 1;
+            tabControlReserve.SelectedIndex =0;
+            txtReqeust.Text = null;
+            txtPurpose.Text = null;
+            startTimePicker.Value = System.DateTime.Now;
+            endTimePicker.Value = System.DateTime.Now;
+            dateReserved.Value = System.DateTime.Now;
+
+        }
+
         
     }
 }

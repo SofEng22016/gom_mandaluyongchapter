@@ -58,6 +58,7 @@
             this.btnCheck = new System.Windows.Forms.Button();
             this.tabControlReserve = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnNextTab1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnBack2 = new System.Windows.Forms.Button();
             this.btnNextTab2 = new System.Windows.Forms.Button();
@@ -88,7 +89,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnBack4 = new System.Windows.Forms.Button();
-            this.btnNextTab1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.floorsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsBindingSource)).BeginInit();
@@ -105,8 +105,8 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(51, 432);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Location = new System.Drawing.Point(46, 435);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(124, 42);
             this.btnCancel.TabIndex = 0;
@@ -118,7 +118,7 @@
             // 
             this.btnReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReserve.Location = new System.Drawing.Point(354, 307);
-            this.btnReserve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReserve.Margin = new System.Windows.Forms.Padding(2);
             this.btnReserve.Name = "btnReserve";
             this.btnReserve.Size = new System.Drawing.Size(73, 35);
             this.btnReserve.TabIndex = 1;
@@ -140,7 +140,7 @@
             // txtReqeust
             // 
             this.txtReqeust.Location = new System.Drawing.Point(29, 78);
-            this.txtReqeust.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReqeust.Margin = new System.Windows.Forms.Padding(2);
             this.txtReqeust.Name = "txtReqeust";
             this.txtReqeust.Size = new System.Drawing.Size(399, 22);
             this.txtReqeust.TabIndex = 3;
@@ -148,7 +148,7 @@
             // dateReserved
             // 
             this.dateReserved.Location = new System.Drawing.Point(63, 93);
-            this.dateReserved.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateReserved.Margin = new System.Windows.Forms.Padding(2);
             this.dateReserved.Name = "dateReserved";
             this.dateReserved.Size = new System.Drawing.Size(226, 22);
             this.dateReserved.TabIndex = 4;
@@ -168,7 +168,7 @@
             // 
             this.startTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.startTimePicker.Location = new System.Drawing.Point(70, 26);
-            this.startTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.startTimePicker.Name = "startTimePicker";
             this.startTimePicker.ShowUpDown = true;
             this.startTimePicker.Size = new System.Drawing.Size(95, 22);
@@ -179,7 +179,7 @@
             // 
             this.endTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.endTimePicker.Location = new System.Drawing.Point(241, 25);
-            this.endTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.endTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.endTimePicker.Name = "endTimePicker";
             this.endTimePicker.ShowUpDown = true;
             this.endTimePicker.Size = new System.Drawing.Size(107, 22);
@@ -285,9 +285,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.endTimePicker);
             this.groupBox1.Location = new System.Drawing.Point(32, 172);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(378, 60);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
@@ -308,7 +308,7 @@
             // txtPurpose
             // 
             this.txtPurpose.Location = new System.Drawing.Point(31, 167);
-            this.txtPurpose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPurpose.Margin = new System.Windows.Forms.Padding(2);
             this.txtPurpose.Name = "txtPurpose";
             this.txtPurpose.Size = new System.Drawing.Size(398, 22);
             this.txtPurpose.TabIndex = 16;
@@ -328,7 +328,7 @@
             // 
             this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.Location = new System.Drawing.Point(43, 233);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(130, 29);
             this.btnCheck.TabIndex = 18;
@@ -338,14 +338,13 @@
             // 
             // tabControlReserve
             // 
-            this.tabControlReserve.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControlReserve.Controls.Add(this.tabPage1);
             this.tabControlReserve.Controls.Add(this.tabPage2);
             this.tabControlReserve.Controls.Add(this.tabPage3);
             this.tabControlReserve.Controls.Add(this.tabPage4);
             this.tabControlReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlReserve.Location = new System.Drawing.Point(26, 28);
-            this.tabControlReserve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControlReserve.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlReserve.Multiline = true;
             this.tabControlReserve.Name = "tabControlReserve";
             this.tabControlReserve.SelectedIndex = 0;
@@ -361,14 +360,26 @@
             this.tabPage1.Controls.Add(this.txtReqeust);
             this.tabPage1.Controls.Add(this.txtPurpose);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Location = new System.Drawing.Point(25, 4);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Size = new System.Drawing.Size(448, 367);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(469, 346);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Step 1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnNextTab1
+            // 
+            this.btnNextTab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNextTab1.Location = new System.Drawing.Point(354, 307);
+            this.btnNextTab1.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNextTab1.Name = "btnNextTab1";
+            this.btnNextTab1.Size = new System.Drawing.Size(73, 35);
+            this.btnNextTab1.TabIndex = 0;
+            this.btnNextTab1.Text = "Next";
+            this.btnNextTab1.UseVisualStyleBackColor = true;
+            this.btnNextTab1.Click += new System.EventHandler(this.btnNextTab1_Click);
             // 
             // tabPage2
             // 
@@ -377,11 +388,12 @@
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.dateReserved);
-            this.tabPage2.Location = new System.Drawing.Point(25, 4);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage2.Size = new System.Drawing.Size(448, 367);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tabPage2.Size = new System.Drawing.Size(469, 346);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Step 2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -390,7 +402,7 @@
             // 
             this.btnBack2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack2.Location = new System.Drawing.Point(262, 307);
-            this.btnBack2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack2.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack2.Name = "btnBack2";
             this.btnBack2.Size = new System.Drawing.Size(73, 35);
             this.btnBack2.TabIndex = 2;
@@ -402,7 +414,7 @@
             // 
             this.btnNextTab2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNextTab2.Location = new System.Drawing.Point(354, 307);
-            this.btnNextTab2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNextTab2.Margin = new System.Windows.Forms.Padding(2);
             this.btnNextTab2.Name = "btnNextTab2";
             this.btnNextTab2.Size = new System.Drawing.Size(73, 35);
             this.btnNextTab2.TabIndex = 0;
@@ -420,11 +432,11 @@
             this.tabPage3.Controls.Add(this.btnNextPage3);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Location = new System.Drawing.Point(25, 4);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage3.Size = new System.Drawing.Size(448, 367);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Size = new System.Drawing.Size(469, 346);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Step 3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -443,7 +455,7 @@
             this.dataGridViewTextBoxColumn3});
             this.roomsDataGridView.DataSource = this.roomsBindingSource;
             this.roomsDataGridView.Location = new System.Drawing.Point(29, 63);
-            this.roomsDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roomsDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.roomsDataGridView.MultiSelect = false;
             this.roomsDataGridView.Name = "roomsDataGridView";
             this.roomsDataGridView.ReadOnly = true;
@@ -483,7 +495,7 @@
             this.cBoxFloors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxFloors.FormattingEnabled = true;
             this.cBoxFloors.Location = new System.Drawing.Point(313, 64);
-            this.cBoxFloors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cBoxFloors.Margin = new System.Windows.Forms.Padding(2);
             this.cBoxFloors.Name = "cBoxFloors";
             this.cBoxFloors.Size = new System.Drawing.Size(92, 24);
             this.cBoxFloors.TabIndex = 19;
@@ -494,7 +506,7 @@
             // 
             this.btnBack3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack3.Location = new System.Drawing.Point(262, 307);
-            this.btnBack3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack3.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack3.Name = "btnBack3";
             this.btnBack3.Size = new System.Drawing.Size(73, 35);
             this.btnBack3.TabIndex = 2;
@@ -506,7 +518,7 @@
             // 
             this.btnNextPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNextPage3.Location = new System.Drawing.Point(354, 307);
-            this.btnNextPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNextPage3.Margin = new System.Windows.Forms.Padding(2);
             this.btnNextPage3.Name = "btnNextPage3";
             this.btnNextPage3.Size = new System.Drawing.Size(73, 35);
             this.btnNextPage3.TabIndex = 0;
@@ -536,17 +548,18 @@
             this.tabPage4.Controls.Add(this.label9);
             this.tabPage4.Controls.Add(this.label8);
             this.tabPage4.Controls.Add(this.btnBack4);
-            this.tabPage4.Location = new System.Drawing.Point(25, 4);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage4.Size = new System.Drawing.Size(448, 367);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Size = new System.Drawing.Size(469, 346);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Step 4";
             // 
             // lblReset
             // 
             this.lblReset.AutoSize = true;
+            this.lblReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReset.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblReset.Location = new System.Drawing.Point(164, 247);
@@ -555,12 +568,13 @@
             this.lblReset.Size = new System.Drawing.Size(102, 13);
             this.lblReset.TabIndex = 19;
             this.lblReset.Text = "No, Reset all values";
+            this.lblReset.Click += new System.EventHandler(this.lblReset_Click);
             // 
             // btnYes
             // 
             this.btnYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYes.Location = new System.Drawing.Point(46, 239);
-            this.btnYes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnYes.Margin = new System.Windows.Forms.Padding(2);
             this.btnYes.Name = "btnYes";
             this.btnYes.Size = new System.Drawing.Size(73, 25);
             this.btnYes.TabIndex = 18;
@@ -723,25 +737,13 @@
             // 
             this.btnBack4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack4.Location = new System.Drawing.Point(262, 307);
-            this.btnBack4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack4.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack4.Name = "btnBack4";
             this.btnBack4.Size = new System.Drawing.Size(73, 35);
             this.btnBack4.TabIndex = 2;
             this.btnBack4.Text = "Go Back";
             this.btnBack4.UseVisualStyleBackColor = true;
             this.btnBack4.Click += new System.EventHandler(this.btnBack4_Click_1);
-            // 
-            // btnNextTab1
-            // 
-            this.btnNextTab1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNextTab1.Location = new System.Drawing.Point(354, 307);
-            this.btnNextTab1.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNextTab1.Name = "btnNextTab1";
-            this.btnNextTab1.Size = new System.Drawing.Size(73, 35);
-            this.btnNextTab1.TabIndex = 0;
-            this.btnNextTab1.Text = "Next";
-            this.btnNextTab1.UseVisualStyleBackColor = true;
-            this.btnNextTab1.Click += new System.EventHandler(this.btnNextTab1_Click);
             // 
             // ReserveRoom
             // 
@@ -752,7 +754,7 @@
             this.Controls.Add(this.tabControlReserve);
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReserveRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReserveRoom";

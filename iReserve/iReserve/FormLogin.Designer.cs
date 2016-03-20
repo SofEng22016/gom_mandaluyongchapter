@@ -41,14 +41,14 @@
             this.schedulesTableAdapter1 = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.schedulesTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iReserveDBDataSet = new WindowsFormsApplication1.iReserveDBDataSet();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -92,7 +92,7 @@
             this.txtPassword.Location = new System.Drawing.Point(3, 4);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(224, 20);
+            this.txtPassword.Size = new System.Drawing.Size(223, 20);
             this.txtPassword.TabIndex = 0;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
@@ -155,7 +155,7 @@
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Location = new System.Drawing.Point(107, 199);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 28);
+            this.panel1.Size = new System.Drawing.Size(230, 28);
             this.panel1.TabIndex = 6;
             // 
             // panel2
@@ -164,20 +164,9 @@
             this.panel2.Controls.Add(this.txtUsername);
             this.panel2.Location = new System.Drawing.Point(107, 151);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(229, 28);
+            this.panel2.Size = new System.Drawing.Size(230, 28);
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.goat;
-            this.pictureBox1.Location = new System.Drawing.Point(137, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 107);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // iReserveDBDataSet
             // 
@@ -188,6 +177,17 @@
             // 
             this.usersBindingSource.DataMember = "users";
             this.usersBindingSource.DataSource = this.iReserveDBDataSet;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.marmot;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(137, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 107);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 
@@ -213,9 +213,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
