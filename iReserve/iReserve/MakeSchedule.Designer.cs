@@ -118,6 +118,8 @@
             this.tabControlMakeSched.SelectedIndex = 0;
             this.tabControlMakeSched.Size = new System.Drawing.Size(636, 462);
             this.tabControlMakeSched.TabIndex = 0;
+            this.tabControlMakeSched.SelectedIndexChanged += new System.EventHandler(this.tabControlMakeSched_SelectedIndexChanged);
+            this.tabControlMakeSched.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlMakeSched_Selecting);
             // 
             // tabPage1
             // 
@@ -322,6 +324,7 @@
             this.btnBack2.TabIndex = 22;
             this.btnBack2.Text = "Go Back";
             this.btnBack2.UseVisualStyleBackColor = true;
+            this.btnBack2.Click += new System.EventHandler(this.btnBack2_Click);
             // 
             // btnNextPage2
             // 
@@ -421,6 +424,7 @@
             this.btnBack3.TabIndex = 25;
             this.btnBack3.Text = "Go Back";
             this.btnBack3.UseVisualStyleBackColor = true;
+            this.btnBack3.Click += new System.EventHandler(this.btnBack3_Click);
             // 
             // btnNextTab3
             // 
@@ -713,6 +717,7 @@
             this.btnBack4.TabIndex = 21;
             this.btnBack4.Text = "Go Back";
             this.btnBack4.UseVisualStyleBackColor = true;
+            this.btnBack4.Click += new System.EventHandler(this.btnBack4_Click);
             // 
             // btnCancel
             // 

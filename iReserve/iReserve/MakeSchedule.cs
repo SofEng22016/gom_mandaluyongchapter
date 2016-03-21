@@ -17,6 +17,7 @@ namespace WindowsFormsApplication1
         String startTime;
         String endTime;
         bool doThisOnce = true;
+        int selected = 0;
 
         public MakeSchedule()
         {
@@ -76,6 +77,7 @@ namespace WindowsFormsApplication1
 
         private void btnNextTab1_Click(object sender, EventArgs e)
         {
+            selected = 1;
             this.tabControlMakeSched.SelectedIndex = 1;//needed this to test things paki ayos mo na lang
             
             this.lblSubjCode.Text = txtCode.Text;
@@ -97,6 +99,7 @@ namespace WindowsFormsApplication1
 
         private void btnNextPage2_Click(object sender, EventArgs e)
         {
+            selected = 1;
             this.tabControlMakeSched.SelectedIndex = 2;
 
             cBoxDays_SelectedIndexChanged(sender, e);
@@ -197,6 +200,7 @@ namespace WindowsFormsApplication1
 
         private void btnNextTab3_Click(object sender, EventArgs e)
         {
+            selected = 1;
             this.tabControlMakeSched.SelectedIndex = 3;
             this.startTime = this.startTimePicker.Text;
             this.endTime = this.endTimePicker.Text;
@@ -284,6 +288,41 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show("Please Check if Schedule is available in Step 3.");
             }
+        }
+
+        private void tabControlMakeSched_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void tabControlMakeSched_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (selected != 1)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                selected = 0;
+            }
+        }
+
+        private void btnBack2_Click(object sender, EventArgs e)
+        {
+            selected = 1;
+            this.tabControlMakeSched.SelectedIndex = 0;
+        }
+
+        private void btnBack3_Click(object sender, EventArgs e)
+        {
+            selected = 1;
+            this.tabControlMakeSched.SelectedIndex = 1;
+        }
+
+        private void btnBack4_Click(object sender, EventArgs e)
+        {
+            selected = 1;
+            this.tabControlMakeSched.SelectedIndex = 2;
         }
 
         

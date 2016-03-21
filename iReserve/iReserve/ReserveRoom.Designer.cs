@@ -342,6 +342,7 @@
             this.tabControlReserve.SelectedIndex = 0;
             this.tabControlReserve.Size = new System.Drawing.Size(636, 462);
             this.tabControlReserve.TabIndex = 19;
+            this.tabControlReserve.SelectedIndexChanged += new System.EventHandler(this.tabControlReserve_SelectedIndexChanged);
             this.tabControlReserve.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlReserve_Selecting);
             this.tabControlReserve.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.tabControlReserve_ControlAdded);
             // 
