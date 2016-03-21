@@ -36,16 +36,17 @@ namespace WindowsFormsApplication1
                 btn.FlatStyle = FlatStyle.Standard;
                 btn.ForeColor = Color.Black;
                 btn.BackColor = Color.White;
+                
 
             }
 
             foreach (TabControl tabCtrl in this.Controls.OfType<TabControl>())
             {//this will controll all button inside form
-                tabControlMakeSched.BackColor = Color.White;
+                
 
                 foreach (TabPage tabPage in tabCtrl.Controls.OfType<TabPage>())
                 {//this will controll all button inside form
-                    tabPage.BackgroundImage = Properties.Resources.white;
+                    tabPage.BackgroundImage = Properties.Resources.ice;
                     tabPage.BackgroundImageLayout = ImageLayout.Stretch;
 
 
@@ -77,6 +78,8 @@ namespace WindowsFormsApplication1
 
         private void btnNextTab1_Click(object sender, EventArgs e)
         {
+            if(!txtSubject.Text.Equals("")||!txtCode.Text.Equals("")||!txtProf.Text.Equals(""))
+            {
             selected = 1;
             this.tabControlMakeSched.SelectedIndex = 1;//needed this to test things paki ayos mo na lang
             
@@ -94,6 +97,10 @@ namespace WindowsFormsApplication1
                 doThisOnce = false;
 
                 
+            }
+            }
+            else{
+                MessageBox.Show("Pls fill in the blanks");
             }
         }
 
@@ -323,6 +330,18 @@ namespace WindowsFormsApplication1
         {
             selected = 1;
             this.tabControlMakeSched.SelectedIndex = 2;
+        }
+
+        private void lblReset_Click(object sender, EventArgs e)
+        {
+            selected = 1;
+            tabControlMakeSched.SelectedIndex = 0;
+            txtCode.Text = null;
+            txtProf.Text = null;
+            txtSubject.Text = null;
+            cBoxDays.SelectedIndex = 0;
+            startTimePicker.Value = System.DateTime.Now;
+            endTimePicker.Value = System.DateTime.Now;
         }
 
         

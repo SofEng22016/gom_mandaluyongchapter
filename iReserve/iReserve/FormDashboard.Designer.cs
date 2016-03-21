@@ -39,10 +39,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRemoveFloor = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnMakeSchedule = new System.Windows.Forms.Button();
-            this.btnViewSchedules = new System.Windows.Forms.Button();
             this.btnMakeReservation = new System.Windows.Forms.Button();
             this.btnViewReservation = new System.Windows.Forms.Button();
+            this.btnMakeSchedule = new System.Windows.Forms.Button();
+            this.btnViewSchedules = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tableAdapterManager = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager();
             this.floorsXroomsXReservationsTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.floorsXroomsXReservationsTableAdapter();
@@ -186,27 +186,6 @@
             this.groupBox2.Text = "Reservations";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // btnMakeSchedule
-            // 
-            this.btnMakeSchedule.Location = new System.Drawing.Point(45, 20);
-            this.btnMakeSchedule.Name = "btnMakeSchedule";
-            this.btnMakeSchedule.Size = new System.Drawing.Size(120, 25);
-            this.btnMakeSchedule.TabIndex = 13;
-            this.btnMakeSchedule.Text = "Make Schedule";
-            this.btnMakeSchedule.UseVisualStyleBackColor = true;
-            this.btnMakeSchedule.Click += new System.EventHandler(this.btnMakeSchedule_Click);
-            // 
-            // btnViewSchedules
-            // 
-            this.btnViewSchedules.Location = new System.Drawing.Point(45, 54);
-            this.btnViewSchedules.Margin = new System.Windows.Forms.Padding(2);
-            this.btnViewSchedules.Name = "btnViewSchedules";
-            this.btnViewSchedules.Size = new System.Drawing.Size(120, 25);
-            this.btnViewSchedules.TabIndex = 12;
-            this.btnViewSchedules.Text = "View All Schedules";
-            this.btnViewSchedules.UseVisualStyleBackColor = true;
-            this.btnViewSchedules.Click += new System.EventHandler(this.btnViewSchedules_Click);
-            // 
             // btnMakeReservation
             // 
             this.btnMakeReservation.Location = new System.Drawing.Point(57, 20);
@@ -227,6 +206,27 @@
             this.btnViewReservation.Text = "View / Cancel Reservations";
             this.btnViewReservation.UseVisualStyleBackColor = true;
             this.btnViewReservation.Click += new System.EventHandler(this.btnViewReservation_Click);
+            // 
+            // btnMakeSchedule
+            // 
+            this.btnMakeSchedule.Location = new System.Drawing.Point(45, 20);
+            this.btnMakeSchedule.Name = "btnMakeSchedule";
+            this.btnMakeSchedule.Size = new System.Drawing.Size(120, 25);
+            this.btnMakeSchedule.TabIndex = 13;
+            this.btnMakeSchedule.Text = "Make Schedule";
+            this.btnMakeSchedule.UseVisualStyleBackColor = true;
+            this.btnMakeSchedule.Click += new System.EventHandler(this.btnMakeSchedule_Click);
+            // 
+            // btnViewSchedules
+            // 
+            this.btnViewSchedules.Location = new System.Drawing.Point(45, 54);
+            this.btnViewSchedules.Margin = new System.Windows.Forms.Padding(2);
+            this.btnViewSchedules.Name = "btnViewSchedules";
+            this.btnViewSchedules.Size = new System.Drawing.Size(120, 25);
+            this.btnViewSchedules.TabIndex = 12;
+            this.btnViewSchedules.Text = "View All Schedules";
+            this.btnViewSchedules.UseVisualStyleBackColor = true;
+            this.btnViewSchedules.Click += new System.EventHandler(this.btnViewSchedules_Click);
             // 
             // label3
             // 
@@ -352,11 +352,11 @@
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.Location = new System.Drawing.Point(789, 22);
             this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(45, 16);
+            this.lblUser.Size = new System.Drawing.Size(46, 18);
             this.lblUser.TabIndex = 18;
             this.lblUser.Text = "label1";
             this.lblUser.Click += new System.EventHandler(this.lblUser_Click);

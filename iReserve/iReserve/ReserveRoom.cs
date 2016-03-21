@@ -87,7 +87,7 @@ namespace WindowsFormsApplication1
              
                 foreach (TabPage tabPage in tabCtrl.Controls.OfType<TabPage>())
                 {//this will controll all button inside form
-                    tabPage.BackgroundImage = Properties.Resources.white;
+                    tabPage.BackgroundImage = Properties.Resources.ice;
                     tabPage.BackgroundImageLayout = ImageLayout.Stretch;
                     
                     
@@ -299,9 +299,14 @@ namespace WindowsFormsApplication1
 
         private void btnNextTab1_Click(object sender, EventArgs e)
         {
+            if(!txtPurpose.Text.Equals("")||!txtReqeust.Text.Equals(""))
+            {
             selected = 1;
             tabControlReserve.SelectedIndex = 1;
-            
+            }
+            else{
+           MessageBox.Show("Pls fill in  the blanks");
+            }
             
         }
 

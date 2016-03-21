@@ -191,6 +191,8 @@
     <Content Include="iReserveDB.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\48-Ice.png" />
+    <None Include="Resources\lmao.jpg" />
     <None Include="Resources\marmot.jpg" />
     <None Include="Resources\white.png" />
     <None Include="Resources\green4.jpg" />
