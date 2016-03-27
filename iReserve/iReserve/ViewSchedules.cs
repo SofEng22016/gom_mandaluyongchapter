@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
                 btn.FlatStyle = FlatStyle.Standard;
                 btn.ForeColor = Color.Black;
                 btn.BackColor = Color.White;
-
+                btn.Cursor = Cursors.Hand;
 
             }
             foreach (Label lbl in this.Controls.OfType<Label>())

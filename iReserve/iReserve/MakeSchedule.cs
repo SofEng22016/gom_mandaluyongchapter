@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1
                 btn.FlatStyle = FlatStyle.Standard;
                 btn.ForeColor = Color.Black;
                 btn.BackColor = Color.White;
-                
+                btn.Cursor = Cursors.Hand;
 
             }
 
@@ -61,6 +61,7 @@ namespace WindowsFormsApplication1
                         btn.FlatStyle = FlatStyle.Standard;
                         btn.ForeColor = Color.Black;
                         btn.BackColor = Color.White;
+                        btn.Cursor = Cursors.Hand;
 
                     }
                 }
@@ -293,6 +294,8 @@ namespace WindowsFormsApplication1
             }
             else
             {
+                selected = 1;
+                tabControlMakeSched.SelectedIndex = 2;
                 MessageBox.Show("Please Check if Schedule is available in Step 3.");
             }
         }
@@ -306,7 +309,7 @@ namespace WindowsFormsApplication1
         {
             if (selected != 1)
             {
-                e.Cancel = true;
+               e.Cancel = true;
             }
             else
             {
@@ -314,10 +317,12 @@ namespace WindowsFormsApplication1
             }
         }
 
+
         private void btnBack2_Click(object sender, EventArgs e)
         {
             selected = 1;
             this.tabControlMakeSched.SelectedIndex = 0;
+
         }
 
         private void btnBack3_Click(object sender, EventArgs e)
@@ -342,6 +347,7 @@ namespace WindowsFormsApplication1
             cBoxDays.SelectedIndex = 0;
             startTimePicker.Value = System.DateTime.Now;
             endTimePicker.Value = System.DateTime.Now;
+            
         }
 
         

@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
                 btn.FlatStyle = FlatStyle.Standard;
                 btn.ForeColor = Color.Black;
                 btn.BackColor = Color.White;
-
+                btn.Cursor = Cursors.Hand;
             }
             foreach (TextBox txtbox in this.Controls.OfType<TextBox>())
             {//this will controll all textbox inside form
@@ -37,8 +37,9 @@ namespace WindowsFormsApplication1
             this.BackgroundImageLayout = ImageLayout.Stretch;
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
             gp.AddEllipse(0, 0, pictureBox1.Width, pictureBox1.Height);
+            
             Region rg = new Region(gp);
-            pictureBox1.Region = rg;
+            //pictureBox1.Region = rg;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
