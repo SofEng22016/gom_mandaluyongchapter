@@ -53,30 +53,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(94, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Room Name: ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtRoomName
             // 
-            this.txtRoomName.Location = new System.Drawing.Point(84, 7);
-            this.txtRoomName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRoomName.Location = new System.Drawing.Point(112, 9);
+            this.txtRoomName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRoomName.Name = "txtRoomName";
-            this.txtRoomName.Size = new System.Drawing.Size(105, 20);
+            this.txtRoomName.Size = new System.Drawing.Size(139, 22);
             this.txtRoomName.TabIndex = 1;
             this.txtRoomName.TextChanged += new System.EventHandler(this.txtRoomName_TextChanged);
             this.txtRoomName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRoomName_KeyDown);
             // 
             // btnAvailability
             // 
-            this.btnAvailability.Location = new System.Drawing.Point(207, 7);
-            this.btnAvailability.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAvailability.Location = new System.Drawing.Point(276, 9);
+            this.btnAvailability.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAvailability.Name = "btnAvailability";
-            this.btnAvailability.Size = new System.Drawing.Size(104, 19);
+            this.btnAvailability.Size = new System.Drawing.Size(139, 23);
             this.btnAvailability.TabIndex = 2;
             this.btnAvailability.Text = "Check Availability";
             this.btnAvailability.UseVisualStyleBackColor = true;
@@ -86,10 +85,9 @@
             // 
             this.lblAvailability.AutoSize = true;
             this.lblAvailability.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblAvailability.Location = new System.Drawing.Point(9, 37);
-            this.lblAvailability.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAvailability.Location = new System.Drawing.Point(12, 46);
             this.lblAvailability.Name = "lblAvailability";
-            this.lblAvailability.Size = new System.Drawing.Size(122, 13);
+            this.lblAvailability.Size = new System.Drawing.Size(161, 17);
             this.lblAvailability.TabIndex = 3;
             this.lblAvailability.Text = "Room name is available!";
             this.lblAvailability.Visible = false;
@@ -97,19 +95,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(178, 42);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(237, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 13);
+            this.label3.Size = new System.Drawing.Size(124, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Room Description:";
             // 
             // rtbDescription
             // 
-            this.rtbDescription.Location = new System.Drawing.Point(180, 63);
-            this.rtbDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtbDescription.Location = new System.Drawing.Point(240, 78);
+            this.rtbDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rtbDescription.Name = "rtbDescription";
-            this.rtbDescription.Size = new System.Drawing.Size(131, 103);
+            this.rtbDescription.Size = new System.Drawing.Size(173, 126);
             this.rtbDescription.TabIndex = 5;
             this.rtbDescription.Text = "Description...";
             this.rtbDescription.Enter += new System.EventHandler(this.rtbDescription_Enter);
@@ -120,10 +117,10 @@
             this.cBoxFloors.DisplayMember = "floorName";
             this.cBoxFloors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxFloors.FormattingEnabled = true;
-            this.cBoxFloors.Location = new System.Drawing.Point(11, 80);
-            this.cBoxFloors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cBoxFloors.Location = new System.Drawing.Point(15, 98);
+            this.cBoxFloors.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBoxFloors.Name = "cBoxFloors";
-            this.cBoxFloors.Size = new System.Drawing.Size(126, 21);
+            this.cBoxFloors.Size = new System.Drawing.Size(167, 24);
             this.cBoxFloors.TabIndex = 6;
             this.cBoxFloors.ValueMember = "floorName";
             // 
@@ -139,10 +136,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(84, 188);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Location = new System.Drawing.Point(112, 231);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(65, 25);
+            this.btnCancel.Size = new System.Drawing.Size(87, 31);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -151,10 +148,10 @@
             // btnDone
             // 
             this.btnDone.Enabled = false;
-            this.btnDone.Location = new System.Drawing.Point(180, 188);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDone.Location = new System.Drawing.Point(240, 231);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(65, 25);
+            this.btnDone.Size = new System.Drawing.Size(87, 31);
             this.btnDone.TabIndex = 8;
             this.btnDone.Text = "Add";
             this.btnDone.UseVisualStyleBackColor = true;
@@ -186,18 +183,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 62);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(12, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(91, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Select Floor: ";
             // 
             // AddRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 224);
+            this.ClientSize = new System.Drawing.Size(445, 276);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDone);
@@ -209,10 +205,10 @@
             this.Controls.Add(this.btnAvailability);
             this.Controls.Add(this.txtRoomName);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddRoom";
+            this.Text = "Add Room";
             this.Load += new System.EventHandler(this.AddRoom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.floorsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();

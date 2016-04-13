@@ -263,3 +263,26 @@ C:\Users\Ruby\Desktop\RepoMAN - Copy\iReserve\iReserve\obj\x86\Debug\WindowsForm
 C:\Users\Ruby\Desktop\RepoMAN - Copy\iReserve\iReserve\obj\x86\Debug\iReserve.csproj.GenerateResource.Cache
 C:\Users\ralphbausas\Documents\gom_mandaluyongchapter\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.MakeSchedule.resources
 D:\Work\SoftEngEditspace\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.MakeSchedule.resources
+D:\Work\SoftEng\iReserve\iReserve\bin\Debug\iReserve.exe.config
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\iReserve.exe
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\iReserve.pdb
+D:\Work\SoftEng\iReserve\iReserve\bin\Debug\iReserveDB.mdb
+D:\Work\SoftEng\iReserve\iReserve\bin\Debug\iReserveDBDataSet.cs
+D:\Work\SoftEng\iReserve\iReserve\bin\Debug\iReserveDBDataSet.Designer.cs
+D:\Work\SoftEng\iReserve\iReserve\bin\Debug\iReserveDBDataSet.xsc
+D:\Work\SoftEng\iReserve\iReserve\bin\Debug\iReserveDBDataSet.xsd
+D:\Work\SoftEng\iReserve\iReserve\bin\Debug\iReserveDBDataSet.xss
+D:\Work\SoftEng\iReserve\iReserve\bin\Debug\iReserve.pdb
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\iReserve.csprojResolveAssemblyReference.cache
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.AddFloor.resources
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.AddRoom.resources
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.frmLogin.resources
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.frmDashboard.resources
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.MakeSchedule.resources
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.RemoveFloor.resources
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.RemoveRoom.resources
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ReserveRoom.resources
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewReservations.resources
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\WindowsFormsApplication1.ViewSchedules.resources
+D:\Work\SoftEng\iReserve\iReserve\obj\x86\Debug\iReserve.csproj.GenerateResource.Cache

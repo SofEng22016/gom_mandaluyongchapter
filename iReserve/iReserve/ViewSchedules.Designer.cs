@@ -35,11 +35,6 @@
             this.iReserveDBDataSet = new WindowsFormsApplication1.iReserveDBDataSet();
             this.tableAdapterManager = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.TableAdapterManager();
             this.floorsXroomsXSchedulesDataGridView = new System.Windows.Forms.DataGridView();
-            this.floorsXroomsXSchedulesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.floorsXroomsXSchedulesTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.floorsXroomsXSchedulesTableAdapter();
-            this.schedulesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.schedulesTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.schedulesTableAdapter();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +42,11 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.floorsXroomsXSchedulesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.floorsXroomsXSchedulesTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.floorsXroomsXSchedulesTableAdapter();
+            this.schedulesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.schedulesTableAdapter = new WindowsFormsApplication1.iReserveDBDataSetTableAdapters.schedulesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXSchedulesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.floorsXroomsXSchedulesBindingSource)).BeginInit();
@@ -133,35 +133,6 @@
             this.floorsXroomsXSchedulesDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.floorsXroomsXSchedulesDataGridView_DataBindingComplete);
             this.floorsXroomsXSchedulesDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.floorsXroomsXSchedulesDataGridView_KeyDown);
             // 
-            // floorsXroomsXSchedulesBindingSource
-            // 
-            this.floorsXroomsXSchedulesBindingSource.DataMember = "floorsXroomsXSchedules";
-            this.floorsXroomsXSchedulesBindingSource.DataSource = this.iReserveDBDataSet;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(903, 11);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(139, 41);
-            this.btnDelete.TabIndex = 10;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // floorsXroomsXSchedulesTableAdapter
-            // 
-            this.floorsXroomsXSchedulesTableAdapter.ClearBeforeFill = true;
-            // 
-            // schedulesBindingSource
-            // 
-            this.schedulesBindingSource.DataMember = "schedules";
-            this.schedulesBindingSource.DataSource = this.iReserveDBDataSet;
-            // 
-            // schedulesTableAdapter
-            // 
-            this.schedulesTableAdapter.ClearBeforeFill = true;
-            // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
@@ -212,6 +183,35 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
+            // floorsXroomsXSchedulesBindingSource
+            // 
+            this.floorsXroomsXSchedulesBindingSource.DataMember = "floorsXroomsXSchedules";
+            this.floorsXroomsXSchedulesBindingSource.DataSource = this.iReserveDBDataSet;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(903, 11);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(139, 41);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // floorsXroomsXSchedulesTableAdapter
+            // 
+            this.floorsXroomsXSchedulesTableAdapter.ClearBeforeFill = true;
+            // 
+            // schedulesBindingSource
+            // 
+            this.schedulesBindingSource.DataMember = "schedules";
+            this.schedulesBindingSource.DataSource = this.iReserveDBDataSet;
+            // 
+            // schedulesTableAdapter
+            // 
+            this.schedulesTableAdapter.ClearBeforeFill = true;
+            // 
             // ViewSchedules
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -229,7 +229,7 @@
             this.MinimizeBox = false;
             this.Name = "ViewSchedules";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ViewSchedules";
+            this.Text = "View All Schedules";
             this.Load += new System.EventHandler(this.ViewSchedules_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ViewSchedules_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();

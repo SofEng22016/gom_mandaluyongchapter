@@ -734,7 +734,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ReserveRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ReserveRoom";
+            this.Text = "Make Reservation";
             this.Load += new System.EventHandler(this.ReserveRoom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.floorsBindingSource)).EndInit();

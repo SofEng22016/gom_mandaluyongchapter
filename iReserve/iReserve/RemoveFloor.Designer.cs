@@ -151,7 +151,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "RemoveFloor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RemoveFloor";
+            this.Text = "Remove Floor";
             this.Load += new System.EventHandler(this.RemoveFloor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iReserveDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.floorsBindingSource)).EndInit();
